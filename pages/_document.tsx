@@ -1,9 +1,9 @@
-import Document, { Main, NextScript, Html } from 'next/document';
+import Document from 'next/document';
 import { ServerStyleSheet } from '../theme';
-import Head from 'next/head';
+import { DocumentContext } from 'next/document';
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+  static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
 

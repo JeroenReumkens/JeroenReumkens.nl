@@ -1,12 +1,8 @@
 import React from 'react';
-import { Wrapper } from './wrapper';
-import styled from '../theme';
-import { Flex, Box } from 'rebass';
-import { mobileUp } from '../utils/mixins';
-
-const Title = styled.h2`
-  font-size: ${props => props.theme.fonts.sizes[3]};
-`;
+import { Box, Flex } from 'rebass';
+import styled from '../../theme';
+import { Wrapper } from '../wrapper';
+import { SectionTitle } from '../section-title';
 
 const Link = styled.a`
   color: ${props => props.theme.colors.black};
@@ -42,7 +38,7 @@ export const LetsWorkTogether = () => {
   return (
     <section>
       <Wrapper>
-        <Title>Let's work together</Title>
+        <SectionTitle>Let's work together</SectionTitle>
         <Flex flexDirection={['column', 'row']}>
           <Box width={[1, 1 / 2]}>
             <Link href="mailto:hello@jeroenreumkens.nl?subject=Let's work together">

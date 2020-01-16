@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import React from 'react';
-import { Intro } from '../components/intro';
-import { LetsWorkTogether } from '../components/lets-work-together';
+import { Intro } from '../components/sections/intro';
+import { LetsWorkTogether } from '../components/sections/lets-work-together';
+import { Skills } from '../components/sections/skills';
 
 const Home = () => (
   <>
@@ -31,6 +32,7 @@ const Home = () => (
       />
     </Head>
     <Intro available />
+    <Skills />
     <LetsWorkTogether />
   </>
 );

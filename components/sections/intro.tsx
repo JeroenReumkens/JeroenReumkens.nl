@@ -1,20 +1,20 @@
-import styled, { keyframes } from '../theme';
-import { Wrapper } from './wrapper';
+import styled, { keyframes, css } from '../../theme';
+import { Wrapper } from '../wrapper';
 import { Flex, Box } from 'rebass';
-import { mobileUp } from '../utils/mixins';
+import { mobileUp } from '../../utils/mixins';
 import React from 'react';
 
 const Background = styled.section`
   background-color: ${props => props.theme.colors.yellow};
-  min-height: 80vh;
   display: flex;
   flex-direction: column;
   position: relative;
   font-size: ${props => props.theme.fonts.sizes[0]};
 
-  ${mobileUp`
+  ${mobileUp(css`
+    min-height: 80vh;
     flex-direction: row;
-  `}
+  `)}
 `;
 
 const wave = keyframes`
@@ -86,12 +86,12 @@ const BackgroundImageWrapper = styled(Box)`
   position: relative;
   height: 30rem;
 
-  ${mobileUp`
+  ${mobileUp(css`
     position: absolute;
     right: 0;
     top: 0;
     height: 100%;
-  `}
+  `)}
 
   img {
     object-fit: cover;

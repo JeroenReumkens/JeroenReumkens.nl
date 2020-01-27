@@ -31,7 +31,7 @@ const Home = () => (
         }}
       />
     </Head>
-    <Intro available />
+    <Intro />
     <Skills />
     <LetsWorkTogether />
   </>

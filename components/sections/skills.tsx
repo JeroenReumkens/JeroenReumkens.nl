@@ -54,7 +54,7 @@ export const Skills = () => {
           <p>Other skills I bring to a team:</p>
           <Box>
             <Badge>Coaching developers</Badge>
-            <Badge>Creating techinical roadmaps</Badge>
+            <Badge>Creating technical roadmaps</Badge>
             <Badge>Scrum and SAFE experience</Badge>
             <Badge>Collaborate, connect people</Badge>
             <Badge>Communicate</Badge>

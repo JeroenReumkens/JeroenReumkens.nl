@@ -9,7 +9,7 @@
     "deploy": "next build && next export"
   },
   "dependencies": {
-    "next": "^9.1.7",
+    "next": "^9.3.2",
     "polished": "^3.4.2",
     "react": "16.12.0",
     "react-dom": "16.12.0",

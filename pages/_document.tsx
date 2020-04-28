@@ -1,4 +1,4 @@
-import Document from 'next/document';
+import Document, { Main, NextScript, Head, Html } from 'next/document';
 import { ServerStyleSheet } from '../theme';
 import { DocumentContext } from 'next/document';
 
@@ -10,7 +10,8 @@ export default class MyDocument extends Document {
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: App => props => sheet.collectStyles(<App {...props} />)
+          enhanceApp: (App) => (props) =>
+            sheet.collectStyles(<App {...props} />),
         });
 
       const initialProps = await Document.getInitialProps(ctx);
@@ -21,10 +22,27 @@ export default class MyDocument extends Document {
             {initialProps.styles}
             {sheet.getStyleElement()}
           </>
-        )
+        ),
       };
     } finally {
       sheet.seal();
     }
+  }
+
+  render() {
+    return (
+      <Html lang="en">
+        <Head>
+          <meta
+            name="description"
+            content="Jeroen Reumkens is a passionate frontend engineer living in The Netherlands."
+          />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
   }
 }

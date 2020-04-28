@@ -3,13 +3,14 @@ import { Wrapper } from '../wrapper';
 import { Flex, Box } from 'rebass';
 import { mobileUp } from '../../utils/mixins';
 import React from 'react';
+import { LazyImage } from '@urval/lazy-image';
 
 const Background = styled.section`
-  background-color: ${props => props.theme.colors.yellow};
+  background-color: ${(props) => props.theme.colors.yellow};
   display: flex;
   flex-direction: column;
   position: relative;
-  font-size: ${props => props.theme.fonts.sizes[0]};
+  font-size: ${(props) => props.theme.fonts.sizes[0]};
 
   ${mobileUp(css`
     min-height: 80vh;
@@ -36,11 +37,11 @@ const wave = keyframes`
 `;
 
 const Upper = styled.span`
-  font-size: ${props => props.theme.fonts.sizes[0]};
+  font-size: ${(props) => props.theme.fonts.sizes[0]};
 
   span {
     transform: rotate(0);
-    font-size: ${props => props.theme.fonts.sizes[2]};
+    font-size: ${(props) => props.theme.fonts.sizes[2]};
     display: inline-block;
     animation: ${wave} 4000ms infinite;
   }
@@ -48,27 +49,27 @@ const Upper = styled.span`
 
 const Title = styled.h1`
   font-weight: 300;
-  font-size: ${props => props.theme.fonts.sizes[2]};
+  font-size: ${(props) => props.theme.fonts.sizes[2]};
   margin-top: 0;
   line-height: 1.6;
 
   span {
     font-weight: 800;
     line-height: 1.4;
-    font-size: ${props => props.theme.fonts.sizes[4]};
+    font-size: ${(props) => props.theme.fonts.sizes[4]};
   }
 `;
 
 const Body = styled.p`
-  font-weight: ${props => props.theme.fonts.weights[0]};
-  color: ${props => props.theme.colors.grey};
+  font-weight: ${(props) => props.theme.fonts.weights[0]};
+  color: ${(props) => props.theme.colors.grey};
   line-height: 1.6;
 
   span {
     display: flex;
     align-items: center;
     margin-top: 6rem;
-    font-weight: ${props => props.theme.fonts.weights[1]};
+    font-weight: ${(props) => props.theme.fonts.weights[1]};
 
     &::before {
       content: '';
@@ -128,7 +129,22 @@ export const Intro: React.FC<{ available?: boolean }> = ({ available }) => {
         </Flex>
       </Wrapper>
       <BackgroundImageWrapper width={[1, 2 / 5]}>
-        <img src="/this-is-i.jpg" />
+        <LazyImage placeholder={require('../../public/this-is-i-preload.jpg')}>
+          <picture>
+            <source
+              type="image/webp"
+              srcSet={`${require('../../public/this-is-i-small.webp')} 600w, ${require('../../public/this-is-i.webp')} 900w`}
+            />
+            <source
+              type="image/jpg"
+              srcSet={`${require('../../public/this-is-i-small.jpg')} 600w, ${require('../../public/this-is-i.jpg')} 900w`}
+            />
+            <img
+              src={require('../../public/this-is-i.jpg')}
+              alt="Me in front of the Apple Campus at One Infinite Loop Cupertino"
+            />
+          </picture>
+        </LazyImage>
       </BackgroundImageWrapper>
     </Background>
   );

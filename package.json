@@ -9,7 +9,8 @@
     "deploy": "next build && next export"
   },
   "dependencies": {
-    "@urval/lazy-image": "^0.0.1-alpha.4",
+    "@urval/lazy-image": "^0.0.1-alpha.6",
+    "@urval/use-in-view": "^0.0.1-alpha.6",
     "next": "^9.3.5",
     "polished": "^3.4.2",
     "react": "16.12.0",

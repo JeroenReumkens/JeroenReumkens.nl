@@ -1272,17 +1272,17 @@
   dependencies:
     csstype "^2.6.6"
 
-"@urval/lazy-image@^0.0.1-alpha.4":
-  version "0.0.1-alpha.4"
-  resolved "https://registry.yarnpkg.com/@urval/lazy-image/-/lazy-image-0.0.1-alpha.4.tgz#b22f1448cb11673dabd2e0b30691e5ad1ba57b57"
-  integrity sha512-eCuBzu56VqttI+jGF/gdnCEKJTNQkmfmGywnUy8o2JhnZAqAwUR2lDsTdu+bNv4W+haXt2FLRiVkwV2PJ/0POQ==
+"@urval/lazy-image@^0.0.1-alpha.6":
+  version "0.0.1-alpha.6"
+  resolved "https://registry.yarnpkg.com/@urval/lazy-image/-/lazy-image-0.0.1-alpha.6.tgz#6cdee822c94847372e0d119c1d81eb38a56c592e"
+  integrity sha512-B+artyCGWCfCHF84Z990tmZcT6G7DAEtOn0j3E8S+iBqoREnxnjwp1PcJx5hgUWRBqm2N+t4h+VgtDWQ8Zcb8Q==
   dependencies:
-    "@urval/use-in-view" "^0.0.1-alpha.4"
+    "@urval/use-in-view" "^0.0.1-alpha.6"
 
-"@urval/use-in-view@^0.0.1-alpha.4":
-  version "0.0.1-alpha.4"
-  resolved "https://registry.yarnpkg.com/@urval/use-in-view/-/use-in-view-0.0.1-alpha.4.tgz#c633ff401aa9885b049cb86308df7389e0dd6c42"
-  integrity sha512-Z1cegy7uGLR/FLmT1dFgR+mop8HteGc3aMkS3KjDQaKDhZDIo/8ccfY3fefLxKSnQ+NZP8521dR8Kr63QmjLSg==
+"@urval/use-in-view@^0.0.1-alpha.6":
+  version "0.0.1-alpha.6"
+  resolved "https://registry.yarnpkg.com/@urval/use-in-view/-/use-in-view-0.0.1-alpha.6.tgz#2df719fde0dda047d3ab9ceea7acf0de3b1a236f"
+  integrity sha512-BDwyMfHyljMiy4ppialNW7oAJMGvkHX0JafQ+LN0HpK+v4hUNYjsV9HdoInRZ/mo6XEmhYKyD5ezx7As/sLD0A==
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"

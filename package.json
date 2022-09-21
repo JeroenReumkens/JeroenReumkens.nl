@@ -1,35 +1,42 @@
 {
-  "name": "jeroenreumkens",
-  "license": "MIT",
-  "version": "0.1.0",
+  "private": true,
+  "sideEffects": false,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "deploy": "next build && next export"
+    "build": "run-s \"build:*\"",
+    "build:css": "npm run generate:css -- --minify",
+    "build:remix": "remix build",
+    "dev": "run-p \"dev:*\"",
+    "dev:css": "npm run generate:css -- --watch",
+    "dev:remix": "remix dev",
+    "generate:css": "npx tailwindcss -i ./app/styles/global.css -o ./app/tailwind.css",
+    "start": "remix-serve build"
   },
   "dependencies": {
-    "@urval/lazy-image": "^0.0.1-alpha.6",
-    "@urval/use-in-view": "^0.0.1-alpha.6",
-    "next": "^9.3.5",
-    "polished": "^3.4.2",
-    "react": "16.12.0",
-    "react-dom": "16.12.0",
-    "rebass": "^4.0.7",
-    "styled-components": "^5.0.0"
+    "@netlify/functions": "^1.0.0",
+    "@remix-run/netlify": "^1.7.1",
+    "@remix-run/node": "^1.7.1",
+    "@remix-run/react": "^1.7.1",
+    "classnames": "^2.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/node": "^13.1.7",
-    "@types/rebass": "^4.0.4",
-    "@types/styled-components": "^4.4.2",
-    "babel-plugin-styled-components": "^1.10.6",
-    "imagemin-mozjpeg": "^8.0.0",
-    "imagemin-optipng": "^7.1.0",
-    "next-compose-plugins": "^2.2.0",
-    "next-optimized-images": "^2.6.0",
-    "tslint-config-airbnb": "^5.11.2",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-react": "^4.1.0",
-    "typescript": "^3.7.4"
+    "@remix-run/dev": "^1.7.1",
+    "@remix-run/eslint-config": "^1.7.1",
+    "@remix-run/serve": "^1.7.1",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "autoprefixer": "^10.4.12",
+    "concurrently": "^7.4.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.20.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.16",
+    "prettier-plugin-tailwindcss": "^0.1.13",
+    "tailwindcss": "^3.1.8",
+    "typescript": "^4.7.4"
+  },
+  "engines": {
+    "node": ">=14"
   }
 }

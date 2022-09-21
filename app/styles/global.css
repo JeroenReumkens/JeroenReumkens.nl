@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Fira Code";
+  src: url("/fonts/FiraCode-Regular.woff2") format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fira Code";
+  src: url("/fonts/FiraCode-Medium.woff2") format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: Cormorant;
+  src: url("/fonts/Cormorant-Medium.woff2") format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: Cormorant;
+  src: url("/fonts/Cormorant-SemiBold.woff2") format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+
+@layer base {
+
+
+  *, *::before, *::after {
+    box-sizing: 'border-box';
+  }
+
+  * {
+    margin: 0;
+  }
+
+  html, body {
+    background-color: theme('colors.gray');
+    font-size: 10px;
+    min-height: 100%;
+  }
+
+  body {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEWzs7P94mLeAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg=='),
+      url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEWzs7P94mLeAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg=='),
+      url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEWzs7P94mLeAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg=='),
+      url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEWzs7P94mLeAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg=='),
+      url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEWzs7P94mLeAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg=='),
+      url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEWzs7P94mLeAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg=='),
+      url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEWzs7P94mLeAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==');
+    background-repeat: repeat-y;
+    background-position:
+      50% top, calc(50% - 214px + 1px) top, calc(50% + 214px - 1px) top,  calc(50% - 214px * 2 + 1px) top, calc(50% + 214px * 2 - 1px) top, calc(50% - 214px * 3 + 1px) top, calc(50% + 214px * 3 - 1px) top;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  input, button, textarea, select {
+    font: inherit;
+  }
+
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+}

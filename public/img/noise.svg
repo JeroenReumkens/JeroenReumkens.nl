@@ -1,0 +1,25 @@
+<svg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'>
+  <filter id='noiseFilter'>
+    <feTurbulence
+      type='fractalNoise'
+      baseFrequency='1'
+      numOctaves='3'
+      stitchTiles='stitch'/>
+  </filter>
+
+  <filter id="gggrain-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+  <feTurbulence type="fractalNoise" baseFrequency="1.35" numOctaves="3" seed="23234223" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"></feTurbulence>
+  <feColorMatrix type="saturate" values="0" x="0%" y="0%" width="100%" height="100%" in="turbulence" result="colormatrix"></feColorMatrix>
+  <feComponentTransfer x="0%" y="0%" width="100%" height="100%" in="colormatrix" result="componentTransfer">
+    <feFuncR type="linear" slope="3"></feFuncR>
+    <feFuncG type="linear" slope="3"></feFuncG>
+    <feFuncB type="linear" slope="3"></feFuncB>
+  </feComponentTransfer>
+  <feColorMatrix x="0%" y="0%" width="100%" height="100%" in="componentTransfer" result="colormatrix2" type="matrix" values="1 0 0 0 0
+          0 1 0 0 0
+          0 0 1 0 0
+          0 0 0 19 -11"></feColorMatrix>
+  </filter>
+
+  <rect width='100%' height='100%' filter='url(#gggrain-filter)'/>
+</svg>

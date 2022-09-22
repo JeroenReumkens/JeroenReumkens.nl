@@ -1,6 +1,7 @@
 {
   "extends": ["@remix-run/eslint-config", "@remix-run/eslint-config/node"],
   "rules": {
-    "quotes": [2, "single", "avoid-escape"]
+    "quotes": [2, "single", "avoid-escape"],
+    "react/display-name": "off"
   }
 }

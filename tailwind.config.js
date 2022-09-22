@@ -28,6 +28,7 @@ module.exports = {
       serif: "'Cormorant', serif",
     },
     fontSize: {
+      small: '2.2rem',
       body: '2.8rem',
       xl: '4.8rem',
       '2xl': '7.2rem',
@@ -38,7 +39,7 @@ module.exports = {
       medium: 500,
     },
     lineHeight: {
-      tight: 1.19
+      tight: 1.19,
     },
     screens: {
       sm: '768px',

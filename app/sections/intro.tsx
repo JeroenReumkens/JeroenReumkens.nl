@@ -1,43 +1,68 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { GrainSection } from '~/components/grain-section';
 import { animate, scroll } from 'motion';
 import { GooglyPicture } from '~/components/googly-picture';
+import { useMotion } from '~/utils/use-motion';
+
+if (
+  typeof window !== 'undefined' &&
+  typeof window?.CSS?.registerProperty !== 'undefined'
+) {
+  window.CSS.registerProperty({
+    name: '--grain-movement',
+    inherits: true,
+    initialValue: '0',
+    syntax: '<length>',
+  });
+}
 
 export const Intro = () => {
   const imageRef = useRef<HTMLImageElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (!imageRef.current || !sectionRef.current) return;
+  useMotion([imageRef, sectionRef], ([image, section]) => {
     scroll(
-      animate(imageRef.current, {
+      animate(image, {
         opacity: [1, 0],
         y: [0, 100],
-        borderBottomLeftRadius: [120, 0],
-        borderBottomRightRadius: [120, 0],
+        borderBottomLeftRadius: ['120px', 0],
+        borderBottomRightRadius: ['120px', 0],
       }),
       {
-        target: imageRef.current,
+        target: image,
         offset: ['start start', -1.45],
       }
     );
 
     scroll(
-      animate(sectionRef.current, {
-        borderRadius: [120, 0],
+      animate(section, {
+        borderRadius: ['120px', 0],
       }),
       {
-        target: sectionRef.current,
-        offset: ['start start', 'end start'],
+        target: section,
+        offset: ['start start', 'center start'],
       }
     );
-  }, []);
+
+    // Modern day internet explorer (Safari..) doesn't support registerProperty..
+    if (typeof window?.CSS?.registerProperty !== 'undefined') {
+      scroll(
+        animate(section, {
+          '--grain-movement': ['0', '100vw'],
+        }),
+        {
+          target: section,
+          offset: ['start start', 'end start'],
+        }
+      );
+    }
+  });
 
   return (
     <>
       <GrainSection
         ref={sectionRef}
-        className="overflow-hidden rounded-b-massive pt-5 after:rounded-b-[inherit]"
+        className="before:pointer-none flex items-center overflow-hidden rounded-b-massive pt-5 before:absolute before:left-[0] before:bottom-[0] before:z-0 before:flex before:w-full before:translate-x-[var(--grain-movement)] before:overflow-hidden before:font-mono before:text-[32rem] before:leading-[0.68] before:tracking-[-3rem] before:opacity-[0.07] before:content-['Jeroen_Reumkens'] after:rounded-b-[inherit]"
       >
         <div className="height-full flex flex-col items-center justify-center sm:flex-row">
           <div className="flex h-full flex-col items-center justify-center sm:mr-4 sm:w-1/2 md:w-[60%] md:max-w-[80rem]">
@@ -58,8 +83,8 @@ export const Intro = () => {
             <div className="md:ml-col">
               <p className="mb-2 text-small md:mb-5 md:text-body">
                 is a passionate frontend engineer with over a decade of
-                professional experience building the best experiences on the
-                web.
+                professional experience hand crafting the best experiences on
+                the web.
               </p>
               <p className="mb-2 text-small md:mb-5 md:text-body">
                 I also mentor teams & individuals, learn more.

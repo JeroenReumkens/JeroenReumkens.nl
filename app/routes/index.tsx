@@ -1,32 +1,26 @@
 import { Container } from '~/components/container';
-import { GrainSection } from '~/components/grain-section';
+import { DivingIntoFrontend } from '~/components/diving-into-frontend';
+import { AllThePossibilities } from '~/sections/all-the-possibilities';
+import { Early2000s } from '~/sections/early-2000s';
 import { Intro } from '~/sections/intro';
+import { OldSkoolWebsite } from '~/sections/old-skool-website';
 
 export default function Index() {
   return (
     <>
       <Intro />
-      <Container className="my-5">
-        <p className="mb-5 font-mono text-2xl leading-tight">
-          My passion for web however, started already as a hobby back in the
-          early 2000s.
-        </p>
-        <p className="mb-5 font-mono text-2xl leading-tight">
-          Back in the days, when the web looked slightly different...
-        </p>
-        <p className="mb-5 font-mono text-2xl leading-tight">
-          — when iframes, tables and GIFs were for the cool kids!
-        </p>
+      <Early2000s />
+      <Container>
+        <img
+          className="mx-auto -mt-6 mb-6 w-[600px] max-w-full md:ml-col"
+          src="/img/gifs/it-looked-a-bit-like-this.gif"
+          alt="Animated GIF with flaming text that says 'It looked a bit like this'"
+        />
+        <span className="sr-only">It looked a bit like this...</span>
       </Container>
-      <GrainSection color="black" className="rounded-t-massive">
-        <h1>Jeroen Reumkens</h1>
-
-        <p>
-          is a passionate frontend engineer with over a decade 👴 of
-          professional experience building the best experiences on the web. I
-          also mentor teams & individuals, learn more.
-        </p>
-      </GrainSection>
+      <OldSkoolWebsite />
+      <AllThePossibilities />
+      <DivingIntoFrontend />
     </>
   );
 }

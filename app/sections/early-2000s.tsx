@@ -4,9 +4,9 @@ import { useMotion } from '~/utils/use-motion';
 import { animate, scroll } from 'motion';
 
 export const Early2000s = () => {
-  const ref = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  useMotion([ref], ([container]) => {
+  useMotion([containerRef], ([container]) => {
     scroll(
       animate(container, {
         y: [0, '-300px'],
@@ -20,7 +20,7 @@ export const Early2000s = () => {
 
   return (
     <Container
-      ref={ref}
+      ref={containerRef}
       className="my-5 font-mono text-body leading-tight sm:text-2xl"
     >
       <p className="mb-3 sm:mb-5">

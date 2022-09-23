@@ -39,7 +39,7 @@ export const AllThePossibilities = () => {
   return (
     <Container
       ref={containerRef}
-      className="py-5 font-serif text-body font-regular leading-tight sm:py-6 sm:text-xl"
+      className="py-5 font-serif text-body font-regular leading-tight sm:py-6 sm:text-2xl"
     >
       <p className="relative z-10 sm:w-[75%]">
         Imagine me as a teenager, seeing all the possibilities!
@@ -49,7 +49,7 @@ export const AllThePossibilities = () => {
         <StarIcon
           ref={starLeftRef}
           aria-hidden
-          className="pointer-events-none absolute -top-[200px] -z-0 h-6 w-6 rotate-12 sm:-left-[200px]"
+          className="pointer-events-none absolute -top-[200px] -z-0 h-6 w-6 rotate-12 sm:-left-[200px] sm:-top-[100px]"
         />
         <StarIcon
           ref={starRightRef}

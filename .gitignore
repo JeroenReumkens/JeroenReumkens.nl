@@ -2,7 +2,7 @@ node_modules
 
 /.cache
 /public/build
-/.netlify
+/netlify/build
 .env
 /build
 /app/tailwind.css

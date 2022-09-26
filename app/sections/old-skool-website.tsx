@@ -8,13 +8,11 @@ export const OldSkoolWebsite = () => {
   useMotion([containerRef, screenRef], ([container, screen]) => {
     scroll(
       animate(screen, {
-        // opacity: [1, 1],
-        // y: [0, '-300px'],
         scale: [8, 2, 1],
       }),
       {
         target: container,
-        offset: ['start end', 'center end', 'end end'],
+        offset: ['start end', 'center end', 0.92],
       }
     );
   });

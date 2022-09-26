@@ -4,6 +4,7 @@ import { AllThePossibilities } from '~/sections/all-the-possibilities';
 import { Early2000s } from '~/sections/early-2000s';
 import { Intro } from '~/sections/intro';
 import { OldSkoolWebsite } from '~/sections/old-skool-website';
+import { PastDecade } from '~/sections/past-decade';
 
 export default function Index() {
   return (
@@ -22,6 +23,7 @@ export default function Index() {
         <OldSkoolWebsite />
       </div>
       <AllThePossibilities />
+      <PastDecade />
       <DivingIntoFrontend />
     </>
   );

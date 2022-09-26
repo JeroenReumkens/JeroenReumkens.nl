@@ -17,8 +17,7 @@ export const GrainSection: React.FC<GrainSectionProps> = forwardRef<
     <section
       ref={ref}
       className={[
-        'relative flex min-h-screen justify-center py-3 font-mono',
-        'after:absolute after:left-[0] after:top-[0] after:z-0 after:block after:h-full after:w-full after:bg-[url(/img/noise.png)] after:bg-[length:300px_300px] after:bg-repeat after:mix-blend-overlay after:content-[\'""\']',
+        'grain relative flex min-h-screen justify-center py-3 font-mono',
         !color || color === 'transparent' ? 'bg-transparent' : 'bg-gray80',
         className,
       ].join(' ')}

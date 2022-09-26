@@ -13,7 +13,7 @@ export const SectionTitle = ({
 }: SectionTitleProps) => (
   <h2
     className={classNames(
-      'flex h-[190px] items-center justify-center rounded-massive font-mono text-2xl lowercase text-gray',
+      'flex min-h-[80px] items-center justify-center rounded-massive py-2 text-center font-mono text-body lowercase leading-tight text-gray sm:min-h-[190px] sm:text-2xl',
       isTransparent ? 'border' : 'grain bg-gray40',
       className
     )}

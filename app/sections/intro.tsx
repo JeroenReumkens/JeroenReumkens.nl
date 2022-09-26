@@ -25,8 +25,8 @@ export const Intro = () => {
       animate(image, {
         opacity: [1, 0],
         y: [0, 100],
-        borderBottomLeftRadius: ['120px', 0],
-        borderBottomRightRadius: ['120px', 0],
+        borderBottomLeftRadius: ['var(--responsive-massive-radius)', 0],
+        borderBottomRightRadius: ['var(--responsive-massive-radius)', 0],
       }),
       {
         target: image,
@@ -36,7 +36,7 @@ export const Intro = () => {
 
     scroll(
       animate(section, {
-        borderRadius: ['120px', 0],
+        borderRadius: ['var(--responsive-massive-radius)', 0],
       }),
       {
         target: section,

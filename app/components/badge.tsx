@@ -20,7 +20,7 @@ export const Badge = ({
 }: BadgeProps) => (
   <div
     className={classNames(
-      'flex h-[500px] w-[310px] flex-col items-center overflow-hidden rounded-massive border',
+      'flex h-[250px] w-[180px] flex-col items-center overflow-hidden rounded-massive border sm:h-[500px] sm:w-[310px]',
       isReverse ? 'rotate-[-9deg]' : 'rotate-[9deg]'
     )}
   >
@@ -35,7 +35,7 @@ export const Badge = ({
       </span>
     ) : (
       <span
-        className="relative mt-5 block h-[150px] w-[150px]"
+        className="relative mt-5 block h-[75px] w-[75px] sm:h-[150px] sm:w-[150px]"
         style={{ clipPath: 'url(#star)' }}
       >
         <StarTwelveIcon />
@@ -43,11 +43,13 @@ export const Badge = ({
           src={illustrationUrl}
           alt={illustrationAlt}
           width={illustrationWidth}
-          className={`absolute left-1/2 top-1/2 max-h-[none] max-w-none -translate-x-1/2 -translate-y-1/2 w-[${illustrationWidth}px]`}
+          className={`absolute left-1/2 top-1/2 max-h-[none] max-w-none -translate-x-1/2 -translate-y-1/2 w-[${
+            illustrationWidth / 2
+          }px sm:w-[${illustrationWidth}px]`}
         />
       </span>
     )}
-    <div className="grain mt-auto flex min-h-[40%] w-full items-center justify-center overflow-clip rounded-b-massive bg-gray40 px-2 text-center font-mono text-body uppercase text-white">
+    <div className="grain mt-auto flex min-h-[40%] w-full items-center justify-center overflow-clip rounded-b-massive bg-gray40 px-2 text-center font-mono text-small uppercase text-white sm:text-body">
       {illustrationTitle}
     </div>
   </div>

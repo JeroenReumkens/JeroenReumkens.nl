@@ -17,12 +17,12 @@ export const BadgeAndText = ({
 }: BadgeAndTextProps & BadgeProps) => (
   <section
     className={classNames(
-      'relative mb-4 flex justify-between py-3 font-serif text-xl leading-tight last:mb-[0] [&_em]:font-mono [&_em]:text-[3.6rem] [&_em]:not-italic',
-      isReverse && 'flex-row-reverse text-right'
+      'relative mb-4 flex flex-col justify-between py-3 font-serif text-body leading-tight last:mb-[0] sm:flex-row sm:text-xl [&_em]:font-mono [&_em]:text-[2.6rem] [&_em]:not-italic [&_em]:sm:text-[3.6rem]',
+      isReverse && 'flex-row-reverse sm:text-right'
     )}
   >
-    <div className="w-[60%] space-y-4">{children}</div>
-    <div>
+    <div className="space-y-4 sm:w-[60%]">{children}</div>
+    <div className="mx-auto mt-4 max-w-md">
       <Badge
         illustrationAlt={illustrationAlt}
         illustrationTitle={illustrationTitle}

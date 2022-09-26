@@ -3,7 +3,6 @@ import { useMotion } from '~/utils/use-motion';
 import { GrainSection } from '~/components/grain-section';
 import { animate, scroll } from 'motion';
 import { SectionTitle } from '~/components/section-title';
-import { Badge } from '~/components/badge';
 import { BadgeAndText } from '~/components/badge-and-text';
 
 export const DivingIntoFrontend = () => {
@@ -14,8 +13,8 @@ export const DivingIntoFrontend = () => {
   useMotion([sectionRef], ([section]) => {
     scroll(
       animate(section, {
-        borderTopLeftRadius: [0, '120px'],
-        borderTopRightRadius: [0, '120px'],
+        borderTopLeftRadius: [0, 'var(--responsive-massive-radius)'],
+        borderTopRightRadius: [0, 'var(--responsive-massive-radius)'],
       }),
       {
         target: section,
@@ -41,9 +40,9 @@ export const DivingIntoFrontend = () => {
   );
 
   return (
-    <GrainSection ref={sectionRef} color="black" className="py-5">
+    <GrainSection ref={sectionRef} color="black" className="overflow-clip py-5">
       <SectionTitle isTransparent>Diving into frontend</SectionTitle>
-      <div className="mx-auto my-5 w-full max-w-6xl space-y-4 text-center font-serif text-xl text-white">
+      <div className="mx-auto my-5 w-full max-w-6xl space-y-4 text-center font-serif text-body text-white sm:text-xl">
         <p>
           To me frontend is so much more than{' '}
           <em>"that boring and too easy piece of HTML and CSS"</em>.
@@ -63,7 +62,7 @@ export const DivingIntoFrontend = () => {
         <div className="sticky top-[50%]">
           <ul
             ref={stickyListRef}
-            className="inline-flex flex-row flex-nowrap text-2xl text-white [&_li]:mr-6 [&_li]:min-w-max [&_li]:flex-1"
+            className="inline-flex flex-row flex-nowrap text-xl text-white sm:text-2xl [&_li]:mr-6 [&_li]:min-w-max [&_li]:flex-1"
           >
             <li>Accessibility</li>
             <li>Design systems</li>

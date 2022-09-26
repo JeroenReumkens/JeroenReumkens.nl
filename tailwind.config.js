@@ -48,7 +48,7 @@ module.exports = {
       lg: '1280px',
     },
     borderRadius: {
-      massive: '12rem',
+      massive: 'var(--responsive-massive-radius)',
     },
     boxShadow: {
       hard: '5px 5px 0 0 rgba(0,0,0,1)',

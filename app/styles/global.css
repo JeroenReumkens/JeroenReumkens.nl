@@ -55,7 +55,6 @@
       50% top, calc(50% - 214px + 1px) top, calc(50% + 214px - 1px) top,  calc(50% - 214px * 2 + 1px) top, calc(50% + 214px * 2 - 1px) top, calc(50% - 214px * 3 + 1px) top, calc(50% + 214px * 3 - 1px) top;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
   }
 
   img, picture, video, canvas, svg {

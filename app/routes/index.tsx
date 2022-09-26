@@ -10,7 +10,7 @@ import { SharingMyPassion } from '~/sections/sharing-my-passion';
 
 export default function Index() {
   return (
-    <>
+    <main className="[--responsive-massive-radius:60px] sm:[--responsive-massive-radius:120px]">
       <Intro />
       <Early2000s />
       <div className="relative overflow-clip">
@@ -29,6 +29,6 @@ export default function Index() {
       <DivingIntoFrontend />
       <SharingMyPassion />
       <Footer />
-    </>
+    </main>
   );
 }

@@ -11,7 +11,11 @@ import {
 import tailwind from './tailwind.css';
 
 export function links() {
-  return [{ rel: 'stylesheet', href: tailwind }];
+  return [
+    { rel: 'stylesheet', href: tailwind },
+    { rel: 'shortcut icon', href: '/favicon.ico' },
+    { rel: 'icon', href: '/favicon.png', type: 'image/png' },
+  ];
 }
 
 export const meta: MetaFunction = () => ({

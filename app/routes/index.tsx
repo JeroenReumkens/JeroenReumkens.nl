@@ -1,10 +1,12 @@
 import { Container } from '~/components/container';
-import { DivingIntoFrontend } from '~/components/diving-into-frontend';
+import { Footer } from '~/components/footer';
+import { DivingIntoFrontend } from '~/sections/diving-into-frontend';
 import { AllThePossibilities } from '~/sections/all-the-possibilities';
 import { Early2000s } from '~/sections/early-2000s';
 import { Intro } from '~/sections/intro';
 import { OldSkoolWebsite } from '~/sections/old-skool-website';
 import { PastDecade } from '~/sections/past-decade';
+import { SharingMyPassion } from '~/sections/sharing-my-passion';
 
 export default function Index() {
   return (
@@ -25,6 +27,8 @@ export default function Index() {
       <AllThePossibilities />
       <PastDecade />
       <DivingIntoFrontend />
+      <SharingMyPassion />
+      <Footer />
     </>
   );
 }

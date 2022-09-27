@@ -7,10 +7,13 @@ import {
   Scripts,
   ScrollRestoration,
   useCatch,
+  useLocation,
 } from '@remix-run/react';
+import { useEffect } from 'react';
 import { NotFound } from './sections/404';
 import { ErrorPage } from './sections/error';
 import tailwind from './tailwind.css';
+import { pageview } from './utils/gtag';
 
 export function links() {
   return [
@@ -51,7 +54,14 @@ interface DocumentProps {
   title?: string;
 }
 
+const gaTrackingId = 'G-FKZ83QZRLE';
+
 const Document = ({ children, title }: DocumentProps) => {
+  const location = useLocation();
+  useEffect(() => {
+    pageview(location.pathname, gaTrackingId);
+  }, [location]);
+
   return (
     <html lang="en">
       <head>
@@ -60,6 +70,29 @@ const Document = ({ children, title }: DocumentProps) => {
         <Links />
       </head>
       <body>
+        {!gaTrackingId ? null : (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaTrackingId}`}
+            />
+            <script
+              async
+              id="gtag-init"
+              dangerouslySetInnerHTML={{
+                __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${gaTrackingId}', {
+                  page_path: window.location.pathname
+                });
+              `,
+              }}
+            />
+          </>
+        )}
+
         {children}
         <ScrollRestoration />
         <Scripts />

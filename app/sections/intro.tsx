@@ -69,7 +69,7 @@ export const Intro = () => {
         <div className="flex h-full flex-col items-center justify-center sm:flex-row">
           <div className="flex h-full flex-col justify-center sm:mr-4 sm:w-1/2 md:w-[60%] md:max-w-[80rem]">
             <h1
-              className="mb-2 font-mono text-xl font-medium leading-[0.9] md:mb-5 md:text-2xl lg:text-humongous"
+              className="mb-2 font-mono text-xl font-medium leading-[0.9] md:mb-3 md:text-2xl lg:text-humongous"
               lang="nl-NL"
             >
               Jeroen
@@ -99,7 +99,7 @@ export const Intro = () => {
               >
                 I also do mentoring
               </CtaButton>
-              Or read on... 👇
+              or read on... 👇
             </p>
           </div>
           <div className="mb:mt-5 relatie mt-2 md:ml-auto md:mt-[0]">

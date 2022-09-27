@@ -128,7 +128,7 @@ export const GooglyPicture = forwardRef<HTMLImageElement>((_, ref) => {
               'circle(calc(var(--dog-zoom) * 100px) at var(--googly-x) var(--googly-y))',
           } as React.CSSProperties
         }
-        src="/img/googly-dog.gif"
+        src="/img/googly-dog.webp"
         alt="An animated gif of a dog wearing glasses with googly eyes. They have a bone in their mouth which a human tries to pull out of dog's mouth, causing the googly eyes to bounce around."
       />
     </div>

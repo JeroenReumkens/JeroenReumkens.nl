@@ -76,7 +76,7 @@ export const DivingIntoFrontend = () => {
         <div className="sticky top-[50%]">
           <ul
             ref={stickyListRef}
-            className="inline-flex flex-row flex-nowrap text-xl text-white sm:text-2xl [&_li]:mr-6 [&_li]:min-w-max [&_li]:flex-1"
+            className="inline-flex flex-row flex-nowrap text-xl text-white sm:text-humongous [&_li]:mr-7 [&_li]:min-w-max [&_li]:flex-1"
           >
             <li>Accessibility</li>
             <li>Design systems</li>

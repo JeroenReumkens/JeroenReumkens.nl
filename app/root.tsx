@@ -8,6 +8,8 @@ import {
   ScrollRestoration,
   useCatch,
 } from '@remix-run/react';
+import { NotFound } from './sections/404';
+import { ErrorPage } from './sections/error';
 import tailwind from './tailwind.css';
 
 export function links() {
@@ -79,9 +81,7 @@ export function CatchBoundary() {
 
   return (
     <Document title={`${caught.status} ${caught.statusText}`}>
-      <p>
-        [CatchBoundary]: {caught.status} {caught.statusText}
-      </p>
+      {caught.status === 404 ? <NotFound /> : <ErrorPage />}
     </Document>
   );
 }
@@ -89,7 +89,7 @@ export function CatchBoundary() {
 export function ErrorBoundary({ error }: { error: Error }) {
   return (
     <Document title="Error!">
-      <p>[ErrorBoundary]: There was an error: {error.message}</p>
+      <ErrorPage />
     </Document>
   );
 }

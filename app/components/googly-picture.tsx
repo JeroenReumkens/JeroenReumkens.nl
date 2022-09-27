@@ -1,65 +1,13 @@
 import type { MouseEvent } from 'react';
-import { useMemo } from 'react';
 import { useState } from 'react';
 import { useRef } from 'react';
-import { forwardRef, useEffect } from 'react';
-import { animate } from 'motion';
-
-const googlyEyeYMin = -5;
-const googlyEyeYMax = 10;
-const googlyEyeXMin = -10;
-const googlyEyeXMax = 20;
-
-const setGooglyPosition = (x: number, y: number, wrapper: HTMLDivElement) => {
-  wrapper.style.setProperty('--googly-x', `${x}px`);
-  wrapper.style.setProperty('--googly-y', `${y}px`);
-};
-
-const randomNumberBetween = (min: number, max: number) =>
-  Math.floor(Math.random() * (max - min + 1) + min);
+import { forwardRef } from 'react';
+import { GoogleEyes, setGooglyPosition } from './google-eyes';
 
 export const GooglyPicture = forwardRef<HTMLImageElement>((_, ref) => {
   const [dogZoom, setDogZoom] = useState(1);
   const maxZoomReached = dogZoom > 8;
-  const leftEye = useRef<SVGCircleElement>(null);
-  const rightEye = useRef<SVGCircleElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
-
-  const imageDimensions = useMemo(() => {
-    if (!imageRef.current) return { width: 300, height: 600 };
-    return { width: imageRef.current.width, height: imageRef.current.height };
-  }, []);
-
-  /**
-   * Randomely moves googly eyes pupils.
-   */
-  useEffect(() => {
-    setInterval(() => {
-      if (!leftEye.current || !rightEye.current) return;
-
-      [leftEye.current, rightEye.current].forEach((eye) => {
-        animate(eye, {
-          y: randomNumberBetween(googlyEyeYMin, googlyEyeYMax),
-          x: randomNumberBetween(googlyEyeXMin, googlyEyeXMax),
-        });
-      });
-    }, 800);
-  }, []);
-
-  /**
-   * Randomely move around googly eyes wrapper over image.
-   */
-  useEffect(() => {
-    setInterval(() => {
-      if (ref && 'current' in ref && ref.current) {
-        setGooglyPosition(
-          Math.random() * imageDimensions.width,
-          Math.random() * imageDimensions.height,
-          ref.current
-        );
-      }
-    }, 3000);
-  }, [imageDimensions]);
 
   const updateCursorPos = (ev: MouseEvent<HTMLImageElement>) => {
     const rekt = ev.currentTarget.getBoundingClientRect();
@@ -91,34 +39,7 @@ export const GooglyPicture = forwardRef<HTMLImageElement>((_, ref) => {
         src="/img/who-dis.jpg"
         alt="Me wearing glasses, a white blouse and having a very short beard, sitting in a coffee bar."
       />
-      <svg
-        data-name="googly-eyes"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 110 56"
-        width="100%"
-        className="pointer-events-none absolute top-[0] left-[0] z-10 w-[100px] translate-x-[calc(var(--googly-x)-50px)] translate-y-[calc(var(--googly-y)+25px)] transition-transform"
-      >
-        <circle
-          fill="white"
-          strokeWidth={5}
-          stroke="black"
-          r="25"
-          cy="28"
-          cx="28"
-        />
-        <circle
-          fill="white"
-          strokeWidth={5}
-          stroke="black"
-          r="25"
-          cy="28"
-          cx="82"
-        />
-        <g transform="translate(8,5)">
-          <circle ref={leftEye} fill="black" r="10" cy="30" cx="25" />
-          <circle ref={rightEye} fill="black" r="10" cy="30" cx="65" />
-        </g>
-      </svg>
+      <GoogleEyes wrapperRef={ref} />
       <img
         loading="lazy"
         className="pointer-events-none absolute left-[0] top-[0] h-full w-full rounded-[inherit] object-cover opacity-0 transition-[opacity_clipPath] duration-500 ease-in-out peer-hover:opacity-100"

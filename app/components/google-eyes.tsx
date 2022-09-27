@@ -1,6 +1,7 @@
-import type { ForwardedRef, MutableRefObject, RefObject } from 'react';
+import type { ForwardedRef, RefObject } from 'react';
 import { useEffect, useMemo, useRef } from 'react';
 import { animate } from 'motion';
+import { randomNumberBetween } from '~/utils/random-number';
 
 export const setGooglyPosition = (
   x: number,
@@ -10,9 +11,6 @@ export const setGooglyPosition = (
   wrapper.style.setProperty('--googly-x', `${x}px`);
   wrapper.style.setProperty('--googly-y', `${y}px`);
 };
-
-const randomNumberBetween = (min: number, max: number) =>
-  Math.floor(Math.random() * (max - min + 1) + min);
 
 const googlyEyeYMin = -5;
 const googlyEyeYMax = 10;

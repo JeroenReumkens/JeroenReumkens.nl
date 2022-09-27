@@ -20,14 +20,15 @@ export const CtaButton = ({
   <NavLink
     to={to}
     className={classNames(
-      'text-[currentColor] inline-flex items-center border font-serif font-medium leading-tight transition-colors hover:bg-white hover:text-black',
+      'text-[currentColor] relative inline-flex items-center border font-serif font-medium leading-tight transition-colors hover:bg-white hover:text-black',
+      'before:absolute before:right-[-2rem] before:top-[-2rem] before:block before:rounded-md before:bg-yellow before:px-3 before:py-2 before:text-[1.8rem] before:text-black before:content-["soon"]',
       className,
       variant === 'large'
-        ? 'rounded-lg px-4 py-3 text-lg'
+        ? 'rounded-lg px-4 py-3 text-small sm:text-lg'
         : 'rounded-md px-3 py-2 text-small'
     )}
   >
-    <DoubleArrowIcon className="h-3 w-3" />
+    <DoubleArrowIcon className="min-h-3 min-w-3" />
     <span className="ml-3 flex flex-col">
       {children}
       {subtitle && <span className="text-small font-regular">{subtitle}</span>}

@@ -1,15 +1,59 @@
 import { useRef } from 'react';
 import { useMotion } from '~/utils/use-motion';
 import { GrainSection } from '~/components/grain-section';
-import { animate, scroll } from 'motion';
+import { animate, scroll, inView } from 'motion';
 import { SectionTitle } from '~/components/section-title';
 import { BadgeAndText } from '~/components/badge-and-text';
 import { CtaButton } from '~/components/cta-button';
+import classNames from 'classnames';
+import escape from 'lodash.escape';
+import { randomNumberBetween } from '~/utils/random-number';
+
+const Code = ({
+  code,
+  className,
+  grr,
+}: {
+  code: string;
+  className?: string;
+  grr?: boolean;
+}) => (
+  <pre
+    className={classNames(
+      'max-w-screen absolute inline',
+      grr && 'line-through',
+      className
+    )}
+    dangerouslySetInnerHTML={{ __html: escape(code) }}
+  />
+);
+
+const Key = ({
+  keyCode,
+  className,
+}: {
+  keyCode: string;
+  className?: string;
+}) => (
+  <span className={classNames('absolute text-small', className)}>
+    <span className="flex h-3 w-3 items-center justify-center rounded-[0.5rem] border p-4 font-mono shadow-[3px_3px_0_0_#ccc] sm:h-4 sm:w-4">
+      {keyCode}
+    </span>
+    <span className="flex h-3 w-3 translate-x-[1.5rem] translate-y-[-1rem] items-center justify-center rounded-[0.5rem] border p-4 font-mono shadow-[3px_3px_0_0_#ccc] sm:h-4 sm:w-4">
+      {keyCode}
+    </span>
+    <span className="flex h-3 w-3 translate-x-[3rem] translate-y-[-2rem] items-center justify-center rounded-[0.5rem] border p-4 font-mono shadow-[3px_3px_0_0_#ccc] sm:h-4 sm:w-4">
+      {keyCode}
+    </span>
+  </span>
+);
 
 export const DivingIntoFrontend = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const stickySectionRef = useRef<HTMLDivElement>(null);
   const stickyListRef = useRef<HTMLUListElement>(null);
+  const microSectionRef = useRef<HTMLLIElement>(null);
+  const microRef = useRef<HTMLDivElement>(null);
 
   useMotion([sectionRef], ([section]) => {
     scroll(
@@ -53,6 +97,46 @@ export const DivingIntoFrontend = () => {
     }
   );
 
+  useMotion([microRef], ([microEm]) => {
+    inView(microEm, (info) => {
+      animate(
+        info.target,
+        {
+          scale: [0.1, 1],
+          animationFillMode: 'forwards',
+        },
+        { delay: 0.5, direction: 'normal' }
+      );
+    });
+  });
+
+  useMotion(
+    [stickySectionRef, stickyListRef],
+    ([stickySection, stickyList]) => {
+      const listItems = stickyList.querySelectorAll('li');
+
+      listItems.forEach((listItem) => {
+        const animatables = listItem.querySelectorAll(
+          ':scope > span, :scope > pre, :scope > img'
+        );
+        if (!animatables.length) return;
+
+        animatables.forEach((item) => {
+          scroll(
+            animate(item, {
+              y: [0, `-${randomNumberBetween(65, 120)}%`],
+              x: [0, `-${randomNumberBetween(65, 120)}%`],
+            }),
+            {
+              target: stickySection,
+              offset: [0, 1],
+            }
+          );
+        });
+      });
+    }
+  );
+
   return (
     <GrainSection ref={sectionRef} color="black" className="overflow-clip py-5">
       <SectionTitle isTransparent>Diving into frontend</SectionTitle>
@@ -76,17 +160,168 @@ export const DivingIntoFrontend = () => {
         <div className="sticky top-[50%]">
           <ul
             ref={stickyListRef}
-            className="inline-flex flex-row flex-nowrap text-xl text-white sm:text-humongous [&_li]:mr-7 [&_li]:min-w-max [&_li]:flex-1"
+            className={classNames(
+              'inline-flex flex-row flex-nowrap text-xl text-white sm:text-humongous',
+              '[&_li]:relative [&_li]:mr-7 [&_li]:min-w-max [&_li]:flex-1',
+              '[&_pre]:pointer-events-none [&_pre]:z-0 [&_pre]:font-mono [&_pre]:text-small [&_pre]:opacity-30',
+              '[&_span]:pointer-events-none [&_span]:z-0 [&_span]:font-mono [&_span]:opacity-30',
+              '[&_img]:opacity-30'
+            )}
           >
-            <li>Accessibility</li>
-            <li>Design systems</li>
-            <li>Micro animations</li>
-            <li>Performance</li>
+            <li>
+              Accessibility
+              <Code
+                grr
+                className="left-[0] top-[-3rem]"
+                code="<div onClick={aBrokenExperience()}/>"
+              />
+              <Code
+                grr
+                className="left-[10vw] top-[130%]"
+                code="<button><FancyIconButNoScreenreaderLabelSadFace/></button>"
+              />
+              <Code
+                grr
+                className="right-[15vw] top-[-100%]"
+                code="<img alt='picture' />"
+              />
+              <Key className="left-[-10vw] top-[50%]" keyCode="Tab" />
+              <Key className="right-[-10vw] top-[-10vh]" keyCode="H" />
+            </li>
+            <li>
+              Design systems
+              <span className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 [&_span]:block [&_span]:h-4 [&_span]:bg-gray40">
+                <span className="w-1" />
+                <span className="w-2" />
+                <span className="w-3" />
+                <span className="w-4" />
+                <span className="w-5" />
+                <span className="w-6" />
+                <span className="w-7" />
+                <span className="w-8" />
+              </span>
+            </li>
+            <li ref={microSectionRef}>
+              <em ref={microRef} className="relative inline-block">
+                Micro
+              </em>{' '}
+              animations
+            </li>
+            <li className="[&_img]:block [&_img]:h-[5rem] [&_img]:w-[5rem] sm:[&_img]:h-[10rem] sm:[&_img]:w-[10rem]">
+              Performance
+              <img
+                className="absolute top-[-5rem] left-[-5rem]"
+                src="/img/loading.gif"
+                alt="Animated gif of an old skool loading spinner"
+              />
+              <img
+                className="absolute top-[0] left-[-30%]"
+                src="/img/loading.gif"
+                alt="Animated gif of an old skool loading spinner"
+              />
+              <img
+                className="absolute top-[-105%] left-[68%]"
+                src="/img/loading.gif"
+                alt="Animated gif of an old skool loading spinner"
+              />
+              <img
+                className="absolute top-[-100%] left-[12rem]"
+                src="/img/loading.gif"
+                alt="Animated gif of an old skool loading spinner"
+              />
+              <img
+                className="absolute top-[130%] left-[-2.4rem]"
+                src="/img/loading.gif"
+                alt="Animated gif of an old skool loading spinner"
+              />
+              <img
+                className="absolute top-[-145%] right-[-3rem]"
+                src="/img/loading.gif"
+                alt="Animated gif of an old skool loading spinner"
+              />
+              <img
+                className="absolute top-[195%] left-[50%]"
+                src="/img/loading.gif"
+                alt="Animated gif of an old skool loading spinner"
+              />
+              <img
+                className="absolute top-[-50%] left-[33%]"
+                src="/img/loading.gif"
+                alt="Animated gif of an old skool loading spinner"
+              />
+              <img
+                className="absolute top-[30%] left-[12%]"
+                src="/img/loading.gif"
+                alt="Animated gif of an old skool loading spinner"
+              />
+              <img
+                className="absolute top-[70%] right-[12%]"
+                src="/img/loading.gif"
+                alt="Animated gif of an old skool loading spinner"
+              />
+              <img
+                className="absolute top-[-5%] left-[50%]"
+                src="/img/loading.gif"
+                alt="Animated gif of an old skool loading spinner"
+              />
+              <img
+                className="absolute top-[100%] left-[30%]"
+                src="/img/loading.gif"
+                alt="Animated gif of an old skool loading spinner"
+              />
+              <img
+                className="absolute top-[-70%] right-[-4rem]"
+                src="/img/loading.gif"
+                alt="Animated gif of an old skool loading spinner"
+              />
+              <img
+                className="absolute top-[198%] left-[96%]"
+                src="/img/loading.gif"
+                alt="Animated gif of an old skool loading spinner"
+              />
+            </li>
             <li>Semantics</li>
             <li>Modern CSS</li>
-            <li>Automated testing</li>
-            <li>Browser APIs</li>
-            <li>Design details</li>
+            <li className="[&_span]:z-0 [&_span]:block [&_span]:text-lg sm:[&_span]:text-2xl">
+              Automated testing
+              <Code
+                className="left-[10vw] top-[130%]"
+                code="expect(thisWebsite.toWork()).toBe(true)"
+              />
+              <span className="absolute top-[-5rem] left-[-5rem]">✅</span>
+              <span className="absolute top-[0] left-[-30%]">✅</span>
+              <span className="absolute top-[-105%] left-[68%]">✅</span>
+              <span className="absolute top-[-100%] left-[12rem]">✅</span>
+              <span className="absolute top-[130%] left-[-2.4rem]">✅</span>
+              <span className="absolute top-[-145%] right-[-3rem]">✅</span>
+              <span className="absolute top-[195%] left-[50%]">✅</span>
+              <span className="absolute top-[-50%] left-[33%]">✅</span>
+              <span className="absolute top-[30%] left-[12%]">✅</span>
+              <span className="absolute top-[70%] right-[12%]">✅</span>
+              <span className="absolute top-[-5%] left-[50%]">✅</span>
+              <span className="absolute top-[100%] left-[30%]">✅</span>
+              <span className="absolute top-[-70%] right-[-4rem]">✅</span>
+              <span className="absolute top-[198%] left-[96%]">✅</span>
+            </li>
+            <li>
+              <img
+                className="pointer-events-none absolute top-[50%] left-[50%] z-0 h-[100vw] w-[100vw] -translate-x-1/2 -translate-y-1/2 opacity-20"
+                src="/img/gifs/explorer.gif"
+                alt="Animated gif of an old skool loading spinner"
+              />
+              Browser APIs
+            </li>
+            <li>
+              Design details
+              <Code
+                className="left-[7vw] top-[116%]"
+                code="I tried my best on this website 🥺"
+              />
+              <Code
+                className="left-[20vw] top-[150%]"
+                code="Imagine what pairing me up with an amazing designer could do... 😉"
+              />
+            </li>
             <li>SEO</li>
           </ul>
         </div>

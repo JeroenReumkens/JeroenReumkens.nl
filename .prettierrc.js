@@ -1,8 +1,7 @@
-const tailwind = require('prettier-plugin-tailwindcss')
+const tailwind = require('prettier-plugin-tailwindcss');
 
 module.exports = {
   singleQuote: true,
-  plugins: [
-    tailwind
-  ]
+  printWidth: 80,
+  plugins: [tailwind],
 };

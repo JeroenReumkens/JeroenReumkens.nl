@@ -124,8 +124,8 @@ export const DivingIntoFrontend = () => {
         animatables.forEach((item) => {
           scroll(
             animate(item, {
-              y: [0, `-${randomNumberBetween(65, 120)}%`],
-              x: [0, `-${randomNumberBetween(65, 120)}%`],
+              y: [0, `${randomNumberBetween(-20, 30)}vh`],
+              x: [0, `${randomNumberBetween(-60, -30)}vw`],
             }),
             {
               target: stickySection,
@@ -304,22 +304,20 @@ export const DivingIntoFrontend = () => {
               <span className="absolute top-[198%] left-[96%]">✅</span>
             </li>
             <li>
-              <img
-                className="pointer-events-none absolute top-[50%] left-[50%] z-0 h-[100vw] w-[100vw] -translate-x-1/2 -translate-y-1/2 opacity-20"
-                src="/img/gifs/explorer.gif"
-                alt="Animated gif of an old skool loading spinner"
-              />
+              <span className="absolute left-[0] top-[0] block h-full w-full">
+                <img
+                  className="pointer-events-none absolute top-[50%] left-[50%] z-0 h-[100vw] w-[100vw] -translate-x-1/2 -translate-y-1/2 opacity-20"
+                  src="/img/gifs/explorer.gif"
+                  alt="Animated gif of an old skool loading spinner"
+                />
+              </span>
               Browser APIs
             </li>
             <li>
               Design details
               <Code
-                className="left-[7vw] top-[116%]"
-                code="I tried my best on this website 🥺"
-              />
-              <Code
-                className="left-[20vw] top-[150%]"
-                code="Imagine what pairing me up with an amazing designer could do... 😉"
+                className="w-full max-w-[50rem] whitespace-normal"
+                code="I tried my best on this website 🥺 —Imagine what pairing me up with an amazing designer could do... 😉"
               />
             </li>
             <li>SEO</li>

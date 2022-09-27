@@ -21,7 +21,7 @@ export const BadgeAndText = ({
       isReverse && 'sm:flex-row-reverse sm:text-right'
     )}
   >
-    <div className="space-y-4 sm:w-[60%]">{children}</div>
+    <div className="space-y-4 sm:w-[50%]">{children}</div>
     <div className="mx-auto mt-4 max-w-md">
       <Badge
         illustrationAlt={illustrationAlt}

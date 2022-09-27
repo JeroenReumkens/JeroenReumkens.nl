@@ -3,6 +3,7 @@ import { GrainSection } from '~/components/grain-section';
 import { animate, scroll } from 'motion';
 import { GooglyPicture } from '~/components/googly-picture';
 import { useMotion } from '~/utils/use-motion';
+import { NavLink } from '@remix-run/react';
 
 if (
   typeof window !== 'undefined' &&
@@ -87,7 +88,11 @@ export const Intro = () => {
                 the web.
               </p>
               <p className="mb-2 text-small md:mb-5 md:text-body">
-                I also mentor teams & individuals, learn more.
+                I also mentor teams & individuals,{' '}
+                <NavLink className="underline" to="/mentoring">
+                  learn more
+                </NavLink>
+                .
               </p>
             </div>
           </div>

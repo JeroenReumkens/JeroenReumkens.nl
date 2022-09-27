@@ -1,5 +1,6 @@
 import { BadgeAndText } from '~/components/badge-and-text';
 import { Container } from '~/components/container';
+import { CtaButton } from '~/components/cta-button';
 import { SectionTitle } from '~/components/section-title';
 
 export const PastDecade = () => {
@@ -45,6 +46,13 @@ export const PastDecade = () => {
         <p>
           This make me realise that I needed to <em>&gt;= focus &lt;=</em>.
         </p>
+
+        <CtaButton
+          to="/about-jeroen"
+          subtitle="past work experience, projects, etc"
+        >
+          More about my experience
+        </CtaButton>
       </BadgeAndText>
     </Container>
   );

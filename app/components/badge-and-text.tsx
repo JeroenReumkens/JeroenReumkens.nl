@@ -18,7 +18,7 @@ export const BadgeAndText = ({
   <section
     className={classNames(
       'relative mb-4 flex flex-col justify-between py-3 font-serif text-body leading-tight last:mb-[0] sm:flex-row sm:text-xl [&_em]:font-mono [&_em]:text-[2.6rem] [&_em]:not-italic [&_em]:sm:text-[3.6rem]',
-      isReverse && 'flex-row-reverse sm:text-right'
+      isReverse && 'sm:flex-row-reverse sm:text-right'
     )}
   >
     <div className="space-y-4 sm:w-[60%]">{children}</div>

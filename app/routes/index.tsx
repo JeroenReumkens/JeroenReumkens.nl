@@ -7,6 +7,7 @@ import { Intro } from '~/sections/intro';
 import { OldSkoolWebsite } from '~/sections/old-skool-website';
 import { PastDecade } from '~/sections/past-decade';
 import { SharingMyPassion } from '~/sections/sharing-my-passion';
+import { ReadOn } from '~/sections/read-on';
 
 export default function Index() {
   return (
@@ -28,6 +29,7 @@ export default function Index() {
       <PastDecade />
       <DivingIntoFrontend />
       <SharingMyPassion />
+      <ReadOn />
       <Footer />
     </main>
   );

@@ -4,6 +4,7 @@ import { GrainSection } from '~/components/grain-section';
 import { animate, scroll } from 'motion';
 import { SectionTitle } from '~/components/section-title';
 import { BadgeAndText } from '~/components/badge-and-text';
+import { CtaButton } from '~/components/cta-button';
 
 export const DivingIntoFrontend = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -78,7 +79,7 @@ export const DivingIntoFrontend = () => {
         </div>
       </div>
 
-      <div className="flex text-lg leading-tight text-white">
+      <div className="mb-3 flex text-lg leading-tight text-white">
         <BadgeAndText
           isFullImage
           illustrationAlt=""
@@ -112,6 +113,12 @@ export const DivingIntoFrontend = () => {
             So yeah, I'm probably a bit opinionated. Something that's neccessary
             with the vast array of options in frontend world.
           </p>
+          <CtaButton
+            to="/my-vision-on-frontend"
+            subtitle="read more about how I approach frontend"
+          >
+            My vision on frontend
+          </CtaButton>
         </BadgeAndText>
       </div>
     </GrainSection>

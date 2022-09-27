@@ -20,7 +20,7 @@ export const Badge = ({
 }: BadgeProps) => (
   <div
     className={classNames(
-      'flex h-[250px] w-[180px] flex-col items-center overflow-hidden rounded-massive border sm:h-[500px] sm:w-[310px]',
+      'flex h-[250px] w-[180px] flex-col items-center overflow-hidden rounded-massive border shadow-hard sm:h-[500px] sm:w-[310px]',
       isReverse ? 'rotate-[-9deg]' : 'rotate-[9deg]'
     )}
   >

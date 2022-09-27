@@ -39,25 +39,25 @@ export const SharingMyPassion = () => {
       <div className="mt-5 flex flex-col justify-between text-body sm:flex-row">
         <div className="mb-4 space-y-3 rounded-massive border bg-white px-3 py-4 shadow-hard sm:mb-[0] sm:w-[calc(50%-2rem)] sm:px-4 sm:py-5">
           <h3 className="text-lg sm:text-2xl">For individuals</h3>
-          <p className="text-small sm:text-xl">
+          <p className="text-small sm:text-body">
             Frontend is huge. You might feel overwhelmed with all the things you
             could learn. Or you might feel "you know it all", but still get
             rejected when you apply for a job. Perhaps you still want to take
             the plunge into frontend and don't know where to start.
           </p>
 
-          <p className="text-small sm:text-xl">I'd love to help.</p>
+          <p className="text-small sm:text-body">I'd love to help.</p>
         </div>
         <div className="space-y-3 rounded-massive border bg-white px-3 py-4 shadow-hard sm:w-[calc(50%-2rem)] sm:px-4 sm:py-5">
           <h3 className="text-lg sm:text-2xl">For teams</h3>
-          <p className="text-small sm:text-xl">
+          <p className="text-small sm:text-body">
             Over the past years I've successfully build and taught multiple
             teams. I've upped their standards and helped them build great
             products. Build teams that are self-sustainable with this new
             quality.
           </p>
 
-          <p className="text-small sm:text-xl">
+          <p className="text-small sm:text-body">
             Looking at the current market, where it's really hard to find
             experienced engineers, I'm convinced I can bring very important
             value to existing teams to teach them these new standards and grow

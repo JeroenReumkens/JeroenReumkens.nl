@@ -24,6 +24,19 @@ export const DivingIntoFrontend = () => {
     );
   });
 
+  useMotion([sectionRef], ([section]) => {
+    scroll(
+      animate(section, {
+        borderBottomLeftRadius: [0, 'var(--responsive-massive-radius)'],
+        borderBottomRightRadius: [0, 'var(--responsive-massive-radius)'],
+      }),
+      {
+        target: section,
+        offset: ['end start', 'end end'],
+      }
+    );
+  });
+
   useMotion(
     [stickySectionRef, stickyListRef],
     ([stickySection, stickyList]) => {

@@ -37,7 +37,7 @@ export const SharingMyPassion = () => {
       </p>
 
       <div className="mt-5 flex flex-col justify-between text-body sm:flex-row">
-        <div className="sm:mb-0 mb-4 space-y-3 rounded-massive border bg-white px-4 py-5 shadow-hard sm:w-[calc(50%-2rem)]">
+        <div className="mb-4 space-y-3 rounded-massive border bg-white px-4 py-5 shadow-hard sm:mb-[0] sm:w-[calc(50%-2rem)]">
           <h3 className="text-2xl">For individuals</h3>
           <p>
             Frontend is huge. You might feel overwhelmed with all the things you

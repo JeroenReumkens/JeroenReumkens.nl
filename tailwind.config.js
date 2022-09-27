@@ -48,6 +48,7 @@ module.exports = {
       lg: '1280px',
     },
     borderRadius: {
+      md: '2rem',
       lg: '3.2rem',
       massive: 'var(--responsive-massive-radius)',
     },

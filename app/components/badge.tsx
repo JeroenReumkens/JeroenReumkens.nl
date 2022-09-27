@@ -27,6 +27,7 @@ export const Badge = ({
     {isFullImage ? (
       <span className="flex h-full w-full items-center justify-center bg-white">
         <img
+          loading="lazy"
           src={illustrationUrl}
           alt={illustrationAlt}
           width={illustrationWidth}
@@ -40,6 +41,7 @@ export const Badge = ({
       >
         <StarTwelveIcon />
         <img
+          loading="lazy"
           src={illustrationUrl}
           alt={illustrationAlt}
           width={illustrationWidth}

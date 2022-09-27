@@ -120,6 +120,7 @@ export const GooglyPicture = forwardRef<HTMLImageElement>((_, ref) => {
         </g>
       </svg>
       <img
+        loading="lazy"
         className="pointer-events-none absolute left-[0] top-[0] h-full w-full rounded-[inherit] object-cover opacity-0 transition-[opacity_clipPath] duration-500 ease-in-out peer-hover:opacity-100"
         style={
           {

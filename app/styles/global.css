@@ -76,7 +76,6 @@
     position: relative;
   }
   .grain::after {
-    /* 'after:z-0 after:block after:h-full after:w-full after:bg-[url(/img/noise.png)] after:bg-[length:300px_300px] after:bg-repeat after:mix-blend-overlay after:content-[\'""\']', */
     content: '';
     position: absolute;
     left: 0;

@@ -14,7 +14,9 @@ export default function Index() {
     <main className="[--responsive-massive-radius:60px] sm:[--responsive-massive-radius:120px]">
       <Intro />
       <Early2000s />
-      <div className="relative overflow-clip">
+      <div
+        className="relative overflow-clip safari-overflow-clip"
+      >
         <Container className="relative z-10">
           <img
             className="mx-auto -mt-6 mb-6 w-[600px] max-w-full md:ml-col"

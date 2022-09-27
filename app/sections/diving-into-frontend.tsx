@@ -138,7 +138,11 @@ export const DivingIntoFrontend = () => {
   );
 
   return (
-    <GrainSection ref={sectionRef} color="black" className="overflow-clip py-5">
+    <GrainSection
+      ref={sectionRef}
+      color="black"
+      className="safari-overflow-clip overflow-clip py-5"
+    >
       <SectionTitle isTransparent>Diving into frontend</SectionTitle>
       <div className="mx-auto my-5 w-full max-w-6xl space-y-4 text-center font-serif text-body text-white sm:text-xl">
         <p>

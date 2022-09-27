@@ -7,12 +7,13 @@ type GrainSectionProps = {
   color?: 'transparent' | 'black';
   className?: string;
   ref?: ForwardedRef<HTMLDivElement>;
+  style?: React.CSSProperties;
 };
 
 export const GrainSection: React.FC<GrainSectionProps> = forwardRef<
   HTMLDivElement,
   GrainSectionProps
->(({ children, color, className }, ref) => {
+>(({ children, color, className, style }, ref) => {
   return (
     <section
       ref={ref}
@@ -21,6 +22,7 @@ export const GrainSection: React.FC<GrainSectionProps> = forwardRef<
         !color || color === 'transparent' ? 'bg-transparent' : 'bg-gray80',
         className,
       ].join(' ')}
+      style={style}
     >
       <Container className="relative z-[1]">{children}</Container>
     </section>

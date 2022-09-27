@@ -89,4 +89,16 @@
     background-repeat: repeat;
     mix-blend-mode: overlay;
   }
+
+  @supports not (overflow: clip) {
+    /*
+      Sorry for the ugly scrollbara Safari users :(
+      Didn't want to make it a better experience for the small
+      group of users. Update to the latest MacOS and it works there too! :)
+    */
+    .safari-overflow-clip {
+      clip-path: inset(0 0 0 0);
+
+    }
+  }
 }

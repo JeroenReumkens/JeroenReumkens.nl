@@ -10,7 +10,7 @@ export const ErrorPage = () => {
       <div className="flex h-full flex-col items-center justify-center">
         <h1 className="text-5xl font-bold text-center text-2xl">Oh no.</h1>
         <p className="text-center text-xl">
-          It seems something broke.. We're unsure what exactly.
+          It seems something broke.. I'm unsure what exactly.
         </p>
 
         <CtaButton

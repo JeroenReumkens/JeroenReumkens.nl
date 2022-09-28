@@ -76,6 +76,7 @@
     position: relative;
   }
   .grain::after {
+    pointer-events: none;
     content: '';
     position: absolute;
     left: 0;

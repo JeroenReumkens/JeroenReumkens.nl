@@ -3,7 +3,6 @@ import { GrainSection } from '~/components/grain-section';
 import { animate, scroll } from 'motion';
 import { GooglyPicture } from '~/components/googly-picture';
 import { useMotion } from '~/utils/use-motion';
-import { NavLink } from '@remix-run/react';
 import { CtaButton } from '~/components/cta-button';
 
 if (
@@ -32,7 +31,7 @@ export const Intro = () => {
       }),
       {
         target: image,
-        offset: ['start start', -1.45],
+        offset: ['start start', 'end start'],
       }
     );
 

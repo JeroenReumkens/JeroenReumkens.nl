@@ -364,6 +364,7 @@ export const DivingIntoFrontend = () => {
             with the vast array of options in frontend world.
           </p>
           <CtaButton
+            soon
             to="/my-vision-on-frontend"
             subtitle="read more about how I approach frontend"
           >

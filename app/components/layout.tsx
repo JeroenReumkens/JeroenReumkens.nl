@@ -8,7 +8,7 @@ interface LayoutProps {
 export const Layout = ({ children }: LayoutProps) => {
   return (
     <main className="font-serif leading-tight [--responsive-massive-radius:60px] sm:[--responsive-massive-radius:120px]">
-      <header className="fixed top-[0] left-[0] z-10 hidden w-full text-body md:block">
+      <header className="fixed top-[0] left-[0] z-20 hidden w-full text-body md:block">
         <Container className="flex space-x-3 py-3 [&_a]:bg-white">
           <CtaButton to="/" variant="small" className="ml-auto">
             Home

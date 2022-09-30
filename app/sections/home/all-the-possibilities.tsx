@@ -3,6 +3,7 @@ import { Container } from '~/components/container';
 import { StarIcon } from '~/components/icons';
 import { useMotion } from '~/utils/use-motion';
 import { animate, scroll } from 'motion';
+import { HighlightText } from '~/components/highlight-text';
 
 export const AllThePossibilities = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -37,27 +38,13 @@ export const AllThePossibilities = () => {
   );
 
   return (
-    <Container
-      ref={containerRef}
-      className="py-5 font-serif text-body font-regular leading-tight sm:py-6 sm:text-2xl"
-    >
-      <p className="relative z-10 sm:w-[75%]">
-        Imagine me as a teenager, seeing all the possibilities!
-      </p>
-
-      <p className="relative mt-3 font-medium sm:mt-5 sm:ml-col sm:w-[60%]">
-        <StarIcon
-          ref={starLeftRef}
-          aria-hidden
-          className="pointer-events-none absolute -top-[200px] -z-0 h-6 w-6 rotate-12 sm:-left-[200px] sm:-top-[100px]"
-        />
-        <StarIcon
-          ref={starRightRef}
-          aria-hidden
-          className="pointer-events-none absolute top-full -right-[20px] -z-0 h-6 w-6 -rotate-12 sm:top-auto sm:-bottom-[20px] sm:-right-[100px]"
-        />
-        It sparked something inside me that is still there today...
-      </p>
+    <Container ref={containerRef} className="py-5 sm:py-6">
+      <HighlightText
+        line1="Imagine me as a teenager, seeing all the possibilities!"
+        line2="It sparked something inside me that is still there today..."
+        iconLeft={(props) => <StarIcon {...props} ref={starLeftRef} />}
+        iconRight={(props) => <StarIcon {...props} ref={starRightRef} />}
+      />
 
       <p className="relative z-10 mt-2 text-small sm:ml-col sm:max-w-[60%] sm:text-[4rem]">
         <span className="font-mono text-[1.4rem] sm:text-small">

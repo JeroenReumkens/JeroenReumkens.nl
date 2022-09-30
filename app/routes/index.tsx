@@ -1,5 +1,4 @@
 import { Container } from '~/components/container';
-import { Footer } from '~/components/footer';
 import { DivingIntoFrontend } from '~/sections/home/diving-into-frontend';
 import { AllThePossibilities } from '~/sections/home/all-the-possibilities';
 import { Early2000s } from '~/sections/home/early-2000s';
@@ -8,10 +7,11 @@ import { OldSkoolWebsite } from '~/sections/home/old-skool-website';
 import { PastDecade } from '~/sections/home/past-decade';
 import { SharingMyPassion } from '~/sections/home/sharing-my-passion';
 import { ReadOn } from '~/sections/home/read-on';
+import { Layout } from '~/components/layout';
 
 export default function Index() {
   return (
-    <main className="[--responsive-massive-radius:60px] sm:[--responsive-massive-radius:120px]">
+    <Layout>
       <Intro />
       <Early2000s />
       <div className="safari-overflow-clip relative overflow-clip">
@@ -30,7 +30,6 @@ export default function Index() {
       <DivingIntoFrontend />
       <SharingMyPassion />
       <ReadOn />
-      <Footer />
-    </main>
+    </Layout>
   );
 }

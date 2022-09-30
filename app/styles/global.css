@@ -40,6 +40,7 @@
     background-color: theme('colors.gray');
     font-size: 10px;
     min-height: 100%;
+    scroll-behavior: smooth;
   }
 
   body {

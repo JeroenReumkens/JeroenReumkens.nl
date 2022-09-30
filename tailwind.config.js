@@ -1,16 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  // See https://github.com/Acidic9/prettier-plugin-tailwind/issues/29 for the node env check
-  mode: process.env.NODE_ENV ? 'jit' : undefined,
+  mode: 'jit',
   content: ['./app/**/*.{ts,tsx}'],
   theme: {
     colors: {
       white: '#fff',
       gray: '#f4f4f4',
+      gray20: '#d3d3d3',
       gray40: '#656565',
       gray80: '#393939',
       black: '#111',
       yellow: '#f9ee8d',
+      yellow20: '#FBF8E4',
     },
     spacing: {
       1: '0.5rem',
@@ -41,6 +42,7 @@ module.exports = {
     },
     lineHeight: {
       tight: 1.19,
+      base: 1.29,
     },
     screens: {
       sm: '768px',

@@ -42,7 +42,7 @@ export const CtaButton = ({
     <LinkWrapper
       to={to}
       className={classNames(
-        'text-[currentColor] relative inline-flex items-center border text-left font-serif font-medium leading-tight shadow-hard transition-colors hover:bg-white hover:text-black',
+        'text-[currentColor] group relative inline-flex items-center border text-left font-serif font-medium leading-tight shadow-hard transition-colors hover:bg-white hover:text-black',
         soon &&
           'before:absolute before:right-[-2rem] before:top-[-2rem] before:block before:scale-[--sooner] before:rounded-md before:bg-yellow before:px-3 before:py-2 before:text-[1.8rem] before:text-black before:content-["soon"]',
         className,
@@ -51,7 +51,7 @@ export const CtaButton = ({
           : 'rounded-md px-3 py-2 text-small'
       )}
     >
-      <DoubleArrowIcon className="min-h-3 min-w-3 h-3 w-3" />
+      <DoubleArrowIcon className="min-h-3 min-w-3 h-3 w-3 transition-transform group-hover:translate-x-2" />
       <span className="ml-3 flex flex-col">
         {children}
         {subtitle && (

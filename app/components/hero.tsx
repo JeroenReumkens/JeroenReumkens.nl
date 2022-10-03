@@ -18,7 +18,7 @@ if (
 
 interface HeroProps {
   children: React.ReactNode;
-  bgTitle: string;
+  className?: string;
 }
 
 export const Title = ({ children }: { children: React.ReactNode }) => (
@@ -31,14 +31,12 @@ export const Title = ({ children }: { children: React.ReactNode }) => (
 );
 
 export const Intro = ({ children }: { children: React.ReactNode }) => (
-  <div className="flex h-full flex-col justify-center space-y-3 sm:mr-4 sm:w-1/2 md:w-[60%] md:max-w-[80rem]">
-    <div className="mb-2 space-y-3 text-small md:mb-3 md:text-body">
-      {children}
-    </div>
+  <div className="flex h-full flex-col justify-center space-y-3 sm:mr-4 sm:w-1/2 md:w-[60%]">
+    <div className="mb-2 text-small md:mb-3 md:text-body">{children}</div>
   </div>
 );
 
-export const Hero = ({ children, bgTitle }: HeroProps) => {
+export const Hero = ({ children, className }: HeroProps) => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useMotion([sectionRef], ([section]) => {
@@ -67,18 +65,17 @@ export const Hero = ({ children, bgTitle }: HeroProps) => {
   });
 
   return (
-    <>
-      <GrainSection
-        ref={sectionRef}
-        className={classNames(
-          'before:pointer-none flex items-center overflow-hidden rounded-b-massive pt-5 before:absolute before:left-[0] before:bottom-[0] before:z-0 before:flex before:h-6 before:w-full before:translate-x-[var(--grain-movement)] before:font-mono before:text-[32rem] before:leading-[0.68] before:tracking-[-3rem] before:opacity-[0.07] after:rounded-b-[inherit]',
-          `before:content-['${bgTitle}']`
-        )}
-      >
-        <div className="flex h-full flex-col items-center justify-start sm:flex-row">
-          {children}
-        </div>
-      </GrainSection>
-    </>
+    <GrainSection
+      ref={sectionRef}
+      className={classNames(
+        'before:pointer-none before:h-12 flex items-center overflow-hidden rounded-b-massive pt-5 before:absolute before:left-[0] before:bottom-[0] before:z-0 before:flex before:w-full before:translate-x-[var(--grain-movement)] before:font-mono before:text-[32rem] before:leading-[0.68] before:tracking-[-3rem] before:opacity-[0.07] after:rounded-b-[inherit]',
+        'before:content-[var(--bg-title)]',
+        className
+      )}
+    >
+      <div className="flex h-full flex-col items-start sm:flex-row md:items-center md:justify-center">
+        {children}
+      </div>
+    </GrainSection>
   );
 };

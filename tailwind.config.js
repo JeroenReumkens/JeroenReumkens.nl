@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: 'jit',
@@ -55,8 +57,13 @@ module.exports = {
       massive: 'var(--responsive-massive-radius)',
     },
     boxShadow: {
+      faded: '5px 5px 0 0 rgba(0,0,0,0.6)',
       hard: '5px 5px 0 0 rgba(0,0,0,1)',
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(({ addVariant }) => {
+      addVariant('current-child', '& [aria-current="page"]');
+    }),
+  ],
 };

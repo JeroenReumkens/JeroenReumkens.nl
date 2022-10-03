@@ -53,17 +53,20 @@ export const Layout = ({ children }: LayoutProps) => {
     <main className="font-serif leading-tight [--responsive-massive-radius:60px] sm:[--responsive-massive-radius:120px]">
       <header className="fixed top-[0] left-[0] z-20 hidden w-full text-body md:block">
         <Container className="relative flex pt-3 [&_a]:bg-white">
-          <nav ref={navRef} className="ml-auto space-x-3">
+          <nav
+            ref={navRef}
+            className="ml-auto space-x-3 current-child:shadow-faded"
+          >
             <CtaButton to="/" variant="small">
               Home
             </CtaButton>
             <CtaButton to="/mentoring" variant="small">
               Mentorship
             </CtaButton>
-            <CtaButton to="/" variant="small">
+            <CtaButton to="/about-jeroen" variant="small">
               About me
             </CtaButton>
-            <CtaButton to="/" variant="small">
+            <CtaButton to="#" variant="small" soon>
               My vision on frontend
             </CtaButton>
           </nav>
@@ -72,10 +75,13 @@ export const Layout = ({ children }: LayoutProps) => {
             ref={hamburgerRef}
             onClick={() => setIsNavVisible((visible) => !visible)}
             className={classNames(
-              'text-[currentColor] transition-color absolute right-[0] top-3 bottom-[0] rounded-md border bg-white px-3 opacity-0 shadow-hard',
+              'text-[currentColor] transition-color absolute right-4 top-3 bottom-[0] rounded-md border bg-white px-3 opacity-0 shadow-hard',
               isNavVisible && 'pointer-events-none'
             )}
           >
+            <span className="sr-only">
+              {isNavVisible ? 'hide' : 'show'} navigation
+            </span>
             <svg
               width="15px"
               height="15px"

@@ -13,7 +13,7 @@ export const Container = forwardRef<HTMLDivElement, ContainerProps>(
       id={id}
       ref={ref}
       className={classNames(
-        'mx-auto w-full max-w-[128rem] px-4 lg:px-[0]',
+        'mx-auto w-full max-w-[128rem] px-4 [@media(min-width:1320px)]:px-[0]',
         className
       )}
     >

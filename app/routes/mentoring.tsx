@@ -10,20 +10,20 @@ import { ForTeamsAndIndividuals } from '~/sections/shared/for-teams-and-individu
 export default function Mentoring() {
   return (
     <Layout>
-      <Hero bgTitle="Mentoring">
+      <Hero className='[--bg-title:"Mentoring"]'>
         <Intro>
           <Title>My mentorship</Title>
-          <p>
+          <p className="mb-3">
             Frontend is a craft — not a neccessary evil you need to do when
             building a website.
           </p>
-          <p>
+          <p className="mb-3">
             In order to build the best online experiences, you need engineers
             who make this their sole specialism.
           </p>
           <p>I want to help you become one of them.</p>
         </Intro>
-        <div className="mt-auto w-full sm:text-right [&_a]:inline-flex">
+        <div className="mt-4 sm:mt-auto sm:text-right [&_a]:inline-flex">
           <CtaButton to="https://superpeer.com/frontendfyi" className="mb-3">
             Schedule a call
           </CtaButton>
@@ -32,6 +32,7 @@ export default function Mentoring() {
           </CtaButton>
         </div>
       </Hero>
+
       <Container id="page-content" className="py-5 sm:py-6">
         <HighlightText
           line1="There is so many competition on the world wide web."
@@ -40,6 +41,7 @@ export default function Mentoring() {
           iconRight={SmileIcon}
         />
       </Container>
+
       <Container className="sm:text-md text-body leading-base md:text-lg">
         <SectionTitle className="mt-5 mb-4 md:mb-5 md:mt-6">
           What can I teach you?
@@ -87,7 +89,6 @@ export default function Mentoring() {
         <SectionTitle className="mt-5 mb-4 md:mb-5 md:mt-6">
           Example topics
         </SectionTitle>
-
         <h3 className="mt-3 text-lg font-medium sm:w-2/3 sm:text-xl md:mt-5">
           Technical things
         </h3>
@@ -136,6 +137,7 @@ export default function Mentoring() {
           </li>
           <li>Can you build enterprise software with React? (duh ;))</li>
         </ul>
+
         <SectionTitle className="mt-5 mb-4 md:mb-5 md:mt-6">
           For teams and individuals
         </SectionTitle>

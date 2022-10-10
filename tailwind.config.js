@@ -14,6 +14,7 @@ module.exports = {
       black: '#111',
       yellow: '#f9ee8d',
       yellow20: '#FBF8E4',
+      transparent: 'transparent',
     },
     spacing: {
       1: '0.5rem',

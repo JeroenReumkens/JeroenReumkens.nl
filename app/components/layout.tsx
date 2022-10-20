@@ -1,3 +1,4 @@
+import { Link } from '@remix-run/react';
 import classNames from 'classnames';
 import { animate, stagger } from 'motion';
 import { useEffect, useRef, useState } from 'react';
@@ -5,6 +6,7 @@ import { useScrollDepth, useWindowWidth } from '~/utils/use-window';
 import { Container } from './container';
 import { CtaButton } from './cta-button';
 import { Footer } from './footer';
+import { HomeIcon } from './icons/home';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -12,6 +14,7 @@ interface LayoutProps {
 export const Layout = ({ children }: LayoutProps) => {
   const navRef = useRef<HTMLDivElement>(null);
   const hamburgerRef = useRef<HTMLButtonElement>(null);
+  const homeRef = useRef<HTMLAnchorElement>(null);
   const width = useWindowWidth();
   const [isNavVisible, setIsNavVisible] = useState(width >= 1024);
   const scrollY = useScrollDepth();
@@ -29,6 +32,7 @@ export const Layout = ({ children }: LayoutProps) => {
   useEffect(() => {
     const links = navRef.current?.querySelectorAll('a');
     const hamburger = hamburgerRef.current;
+    const home = homeRef.current;
     if (!links || !hamburger) {
       return;
     }
@@ -58,7 +62,7 @@ export const Layout = ({ children }: LayoutProps) => {
         }
       );
       animate(
-        hamburger,
+        home ? [hamburger, home] : hamburger,
         isNavVisible ? { opacity: 0, x: 30 } : { opacity: 1, x: 0 },
         { delay: stagger(0.1, { start: isNavVisible ? 0 : 0.5 }) }
       );
@@ -97,11 +101,23 @@ export const Layout = ({ children }: LayoutProps) => {
             </Container>
           </nav>
 
+          <Link
+            ref={homeRef}
+            to="/"
+            className={classNames(
+              'transition-color absolute right-[120px] top-[20px] flex h-[60px] w-[60px] items-center justify-center rounded-md border bg-white px-3 text-[currentColor] shadow-hard md:opacity-0 lg:right-[80px]',
+              isNavVisible && 'hidden md:pointer-events-none md:flex'
+            )}
+          >
+            <span className="sr-only">Go back home</span>
+            <HomeIcon />
+          </Link>
+
           <button
             ref={hamburgerRef}
             onClick={() => setIsNavVisible((visible) => !visible)}
             className={classNames(
-              'text-[currentColor] transition-color absolute right-4 top-3 bottom-[0] rounded-md border bg-white px-3 shadow-hard md:opacity-0 lg:right-[0]',
+              'transition-color absolute right-4 top-3 bottom-[0] h-[60px] w-[60px] rounded-md border bg-white px-3 text-[currentColor] shadow-hard md:opacity-0 lg:right-[0]',
               isNavVisible && 'md:pointer-events-none'
             )}
           >

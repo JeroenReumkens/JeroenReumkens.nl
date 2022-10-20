@@ -1,7 +1,7 @@
 import { NavLink } from '@remix-run/react';
 import classNames from 'classnames';
 import { Container } from '~/components/container';
-import { DoubleArrowIcon } from '~/components/icons/double-arrow';
+import { DoubleArrowIcon } from '~/components/icons';
 import { SectionTitle } from '~/components/section-title';
 
 interface CtaProps {

@@ -20,7 +20,8 @@
     "lodash.escape": "^4.0.1",
     "motion": "^10.14.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tailwind": "^4.0.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.7.1",

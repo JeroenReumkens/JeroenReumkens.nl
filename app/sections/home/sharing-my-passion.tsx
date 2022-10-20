@@ -1,6 +1,6 @@
 import { Container } from '~/components/container';
 import { SectionTitle } from '~/components/section-title';
-import { GlobeIcon } from '~/components/icons/globe';
+import { GlobeIcon } from '~/components/icons';
 import { CtaButton } from '~/components/cta-button';
 import { HighlightText } from '~/components/highlight-text';
 import { ForTeamsAndIndividuals } from '../shared/for-teams-and-individuals';

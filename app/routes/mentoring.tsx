@@ -2,7 +2,7 @@ import { Container } from '~/components/container';
 import { CtaButton } from '~/components/cta-button';
 import { Hero, Intro, Title } from '~/components/hero';
 import { HighlightText } from '~/components/highlight-text';
-import { SmileIcon } from '~/components/icons/smile';
+import { SmileIcon } from '~/components/icons';
 import { Layout } from '~/components/layout';
 import { SectionTitle } from '~/components/section-title';
 import { ForTeamsAndIndividuals } from '~/sections/shared/for-teams-and-individuals';

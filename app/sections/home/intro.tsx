@@ -44,10 +44,10 @@ export const Intro = () => {
           </p>
         </div>
 
-        <p className="mt-5 text-small">
+        <p className="mt-5 flex flex-col items-start text-small md:block">
           <CtaButton
             variant="small"
-            className="mr-3"
+            className="mr-3 mb-3 md:mb-[0]"
             to="/mentoring"
             subtitle="for teams and individuals"
           >

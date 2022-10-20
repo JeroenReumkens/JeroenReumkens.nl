@@ -8,7 +8,7 @@ import { ForTeamsAndIndividuals } from '../shared/for-teams-and-individuals';
 export const SharingMyPassion = () => {
   return (
     <Container className="pt-5 sm:pt-6">
-      <SectionTitle className="mb-5">Sharing my passion</SectionTitle>
+      <SectionTitle>Sharing my passion</SectionTitle>
 
       <HighlightText
         line1="The past years I've been focussing more and more on sharing my passion."

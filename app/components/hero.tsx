@@ -42,7 +42,8 @@ export const Hero = ({ children, className }: HeroProps) => {
   useMotion([sectionRef], ([section]) => {
     scroll(
       animate(section, {
-        borderRadius: ['var(--responsive-massive-radius)', 0],
+        borderBottomLeftRadius: ['var(--responsive-massive-radius)', 0],
+        borderBottomRightRadius: ['var(--responsive-massive-radius)', 0],
       }),
       {
         target: section,

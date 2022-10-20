@@ -43,9 +43,7 @@ export default function Mentoring() {
       </Container>
 
       <Container className="sm:text-md text-body leading-base md:text-lg">
-        <SectionTitle className="mt-5 mb-4 md:mb-5 md:mt-6">
-          What can I teach you?
-        </SectionTitle>
+        <SectionTitle>What can I teach you?</SectionTitle>
         <div className="flex flex-col md:flex-row">
           <div className="mb-4 space-y-4 pr-4 md:mb-[0] md:w-1/2">
             <p>
@@ -86,9 +84,7 @@ export default function Mentoring() {
           </div>
         </div>
 
-        <SectionTitle className="mt-5 mb-4 md:mb-5 md:mt-6">
-          Example topics
-        </SectionTitle>
+        <SectionTitle>Example topics</SectionTitle>
         <h3 className="mt-3 text-lg font-medium sm:w-2/3 sm:text-xl md:mt-5">
           Technical things
         </h3>
@@ -138,9 +134,7 @@ export default function Mentoring() {
           <li>Can you build enterprise software with React? (duh ;))</li>
         </ul>
 
-        <SectionTitle className="mt-5 mb-4 md:mb-5 md:mt-6">
-          For teams and individuals
-        </SectionTitle>
+        <SectionTitle>For teams and individuals</SectionTitle>
         <p className="text-center">
           It doesn't matter if you're a student, a freelancer, an individual at
           a company or the manager of a team. I think I can add value to all of

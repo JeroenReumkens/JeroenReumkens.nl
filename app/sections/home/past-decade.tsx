@@ -6,7 +6,7 @@ import { SectionTitle } from '~/components/section-title';
 export const PastDecade = () => {
   return (
     <Container className="mb-5">
-      <SectionTitle className="mb-4">The past decade</SectionTitle>
+      <SectionTitle>The past decade</SectionTitle>
       <BadgeAndText
         illustrationAlt="Old skool spining logo of the best browser ever made"
         illustrationTitle="Webmaster"
@@ -44,7 +44,8 @@ export const PastDecade = () => {
         </p>
 
         <p>
-          This make me realise that I needed to <em>&gt;= focus &lt;=</em>.
+          This made me realise that I needed to <em>&gt;= focus &lt;=</em> and
+          specialise myself on frontend.
         </p>
 
         <CtaButton

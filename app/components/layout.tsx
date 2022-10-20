@@ -94,14 +94,6 @@ export const Layout = ({ children }: LayoutProps) => {
               >
                 About me
               </CtaButton>
-              <CtaButton
-                className="w-full md:w-auto"
-                to="#"
-                variant="small"
-                soon
-              >
-                My vision on frontend
-              </CtaButton>
             </Container>
           </nav>
 

@@ -8,6 +8,15 @@ import { PastDecade } from '~/sections/home/past-decade';
 import { SharingMyPassion } from '~/sections/home/sharing-my-passion';
 import { ReadOn } from '~/sections/home/read-on';
 import { Layout } from '~/components/layout';
+import type { MetaFunction } from '@remix-run/node';
+
+export const meta: MetaFunction = () => {
+  return {
+    title: 'Jeroen Reumkens — Frontend mentor',
+    description:
+      'Jeroen is a passionate frontend engineer who loves to help others become beter frontenders too.',
+  };
+};
 
 export default function Index() {
   return (

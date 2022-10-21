@@ -1,3 +1,4 @@
+import type { MetaFunction } from '@remix-run/node';
 import { Container } from '~/components/container';
 import { CtaButton } from '~/components/cta-button';
 import { Hero, Intro, Title } from '~/components/hero';
@@ -6,6 +7,14 @@ import { SmileIcon } from '~/components/icons';
 import { Layout } from '~/components/layout';
 import { SectionTitle } from '~/components/section-title';
 import { ForTeamsAndIndividuals } from '~/sections/shared/for-teams-and-individuals';
+
+export const meta: MetaFunction = () => {
+  return {
+    title: 'Mentoring | Jeroen Reumkens — Frontend mentor',
+    description:
+      'I see frontend as a craft and an everlearning journey — a journey on which I love to take you, while teaching you a few things along the way.',
+  };
+};
 
 export default function Mentoring() {
   return (

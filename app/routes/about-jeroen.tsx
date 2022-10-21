@@ -5,6 +5,15 @@ import { Layout } from '~/components/layout';
 import { SectionTitle } from '~/components/section-title';
 import { MyTimeline } from '~/sections/shared/my-timeline';
 import { AwardIcon } from '~/components/icons';
+import type { MetaFunction } from '@remix-run/node';
+
+export const meta: MetaFunction = () => {
+  return {
+    title: 'About me | Jeroen Reumkens — Frontend mentor',
+    description:
+      'Jeroen is a frontend engineer with a passion for the web, trying to make people smile when using this products.',
+  };
+};
 
 export default function AboutJeroen() {
   return (

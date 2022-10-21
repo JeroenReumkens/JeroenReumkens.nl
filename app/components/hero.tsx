@@ -69,7 +69,7 @@ export const Hero = ({ children, className }: HeroProps) => {
     <GrainSection
       ref={sectionRef}
       className={classNames(
-        'before:pointer-none before:h-12 flex items-center overflow-hidden rounded-b-massive pt-5 before:absolute before:left-[0] before:bottom-[0] before:z-0 before:flex before:w-full before:translate-x-[var(--grain-movement)] before:font-mono before:text-[32rem] before:leading-[0.68] before:tracking-[-3rem] before:opacity-[0.07] after:rounded-b-[inherit]',
+        'before:pointer-none before:h-12 flex items-center overflow-hidden rounded-b-massive pt-6 before:absolute before:left-[0] before:bottom-[0] before:z-0 before:flex before:w-full before:translate-x-[var(--grain-movement)] before:font-mono before:text-[32rem] before:leading-[0.68] before:tracking-[-3rem] before:opacity-[0.07] after:rounded-b-[inherit] md:pt-5',
         'before:content-[var(--bg-title)]',
         className
       )}

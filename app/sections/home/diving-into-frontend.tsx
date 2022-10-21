@@ -4,7 +4,6 @@ import { GrainSection } from '~/components/grain-section';
 import { animate, scroll, inView } from 'motion';
 import { SectionTitle } from '~/components/section-title';
 import { BadgeAndText } from '~/components/badge-and-text';
-import { CtaButton } from '~/components/cta-button';
 import classNames from 'classnames';
 import escape from 'lodash.escape';
 import { randomNumberBetween } from '~/utils/random-number';
@@ -363,13 +362,6 @@ export const DivingIntoFrontend = () => {
             So yeah, I'm probably a bit opinionated. Something that's neccessary
             with the vast array of options in frontend world.
           </p>
-          <CtaButton
-            soon
-            to="/my-vision-on-frontend"
-            subtitle="read more about how I approach frontend"
-          >
-            My vision on frontend
-          </CtaButton>
         </BadgeAndText>
       </div>
     </GrainSection>

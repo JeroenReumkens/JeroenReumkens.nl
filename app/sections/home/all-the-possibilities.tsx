@@ -46,7 +46,7 @@ export const AllThePossibilities = () => {
         iconRight={(props) => <StarIcon {...props} ref={starRightRef} />}
       />
 
-      <p className="relative z-10 mt-2 text-small sm:ml-col sm:max-w-[60%] sm:text-[4rem]">
+      <p className="relative z-10 mt-2 max-w-[80%] text-small sm:ml-col sm:max-w-[60%] sm:text-[4rem]">
         <span className="font-mono text-[1.4rem] sm:text-small">
           &lt;==&lt;
         </span>{' '}

@@ -4,33 +4,23 @@ import { Badge } from './badge';
 
 interface BadgeAndTextProps {
   children: React.ReactNode;
+  isReverse?: boolean;
 }
 
 export const BadgeAndText = ({
   children,
-  illustrationTitle,
-  illustrationUrl,
-  illustrationWidth,
-  illustrationAlt,
   isReverse,
-  isFullImage,
+  ...badgeProps
 }: BadgeAndTextProps & BadgeProps) => (
   <section
     className={classNames(
-      'relative mb-4 flex flex-col justify-between py-3 font-serif text-body leading-tight last:mb-[0] sm:flex-row sm:text-xl [&_em]:font-mono [&_em]:text-[2.6rem] [&_em]:not-italic [&_em]:sm:text-[3.6rem]',
-      isReverse && 'sm:flex-row-reverse sm:text-right'
+      'relative mb-4 flex flex-col items-center justify-between py-3 font-serif text-body leading-tight last:mb-[0] sm:flex-row sm:text-lg [&_em]:font-mono [&_em]:text-[2.6rem] [&_em]:not-italic [&_em]:sm:text-[3.6rem]',
+      isReverse && 'sm:flex-row-reverse'
     )}
   >
-    <div className="space-y-4 sm:w-[50%]">{children}</div>
-    <div className="mx-auto mt-4 max-w-md">
-      <Badge
-        illustrationAlt={illustrationAlt}
-        illustrationTitle={illustrationTitle}
-        illustrationUrl={illustrationUrl}
-        illustrationWidth={illustrationWidth}
-        isFullImage={isFullImage}
-        isReverse={isReverse}
-      />
+    <div className="w-full space-y-4 sm:w-1/2">{children}</div>
+    <div className="mx-auto mt-4 w-full sm:w-1/2">
+      <Badge {...badgeProps} />
     </div>
   </section>
 );

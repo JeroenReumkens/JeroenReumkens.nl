@@ -5,7 +5,7 @@ import { useMotion } from '~/utils/use-motion';
 export const OldSkoolWebsiteFrame = forwardRef<HTMLDivElement>((_, ref) => (
   <div
     ref={ref}
-    className="sticky top-[0] h-screen max-h-[100vw] w-full bg-[url(/img/planets.jpeg)] sm:max-h-screen [&_img]:max-w-[100vw]"
+    className="sticky top-[120px] h-screen max-h-[100vw] w-full bg-[url(/img/planets.jpeg)] sm:max-h-screen md:top-[0] [&_img]:max-w-[100vw]"
   >
     <div className="flex h-full w-full">
       <div className="relative z-10 min-w-[20%] overflow-scroll border-r border-r-[#999] bg-[url(/img/planets.jpeg)] bg-[length:100px_100px] shadow-[1px_0_0_0_rgb(237,237,237)] sm:w-[15%] sm:min-w-0">

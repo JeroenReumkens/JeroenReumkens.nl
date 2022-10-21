@@ -4,7 +4,6 @@ interface BadgeBaseProps {
   illustrationTitle: string;
   illustrationUrl: string;
   illustrationAlt: string;
-  isReverse?: boolean;
 }
 
 export type BadgeProps = BadgeBaseProps | BageFullImageProps;
@@ -18,13 +17,11 @@ export const Badge = ({
   illustrationTitle,
   illustrationUrl,
   illustrationAlt,
-  isReverse,
   ...props
 }: BadgeProps) => (
   <div
     className={classNames(
-      'flex h-[250px] w-[180px] flex-col items-center justify-center overflow-hidden rounded-massive border shadow-hard sm:h-[500px] sm:w-[310px]',
-      isReverse ? 'rotate-[-9deg]' : 'rotate-[9deg]'
+      'mx-auto flex h-[350px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border shadow-hard sm:h-[500px] sm:w-[400px] sm:max-w-[90%] sm:rounded-massive'
     )}
   >
     {'isFullImage' in props && props.isFullImage ? (
@@ -38,7 +35,7 @@ export const Badge = ({
         />
       </span>
     ) : (
-      <span className="flex h-full min-w-full items-center justify-center">
+      <span className="flex h-full min-w-full items-center justify-center bg-white">
         <figure className="h-[90px] w-[90px] sm:h-[180px] sm:w-[180px]">
           <img
             loading="lazy"
@@ -55,7 +52,7 @@ export const Badge = ({
         </figure>
       </span>
     )}
-    <div className="grain mt-auto flex min-h-[40%] w-full items-center justify-center overflow-clip rounded-b-massive bg-gray40 px-2 text-center font-mono text-small uppercase text-white sm:text-body">
+    <div className="grain mt-auto flex min-h-[40%] w-full items-center justify-center overflow-clip rounded-b-lg bg-gray40 px-2 text-center font-mono text-small uppercase text-white sm:rounded-b-massive sm:text-body">
       {illustrationTitle}
     </div>
   </div>

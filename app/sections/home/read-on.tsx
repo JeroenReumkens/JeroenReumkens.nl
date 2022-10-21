@@ -15,7 +15,7 @@ const Cta = ({ children, to, soon }: CtaProps) => {
     <NavLink
       to={to}
       className={classNames(
-        'group relative mb-2 inline-flex w-full flex-col justify-center rounded-lg border bg-white p-3 shadow-hard sm:mb-3 sm:p-4 md:mb-[0] md:h-[300px] md:w-[32%]',
+        'group relative mb-2 inline-flex w-full flex-col justify-center rounded-lg border bg-white p-3 pr-5 shadow-hard sm:mb-3 sm:p-4 md:mb-[0] md:h-[300px] md:w-[32%]',
         soon &&
           'before:absolute before:right-[-2rem] before:top-[-2rem] before:block before:rounded-md before:bg-gray80 before:px-3 before:py-2 before:text-[1.8rem] before:text-white before:content-["soon"]'
       )}

@@ -43,10 +43,11 @@ export function links() {
 
 export const meta: MetaFunction = () => ({
   charset: 'utf-8',
-  title: 'Jeroen Reumkens',
+  title: 'Jeroen Reumkens — Frontend mentor',
   viewport: 'width=device-width,initial-scale=1',
   'msapplication-TileColor': '#393939',
   'theme-color': '#393939',
+  'og:image': '/og-image.jpg',
 });
 
 interface DocumentProps {

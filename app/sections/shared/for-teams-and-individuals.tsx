@@ -11,7 +11,7 @@ export const ForTeamsAndIndividuals = () => (
 
       <p className="text-small md:text-body">I'd love to help.</p>
 
-      <p className="text-small italic md:text-body">
+      <p className="text-small italic md:text-small">
         PS: If you're an individual at a company, usually there's education
         budget available. Using that on mentor sessions with me might be a very
         good way to spend that money! <span className="not-italic">😉</span>
@@ -22,7 +22,7 @@ export const ForTeamsAndIndividuals = () => (
       <p className="text-small md:text-body">
         Over the past years I've successfully build and taught multiple teams.
         I've upped their standards and helped them build great products. Build
-        teams that are self-sustainable with this new quality.
+        teams that are self-sustainable with this new standard.
       </p>
 
       <p className="text-small md:text-body">

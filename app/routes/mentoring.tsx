@@ -23,14 +23,16 @@ export default function Mentoring() {
         <Intro>
           <Title>My mentorship</Title>
           <p className="mb-3">
-            Frontend is a craft — not a neccessary evil you need to do when
-            building a website.
+            Frontend is a craft — not a neccessary evil when building a website.
           </p>
           <p className="mb-3">
-            In order to build the best online experiences, you need engineers
-            who make this their sole specialism.
+            Giving frontend proper love is a key ingredient to building products
+            that will stand out.
           </p>
-          <p>I want to help you become one of them.</p>
+          <p>
+            Building these experiences, requires engineers who make this their
+            sole specialism. I want to help you become one of them.
+          </p>
         </Intro>
         <div className="mt-4 sm:mt-auto sm:text-right [&_a]:inline-flex">
           <CtaButton to="https://superpeer.com/frontendfyi" className="mb-3">
@@ -51,46 +53,58 @@ export default function Mentoring() {
         />
       </Container>
 
-      <Container className="sm:text-md text-body leading-base md:text-lg">
+      <Container className="sm:text-md text-body leading-base md:text-body">
         <SectionTitle>What can I teach you?</SectionTitle>
-        <div className="flex flex-col md:flex-row">
-          <div className="mb-4 space-y-4 pr-4 md:mb-[0] md:w-1/2">
-            <p>
-              My goal is to teach people creating the best online experiences
-              out there. I do this by making frontend the most important piece
-              of the puzzle. I'll teach you how to{' '}
-              <strong>make the craziest things with CSS</strong> — heck even
-              fall in love with CSS. I will show you there's a whole group of{' '}
-              <strong>
-                visually impaired people out there who also try to use the web
-              </strong>
-              , or{' '}
-              <strong>people who don't have the same speedy internet</strong> as
-              you might have in your home office.
-            </p>
+        <div className="mb-4 space-y-4 pr-4 md:mb-[0] md:ml-col md:w-2/3">
+          <p>
+            Nowadays frontend is a very extensive field. Every week there seem
+            to be popping up a new standards, browsers are adopting new features
+            quicker than ever before and you can build pretty much anything with
+            frontend tooling. Where do you even start improving yourself? Will
+            you ever have to time to learn it all?!
+          </p>
 
-            <p className="grain rounded-md bg-gray p-3 text-body shadow-hard">
-              So in short; I will show you areas of frontend you never knew
-              existed. That includes anything from CSS, accessibility,
-              performance, JavaScript/TypeScript, to library specific things
-              like React or NextJS or more technical things like generating
-              types from your backend API's to make frontend life easier.
-            </p>
-          </div>
-          <div className="space-y-4 md:w-1/2">
-            <p>
-              Transferring my passion for frontend to others. That's actually
-              what I try to achieve.
-            </p>
+          <p>
+            Exactly why I am opinionated (I don't do Angular 😉{' '}
+            <small>
+              — huge fan of React, but always open for new things on the horizon
+            </small>
+            ). I'm convinced that if you want to grow in frontend, you need to
+            focus. Focus on the things that are important right now, don't jump
+            on every hype train and <u>focus on the fundamentals</u> of
+            frontend. These fundamentals apply to every new framework that comes
+            around.
+          </p>
 
-            <p>
-              However, besides all the technical stuff, I've also worked in a
-              lot of different teams and with a lot of different clients. Many
-              of them also requiring me to grow in my soft skills. Saying no to
-              a client or your boss? That's scary right! I'm sure I'll have some
-              great advice in that as well.
-            </p>
-          </div>
+          <p>
+            My goal is to teach you create online experiences that{' '}
+            <u>stand out</u>, by making frontend the most important piece of the
+            puzzle. I'll teach you to make the craziest things with CSS — even
+            fall in love with CSS. I will show you there's a whole group of
+            visually impaired people out there who also try to use the web, or
+            people who don't have the same speedy internet as you. I will also
+            convince you that TypeScript is not as scary as you might think 🫣.
+          </p>
+
+          <p>
+            I will show you areas of frontend you never knew existed. That
+            includes anything from CSS, accessibility, performance,
+            JavaScript/TypeScript, to library specific things like React or
+            NextJS, or more technical things like generating types from your
+            backend API's to make frontend life easier.
+          </p>
+
+          <p>
+            I will make you a frontend engineer that will stand out above the
+            rest.
+          </p>
+
+          <p className="italic">
+            Besides all the technical stuff, I've also worked in a lot of
+            different teams and with a lot of different clients. Many of them
+            also requiring me to grow in my soft skills. I'm sure I'll have some
+            great advice in that as well.
+          </p>
         </div>
 
         <SectionTitle>Example topics</SectionTitle>

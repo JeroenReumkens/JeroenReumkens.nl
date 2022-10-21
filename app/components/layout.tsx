@@ -1,20 +1,31 @@
 import { Link } from '@remix-run/react';
 import classNames from 'classnames';
+import type { ElementOrSelector } from 'motion';
 import { animate, stagger } from 'motion';
 import { useEffect, useRef, useState } from 'react';
 import { useScrollDepth, useWindowWidth } from '~/utils/use-window';
 import { Container } from './container';
 import { CtaButton } from './cta-button';
 import { Footer } from './footer';
+import { HamburgerIcon } from './icons';
 import { HomeIcon } from './icons/home';
 
 interface LayoutProps {
   children: React.ReactNode;
 }
+
+const staggerAnimation = (elements: ElementOrSelector, isVisible: boolean) =>
+  animate(elements, isVisible ? { x: 0, opacity: 1 } : { x: 30, opacity: 0 }, {
+    delay: stagger(0.1, {
+      start: !isVisible ? 0 : 0.5,
+      from: isVisible ? 'first' : 'last',
+    }),
+  });
+
 export const Layout = ({ children }: LayoutProps) => {
   const navRef = useRef<HTMLDivElement>(null);
-  const hamburgerRef = useRef<HTMLButtonElement>(null);
-  const homeRef = useRef<HTMLAnchorElement>(null);
+  const iconsRef = useRef<HTMLDivElement>(null);
+
   const width = useWindowWidth();
   const [isNavVisible, setIsNavVisible] = useState(width >= 1024);
   const scrollY = useScrollDepth();
@@ -31,41 +42,20 @@ export const Layout = ({ children }: LayoutProps) => {
 
   useEffect(() => {
     const links = navRef.current?.querySelectorAll('a');
-    const hamburger = hamburgerRef.current;
-    const home = homeRef.current;
-    if (!links || !hamburger) {
+    const icons = iconsRef.current?.querySelectorAll('a, button');
+
+    if (!links || !icons) {
       return;
     }
 
     if (width < 1024) {
       // Removes any existing inline styles (set by animations). This ensures there's
-      // no animation styles sticking around on mobile.
-      // if (links) links.forEach((link) => link.removeAttribute('style'));
-      if (hamburger) hamburger.removeAttribute('style');
-
-      animate(
-        links,
-        isNavVisible ? { y: 0, x: 0, opacity: 1 } : { y: 30, x: 0, opacity: 0 },
-        {
-          delay: stagger(0.1),
-        }
-      );
+      // no animation styles sticking around on mobile if user resized their screen.
+      if (icons) icons.forEach((icon) => icon.removeAttribute('style'));
+      staggerAnimation(links, isNavVisible);
     } else {
-      animate(
-        links,
-        isNavVisible ? { x: 0, opacity: 1 } : { x: 30, opacity: 0 },
-        {
-          delay: stagger(0.1, {
-            start: isNavVisible ? 0.5 : 0,
-            from: isNavVisible ? 'last' : 'first',
-          }),
-        }
-      );
-      animate(
-        home ? [hamburger, home] : hamburger,
-        isNavVisible ? { opacity: 0, x: 30 } : { opacity: 1, x: 0 },
-        { delay: stagger(0.1, { start: isNavVisible ? 0 : 0.5 }) }
-      );
+      staggerAnimation(links, isNavVisible);
+      staggerAnimation(icons, !isNavVisible);
     }
   }, [isNavVisible, width]);
 
@@ -101,44 +91,28 @@ export const Layout = ({ children }: LayoutProps) => {
             </Container>
           </nav>
 
-          <Link
-            ref={homeRef}
-            to="/"
-            className={classNames(
-              'transition-color absolute right-[120px] top-[20px] flex h-[60px] w-[60px] items-center justify-center rounded-md border bg-white px-3 text-[currentColor] shadow-hard md:opacity-0 lg:right-[80px]',
-              isNavVisible && 'hidden md:pointer-events-none md:flex'
-            )}
+          <div
+            ref={iconsRef}
+            className="absolute right-4 top-3 flex space-x-3  transition-opacity lg:right-[0]"
           >
-            <span className="sr-only">Go back home</span>
-            <HomeIcon />
-          </Link>
-
-          <button
-            ref={hamburgerRef}
-            onClick={() => setIsNavVisible((visible) => !visible)}
-            className={classNames(
-              'transition-color absolute right-4 top-3 bottom-[0] h-[60px] w-[60px] rounded-md border bg-white px-3 text-[currentColor] shadow-hard md:opacity-0 lg:right-[0]',
-              isNavVisible && 'md:pointer-events-none'
-            )}
-          >
-            <span className="sr-only">
-              {isNavVisible ? 'hide' : 'show'} navigation
-            </span>
-            <svg
-              width="15px"
-              height="15px"
-              viewBox="0 0 15 15"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+            <Link
+              to="/"
+              className="transition-color flex h-[60px] w-[60px] items-center justify-center rounded-md border bg-white px-3 text-[currentColor] shadow-hard md:opacity-0"
             >
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M1.5 3C1.22386 3 1 3.22386 1 3.5C1 3.77614 1.22386 4 1.5 4H13.5C13.7761 4 14 3.77614 14 3.5C14 3.22386 13.7761 3 13.5 3H1.5ZM1 7.5C1 7.22386 1.22386 7 1.5 7H13.5C13.7761 7 14 7.22386 14 7.5C14 7.77614 13.7761 8 13.5 8H1.5C1.22386 8 1 7.77614 1 7.5ZM1 11.5C1 11.2239 1.22386 11 1.5 11H13.5C13.7761 11 14 11.2239 14 11.5C14 11.7761 13.7761 12 13.5 12H1.5C1.22386 12 1 11.7761 1 11.5Z"
-                fill="currentColor"
-              />
-            </svg>
-          </button>
+              <span className="sr-only">Go back home</span>
+              <HomeIcon />
+            </Link>
+
+            <button
+              onClick={() => setIsNavVisible((visible) => !visible)}
+              className="transition-color h-[60px] w-[60px] rounded-md border bg-white px-3 text-[currentColor] shadow-hard md:opacity-0"
+            >
+              <span className="sr-only">
+                {isNavVisible ? 'hide' : 'show'} navigation
+              </span>
+              <HamburgerIcon />
+            </button>
+          </div>
         </Container>
       </header>
       {children}

@@ -11,8 +11,10 @@ interface CtaProps {
 }
 
 const Cta = ({ children, to, soon }: CtaProps) => {
+  const NavLinkOrSpan = soon ? 'span' : NavLink;
+
   return (
-    <NavLink
+    <NavLinkOrSpan
       to={to}
       className={classNames(
         'group relative mb-2 inline-flex w-full flex-col justify-center rounded-lg border bg-white p-3 pr-5 shadow-hard sm:mb-3 sm:p-4 md:mb-[0] md:h-[300px] md:w-[32%]',
@@ -21,13 +23,15 @@ const Cta = ({ children, to, soon }: CtaProps) => {
       )}
     >
       {children}
-      <span
-        className="absolute right-4 bottom-4 h-3 w-3 transition-transform group-hover:translate-x-3"
-        aria-hidden
-      >
-        <DoubleArrowIcon />
-      </span>
-    </NavLink>
+      {!soon && (
+        <span
+          className="absolute right-4 bottom-4 h-3 w-3 transition-transform group-hover:translate-x-3"
+          aria-hidden
+        >
+          <DoubleArrowIcon />
+        </span>
+      )}
+    </NavLinkOrSpan>
   );
 };
 

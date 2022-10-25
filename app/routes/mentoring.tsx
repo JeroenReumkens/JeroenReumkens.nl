@@ -35,7 +35,7 @@ export default function Mentoring() {
           </p>
         </Intro>
         <div className="mt-4 sm:mt-auto sm:text-right [&_a]:inline-flex">
-          <CtaButton to="https://superpeer.com/frontendfyi" className="mb-3">
+          <CtaButton to="/schedule-a-session" className="mb-3">
             Schedule a call
           </CtaButton>
           <CtaButton to="#page-content" className="sm:ml-3">
@@ -130,10 +130,7 @@ export default function Mentoring() {
           </li>
           <li>
             I would love to get a code review on this{' '}
-            <CtaButton
-              to="https://superpeer.com/frontendfyi/-/code-review"
-              variant="small"
-            >
+            <CtaButton to="/schedule-a-session#code-review" variant="small">
               Schedule it!
             </CtaButton>
           </li>
@@ -166,7 +163,7 @@ export default function Mentoring() {
         <ForTeamsAndIndividuals />
 
         <div className="mt-5 flex">
-          <CtaButton className="mx-auto" to="https://superpeer.com/frontendfyi">
+          <CtaButton className="mx-auto" to="/schedule-a-session#intro-chat">
             Schedule an intro session now
           </CtaButton>
         </div>

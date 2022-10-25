@@ -5,6 +5,7 @@ import {
   Meta,
   Outlet,
   Scripts,
+  ScrollRestoration,
   useCatch,
   useLocation,
 } from '@remix-run/react';
@@ -94,7 +95,7 @@ const Document = ({ children, title }: DocumentProps) => {
         )}
 
         {children}
-
+        <ScrollRestoration />
         <Scripts />
         {process.env.NODE_ENV === 'development' && <LiveReload />}
       </body>

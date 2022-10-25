@@ -93,7 +93,10 @@ export const Layout = ({ children }: LayoutProps) => {
 
           <div
             ref={iconsRef}
-            className="absolute right-4 top-3 flex space-x-3  transition-opacity lg:right-[0]"
+            className={classNames(
+              'absolute right-4 top-3 flex space-x-3  transition-opacity lg:right-[0]',
+              isNavVisible && 'pointer-events-none'
+            )}
           >
             <Link
               to="/"

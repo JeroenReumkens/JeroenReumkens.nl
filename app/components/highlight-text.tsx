@@ -11,12 +11,12 @@ export const HighlightText = ({
   iconLeft: IconLeft,
   iconRight: IconRight,
 }: HighlightTextProps) => (
-  <div className="font-serif text-body font-regular leading-tight sm:text-2xl">
+  <div className="pt-6 font-serif text-body font-regular leading-tight sm:text-xl md:text-2xl">
     <p className="relative z-10 sm:w-[75%]">
       {line1}
       <IconLeft
         aria-hidden
-        className="pointer-events-none absolute -top-[60px] z-[0] h-4 w-4 rotate-12 sm:-top-[100px] md:h-6 md:w-6"
+        className="pointer-events-none absolute -top-[60px] z-[0] h-4 w-4 rotate-12 sm:h-5 sm:w-5 md:-top-6 md:-left-4 md:h-6 md:w-6"
       />
     </p>
 

@@ -213,16 +213,22 @@ export const MyTimeline = () => {
             big focus on the My Vodafone environment.
           </p>
         </Item>
+        <Item title="More freelancing work">
+          <p>
+            During the period I worked for Vodafone, I've also worked on other
+            smaller freelance projects.
+          </p>
+        </Item>
       </Year>
       <Year year="Way back..">
         <Item title="Do I even remember this time?">
           <p>
-            The web surely was a whole different thing back than. Since 2011 I'm
-            professionally working in web development, and until 2014 I've
-            mainly worked at different online agencies.
+            The web surely was a whole different thing back then.{' '}
+            <u>Since 2011</u> I'm professionally working in web development, and
+            until 2014 I've mainly worked at different online agencies.
           </p>
 
-          <div className="pointer-events-none absolute left-1/3 -top-5 w-1/2 rotate-12 overflow-hidden opacity-10">
+          <div className="pointer-events-none absolute left-1/3 -top-5 h-[600px] w-1/2 rotate-12 overflow-hidden opacity-10">
             <OldSkoolWebsiteFrame />
           </div>
         </Item>

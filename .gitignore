@@ -12,3 +12,5 @@ yarn-error.log
 .DS_Store
 .env*
 TODO.MD
+# Local Netlify folder
+.netlify

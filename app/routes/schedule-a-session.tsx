@@ -73,7 +73,7 @@ export default function Mentoring() {
               to="https://cal.com/frontendfyi/lskjm0hrgx-1on1-30mins"
               subtitle="A payment link will follow after booking"
             >
-              Book 30 mins for $99
+              Book 30 mins for $125
             </CtaButton>
             <CtaButton
               to="https://cal.com/frontendfyi/hunm238j9o-1on1-60mins"

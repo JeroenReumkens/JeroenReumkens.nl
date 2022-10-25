@@ -1,4 +1,4 @@
-import { Card, CardGroup } from '~/components/card';
+import { Card, CardGroup } from '~/app/components/card';
 
 export const ForTeamsAndIndividuals = () => (
   <CardGroup>

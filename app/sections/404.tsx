@@ -1,7 +1,7 @@
 import { useRef } from 'react';
-import { CtaButton } from '~/components/cta-button';
-import { GoogleEyes } from '~/components/google-eyes';
-import { GrainSection } from '~/components/grain-section';
+import { CtaButton } from '~/app/components/cta-button';
+import { GoogleEyes } from '~/app/components/google-eyes';
+import { GrainSection } from '~/app/components/grain-section';
 
 export const NotFound = () => {
   const ref = useRef<HTMLDivElement>(null);

@@ -1,4 +1,6 @@
-import { Link } from '@remix-run/react';
+'use client';
+
+import Link from 'next/link';
 import classNames from 'classnames';
 import type { ElementOrSelector } from 'motion';
 import { animate, stagger } from 'motion';
@@ -99,7 +101,7 @@ export const Layout = ({ children }: LayoutProps) => {
             )}
           >
             <Link
-              to="/"
+              href="/"
               className="transition-color flex h-[60px] w-[60px] items-center justify-center rounded-md border bg-white px-3 text-[currentColor] shadow-hard md:opacity-0"
             >
               <span className="sr-only">Go back home</span>

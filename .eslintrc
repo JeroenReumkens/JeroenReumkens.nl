@@ -1,7 +1,10 @@
 {
-  "extends": ["@remix-run/eslint-config", "@remix-run/eslint-config/node"],
+  "extends": ["next/core-web-vitals", "plugin:tailwindcss/recommended"],
   "rules": {
     "quotes": [2, "single", "avoid-escape"],
-    "react/display-name": "off"
-  }
+    "react/display-name": "off",
+    "react/no-unescaped-entities": "off"
+  },
+  "plugins": ["tailwindcss"]
 }
+

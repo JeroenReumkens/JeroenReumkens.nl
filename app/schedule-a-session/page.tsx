@@ -1,22 +1,20 @@
-import type { MetaFunction } from '@remix-run/node';
-import { Link } from '@remix-run/react';
-import { Card } from '~/components/card';
-import { Container } from '~/components/container';
-import { CtaButton } from '~/components/cta-button';
-import { Hero, Intro, Title } from '~/components/hero';
-import { Layout } from '~/components/layout';
+import  Link from 'next/link';
+import { Card } from '~/app/components/card';
+import { Container } from '~/app/components/container';
+import { CtaButton } from '~/app/components/cta-button';
+import { Hero, Intro, Title } from '~/app/components/hero';
 
-export const meta: MetaFunction = () => {
-  return {
-    title: 'Schedule a mentorhsip session | Jeroen Reumkens — Frontend mentor',
-    description:
-      'I see frontend as a craft and an everlearning journey — a journey on which I love to take you, while teaching you a few things along the way.',
-  };
-};
+// export const meta: MetaFunction = () => {
+//   return {
+//     title: 'Schedule a mentorhsip session | Jeroen Reumkens — Frontend mentor',
+//     description:
+//       'I see frontend as a craft and an everlearning journey — a journey on which I love to take you, while teaching you a few things along the way.',
+//   };
+// };
 
 export default function Mentoring() {
   return (
-    <Layout>
+    <>
       <Hero className='[--bg-title:"Schedule_a_session"]'>
         <Intro>
           <Title>Schedule a mentorship session</Title>
@@ -62,7 +60,7 @@ export default function Mentoring() {
           </p>
           <p>
             See the{' '}
-            <Link className="underline" to="/mentoring">
+            <Link className="underline" href="/mentoring">
               mentorship page
             </Link>{' '}
             to learn more about what I can help you with during these sessions.
@@ -117,6 +115,6 @@ export default function Mentoring() {
           </div>
         </Card>
       </Container>
-    </Layout>
+    </>
   );
 }

@@ -1,5 +1,5 @@
-import { NavLink } from '@remix-run/react';
 import classNames from 'classnames';
+import Link from 'next/link';
 import { DoubleArrowIcon } from './icons/double-arrow';
 
 interface CtaButtonProps {
@@ -20,9 +20,9 @@ interface LinkWrapperProps {
 const LinkWrapper = ({ children, to, className }: LinkWrapperProps) => {
   const linkIsInteral = !to.startsWith('http');
   return linkIsInteral ? (
-    <NavLink to={to} className={className}>
+    <Link href={to} className={className}>
       {children}
-    </NavLink>
+    </Link>
   ) : (
     <a href={to} target="_blank" className={className} rel="noreferrer">
       {children}

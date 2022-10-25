@@ -1,3 +1,5 @@
+'use client';
+
 import { animate, scroll } from 'motion';
 import { forwardRef, useRef } from 'react';
 import { useMotion } from '~/utils/use-motion';

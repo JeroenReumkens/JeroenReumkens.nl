@@ -1,9 +1,11 @@
+'use client';
+
 import { useRef } from 'react';
 import { animate, scroll } from 'motion';
-import { GooglyPicture } from '~/components/googly-picture';
+import { GooglyPicture } from '~/app/components/googly-picture';
 import { useMotion } from '~/utils/use-motion';
-import { CtaButton } from '~/components/cta-button';
-import { Hero, Title, Intro as IntroText } from '~/components/hero';
+import { CtaButton } from '~/app/components/cta-button';
+import { Hero, Title, Intro as IntroText } from '~/app/components/hero';
 
 export const Intro = () => {
   const imageRef = useRef<HTMLImageElement>(null);

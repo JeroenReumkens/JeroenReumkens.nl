@@ -1,8 +1,8 @@
-import { NavLink } from '@remix-run/react';
+import Link  from 'next/link';
 import classNames from 'classnames';
-import { Container } from '~/components/container';
-import { DoubleArrowIcon } from '~/components/icons';
-import { SectionTitle } from '~/components/section-title';
+import { Container } from '~/app/components/container';
+import { DoubleArrowIcon } from '~/app/components/icons';
+import { SectionTitle } from '~/app/components/section-title';
 
 interface CtaProps {
   children: React.ReactNode;
@@ -11,11 +11,11 @@ interface CtaProps {
 }
 
 const Cta = ({ children, to, soon }: CtaProps) => {
-  const NavLinkOrSpan = soon ? 'span' : NavLink;
+  const NavLinkOrSpan = soon ? 'span' : Link;
 
   return (
     <NavLinkOrSpan
-      to={to}
+      href={to}
       className={classNames(
         'group relative mb-2 inline-flex w-full flex-col justify-center rounded-lg border bg-white p-3 pr-5 shadow-hard sm:mb-3 sm:p-4 md:mb-[0] md:h-[300px] md:w-[32%]',
         soon &&

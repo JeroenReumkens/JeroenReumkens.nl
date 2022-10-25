@@ -1,24 +1,22 @@
-import type { MetaFunction } from '@remix-run/node';
-import { Container } from '~/components/container';
-import { CtaButton } from '~/components/cta-button';
-import { Hero, Intro, Title } from '~/components/hero';
-import { HighlightText } from '~/components/highlight-text';
-import { SmileIcon } from '~/components/icons';
-import { Layout } from '~/components/layout';
-import { SectionTitle } from '~/components/section-title';
-import { ForTeamsAndIndividuals } from '~/sections/shared/for-teams-and-individuals';
+import { Container } from '~/app/components/container';
+import { CtaButton } from '~/app/components/cta-button';
+import { Hero, Intro, Title } from '~/app/components/hero';
+import { HighlightText } from '~/app/components/highlight-text';
+import { SmileIcon } from '~/app/components/icons';
+import { SectionTitle } from '~/app/components/section-title';
+import { ForTeamsAndIndividuals } from '~/app/sections/shared/for-teams-and-individuals';
 
-export const meta: MetaFunction = () => {
-  return {
-    title: 'Mentoring | Jeroen Reumkens — Frontend mentor',
-    description:
-      'I see frontend as a craft and an everlearning journey — a journey on which I love to take you, while teaching you a few things along the way.',
-  };
-};
+// export const meta: MetaFunction = () => {
+//   return {
+//     title: 'Mentoring | Jeroen Reumkens — Frontend mentor',
+//     description:
+//       'I see frontend as a craft and an everlearning journey — a journey on which I love to take you, while teaching you a few things along the way.',
+//   };
+// };
 
 export default function Mentoring() {
   return (
-    <Layout>
+    <>
       <Hero className='[--bg-title:"Mentoring"]'>
         <Intro>
           <Title>My mentorship</Title>
@@ -112,7 +110,7 @@ export default function Mentoring() {
           Technical things
         </h3>
 
-        <ul className="mt-4 font-mono text-small md:text-body [&_li]:mb-3 [&_li]:rounded-md [&_li]:bg-white [&_li]:px-4 [&_li]:py-4 [&_li]:shadow-hard">
+        <ul className="mt-4 font-mono text-small md:text-body [&_li]:mb-3 [&_li]:rounded-md [&_li]:bg-white [&_li]:p-4 [&_li]:shadow-hard">
           <li>
             My website needs to comply with WCAG standards — where do I start?
           </li>
@@ -124,7 +122,7 @@ export default function Mentoring() {
           Helping you as an individual
         </h3>
 
-        <ul className="mt-4 font-mono text-small md:text-body [&_li]:mb-3 [&_li]:rounded-md [&_li]:bg-white [&_li]:px-4 [&_li]:py-4 [&_li]:shadow-hard">
+        <ul className="mt-4 font-mono text-small md:text-body [&_li]:mb-3 [&_li]:rounded-md [&_li]:bg-white [&_li]:p-4 [&_li]:shadow-hard">
           <li>
             I want to grow as a frontend engineer, what should I learn next?
           </li>
@@ -141,7 +139,7 @@ export default function Mentoring() {
           And even broader topics impacting a whole team or company like:
         </h3>
 
-        <ul className="mt-4 font-mono text-small md:text-body [&_li]:mb-3 [&_li]:rounded-md [&_li]:bg-white [&_li]:px-4 [&_li]:py-4 [&_li]:shadow-hard">
+        <ul className="mt-4 font-mono text-small md:text-body [&_li]:mb-3 [&_li]:rounded-md [&_li]:bg-white [&_li]:p-4 [&_li]:shadow-hard">
           <li>Headless?! SSR, SSG, ISR, what will this bring to my company?</li>
           <li>
             Headless?! SSR, SSG, ISR, why are all my engineers talking about
@@ -168,6 +166,6 @@ export default function Mentoring() {
           </CtaButton>
         </div>
       </Container>
-    </Layout>
+    </>
   );
 }

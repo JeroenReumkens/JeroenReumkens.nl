@@ -3,7 +3,7 @@ const plugin = require('tailwindcss/plugin');
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: 'jit',
-  content: ['./app/**/*.{ts,tsx}'],
+  content: ['./app/**/*.{ts,tsx}', './sections/**/*.{ts,tsx}', './components/**/*.{ts,tsx}'],
   theme: {
     colors: {
       white: '#fff',

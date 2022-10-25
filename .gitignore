@@ -1,12 +1,10 @@
 node_modules
 
-/.cache
-/public/build
-/netlify/functions/build
-/netlify/functions/server/build
-.env
+/.next
 /build
-/app/tailwind.css
+/public/build
+.env
+./tailwind.css
 yarn-error.log
 
 .DS_Store
@@ -14,3 +12,5 @@ yarn-error.log
 TODO.MD
 # Local Netlify folder
 .netlify
+
+.vscode

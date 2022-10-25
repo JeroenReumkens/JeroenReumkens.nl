@@ -1,8 +1,8 @@
-import { Container } from '~/components/container';
-import { SectionTitle } from '~/components/section-title';
-import { GlobeIcon } from '~/components/icons';
-import { CtaButton } from '~/components/cta-button';
-import { HighlightText } from '~/components/highlight-text';
+import { Container } from '~/app/components/container';
+import { SectionTitle } from '~/app/components/section-title';
+import { GlobeIcon } from '~/app/components/icons';
+import { CtaButton } from '~/app/components/cta-button';
+import { HighlightText } from '~/app/components/highlight-text';
 import { ForTeamsAndIndividuals } from '../shared/for-teams-and-individuals';
 
 export const SharingMyPassion = () => {

@@ -1,9 +1,11 @@
+'use client';
+
 import { useRef } from 'react';
 import { useMotion } from '~/utils/use-motion';
-import { GrainSection } from '~/components/grain-section';
+import { GrainSection } from '~/app/components/grain-section';
 import { animate, scroll, inView } from 'motion';
-import { SectionTitle } from '~/components/section-title';
-import { BadgeAndText } from '~/components/badge-and-text';
+import { SectionTitle } from '~/app/components/section-title';
+import { BadgeAndText } from '~/app/components/badge-and-text';
 import classNames from 'classnames';
 import escape from 'lodash.escape';
 import { randomNumberBetween } from '~/utils/random-number';
@@ -140,7 +142,7 @@ export const DivingIntoFrontend = () => {
     <GrainSection
       ref={sectionRef}
       color="black"
-      className="safari-overflow-clip overflow-clip py-5"
+      className="safari-text-clip text-clip py-5"
     >
       <SectionTitle isTransparent>Diving into frontend</SectionTitle>
       <div className="mx-auto my-5 w-full max-w-6xl space-y-4 text-center font-serif text-body text-white sm:text-xl">

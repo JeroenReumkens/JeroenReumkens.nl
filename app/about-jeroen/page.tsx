@@ -1,24 +1,22 @@
-import { Container } from '~/components/container';
-import { Hero, Intro, Title } from '~/components/hero';
-import { HighlightText } from '~/components/highlight-text';
-import { Layout } from '~/components/layout';
-import { SectionTitle } from '~/components/section-title';
-import { MyTimeline } from '~/sections/shared/my-timeline';
-import { AwardIcon } from '~/components/icons';
-import type { MetaFunction } from '@remix-run/node';
-import { SectionIntro } from '~/components/section-intro';
+import { Container } from '~/app/components/container';
+import { Hero, Intro, Title } from '~/app/components/hero';
+import { HighlightText } from '~/app/components/highlight-text';
+import { SectionTitle } from '~/app/components/section-title';
+import { MyTimeline } from '~/app/sections/shared/my-timeline';
+import { AwardIcon } from '~/app/components/icons';
+import { SectionIntro } from '~/app/components/section-intro';
 
-export const meta: MetaFunction = () => {
-  return {
-    title: 'About me | Jeroen Reumkens — Frontend mentor',
-    description:
-      'Jeroen is a frontend engineer with a passion for the web, trying to make people smile when using this products.',
-  };
-};
+// export const meta: MetaFunction = () => {
+//   return {
+//     title: 'About me | Jeroen Reumkens — Frontend mentor',
+//     description:
+//       'Jeroen is a frontend engineer with a passion for the web, trying to make people smile when using this products.',
+//   };
+// };
 
 export default function AboutJeroen() {
   return (
-    <Layout>
+    <>
       <Hero className='[--bg-title:"Who_dis"]'>
         <Intro>
           <Title>Hi, I'm Jeroen,</Title>
@@ -77,6 +75,6 @@ export default function AboutJeroen() {
 
         <MyTimeline />
       </Container>
-    </Layout>
+    </>
   );
 }

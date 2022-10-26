@@ -1,3 +1,5 @@
+'use client';
+
 import { useRef } from 'react';
 import { CtaButton } from '~/components/cta-button';
 import { GoogleEyes } from '~/components/google-eyes';

@@ -25,10 +25,10 @@ export const OldSkoolWebsiteFrame = forwardRef<HTMLDivElement>((_, ref) => (
     <div className="flex h-full w-full">
       <div className="relative z-10 min-w-[20%] overflow-scroll border-r border-r-[#999] bg-[url(/img/planets.jpeg)] bg-[length:100px_100px] shadow-[1px_0_0_0_rgb(237,237,237)] sm:w-[15%] sm:min-w-0">
         <Image
-          loading="lazy"
           src={adGif}
           className="mt-4 ml-2 w-[150%] -rotate-12"
           alt="Old skool animated GIF selling fake ad space"
+          placeholder="blur"
         />
         <p className="mt-4 ml-2 font-['comic_sans_MS'] text-[12px] text-[#02FF2B] sm:text-small">
           Everyone needs a cool website!!! I can also build these cool websites
@@ -37,79 +37,78 @@ export const OldSkoolWebsiteFrame = forwardRef<HTMLDivElement>((_, ref) => (
         {Array.from({ length: 4 }).map((_, i) => (
           <Image
             key={i}
-            loading="lazy"
             src={mailGif}
             className="mt-4 ml-2 w-[80%]"
             alt="Spinning email logo"
+            placeholder="blur"
           />
         ))}
       </div>
       <div className="flex w-full flex-col">
         <div className="flex h-6 items-center overflow-scroll border-b border-b-[#999] bg-[url(/img/planets.jpeg)] shadow-[0_1px_0_0_rgb(237,237,237)]">
           <Image
-            loading="lazy"
             src={homeGif}
             width="100"
             className="ml-4 mt-4"
             alt="Animated GIF of a home button"
+            placeholder="blur"
           />
           <Image
-            loading="lazy"
             src={linksGif}
             width="100"
             className="mt-4 ml-4"
             alt="Animated GIF of a link button"
+            placeholder="blur"
           />
           <Image
-            loading="lazy"
             src={guestbookGif}
             width="100"
             className="mx-4 mt-4"
             alt="Animated GIF of a guestbook button"
+            placeholder="blur"
           />
         </div>
         <div className="relative h-full">
           <Image
-            loading="lazy"
             src={welcomeImage}
             className="absolute top-[10%] left-1/2 w-1/2 -translate-x-1/2"
             alt="Welcome to my website title"
+            placeholder="blur"
           />
           <Image
-            loading="lazy"
             src={shuttleGif}
             className="absolute right-[5%] top-[50%] w-[8%]"
             alt="Low pixel GIF of a space shuttle"
+            placeholder="blur"
           />
           <Image
-            loading="lazy"
             src={shuttle2Gif}
             className="absolute left-[15%] top-[40%] w-[35%]"
             alt="Low pixel GIF of a space shuttle"
+            placeholder="blur"
           />
           <Image
-            loading="lazy"
             src={nextGif}
             className="absolute right-[5%] top-[80%] w-[20%]"
             alt="Animated GIF a button saying NEXT, implying that nextjs was already a thing back then"
           />
           <Image
-            loading="lazy"
             src={planetGif}
             className="absolute left-[70%] top-[25%] w-[20%]"
             alt="Animated GIF of a planet with small planets floating around it"
+            placeholder="blur"
           />
           <Image
-            loading="lazy"
             src={constructionGif}
             className="absolute left-4 bottom-5 w-[80%]"
             alt="Animated GIF of a retro under construction sign for a website"
+            placeholder="blur"
           />
           <Image
-            loading="lazy"
             src={webmasterGif}
             className="absolute left-4 bottom-4 w-[45%]"
             alt="Animated GIF with the text webmaster jeroen"
+            placeholder="blur"
           />
         </div>
       </div>

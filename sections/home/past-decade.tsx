@@ -14,8 +14,8 @@ export const PastDecade = () => {
         illustrationWidth={50}
       >
         <p>
-          Back in the beginning, you started out as a <em>webdeveloper</em>, or
-          even a <em>webmaster</em>. Building full experiences, ranging from{' '}
+          Back then you started out as a <em>webdeveloper</em>, or even a{' '}
+          <em>webmaster</em>. Building full experiences, ranging from{' '}
           <em>HTML</em>, <em>CSS</em>, some <em>JavaScript</em> and also lots of{' '}
           <em>PHP</em> and <em>Wordpress</em> in my case.
         </p>

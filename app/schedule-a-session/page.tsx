@@ -1,4 +1,4 @@
-import  Link from 'next/link';
+import Link from 'next/link';
 import { Card } from '~/components/card';
 import { Container } from '~/components/container';
 import { CtaButton } from '~/components/cta-button';
@@ -11,7 +11,7 @@ export default function Mentoring() {
         <Intro>
           <Title>Schedule a mentorship session</Title>
           <p className="mb-3">
-            This page is a temporary entrypoint to my scheduling links for
+            This page is a temporary entrypoint to the scheduling links for my
             mentorship sessions. This will soon get replaced by frontend.fyi.
           </p>
         </Intro>
@@ -25,7 +25,10 @@ export default function Mentoring() {
         </div>
       </Hero>
 
-      <Container id="the-sessions" className="max-w-7xl space-y-4 pt-5 sm:pt-6">
+      <Container
+        id="the-sessions"
+        className="max-w-[920px] space-y-4 pt-5 sm:pt-6"
+      >
         <Card id="intro-chat" title="Intro chat (25 min)">
           <p>
             This session is great for us to get to know each other, and for me

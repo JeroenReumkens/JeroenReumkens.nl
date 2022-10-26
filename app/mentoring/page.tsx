@@ -3,6 +3,7 @@ import { CtaButton } from '~/components/cta-button';
 import { Hero, Intro, Title } from '~/components/hero';
 import { HighlightText } from '~/components/highlight-text';
 import { SmileIcon } from '~/components/icons';
+import { SectionIntro } from '~/components/section-intro';
 import { SectionTitle } from '~/components/section-title';
 import { ForTeamsAndIndividuals } from '~/sections/shared/for-teams-and-individuals';
 
@@ -145,11 +146,12 @@ export default function Mentoring() {
         </ul>
 
         <SectionTitle>For teams and individuals</SectionTitle>
-        <p className="text-center">
+        <SectionIntro>
           It doesn't matter if you're a student, a freelancer, an individual at
           a company or the manager of a team. I think I can add value to all of
           you.
-        </p>
+        </SectionIntro>
+
         <ForTeamsAndIndividuals />
 
         <div className="mt-5 flex">

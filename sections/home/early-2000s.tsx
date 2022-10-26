@@ -26,8 +26,7 @@ export const Early2000s = () => {
       className="my-5 font-mono text-body leading-tight sm:text-2xl"
     >
       <p className="mb-3 sm:mb-5">
-        My passion for web however, started already as a hobby back in the early
-        2000s.
+        My passion for web started as a hobby back in the early 2000s.
       </p>
       <p className="mb-3 sm:mb-5">
         Back in the days, when the web looked slightly different...

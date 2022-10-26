@@ -49,7 +49,7 @@ export const PastDecade = () => {
         </p>
 
         <CtaButton
-          to="/about-jeroen"
+          href="/about-jeroen"
           subtitle="past work experience, projects, etc"
         >
           More about my experience

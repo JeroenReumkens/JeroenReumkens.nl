@@ -1,5 +1,11 @@
 {
-  "extends": ["next/core-web-vitals", "plugin:tailwindcss/recommended"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:tailwindcss/recommended",
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
   "rules": {
     "quotes": [2, "single", "avoid-escape"],
     "react/display-name": "off",
@@ -8,6 +14,6 @@
     "tailwindcss/migration-from-tailwind-2": "off",
     "tailwindcss/no-custom-classname": "off"
   },
-  "plugins": ["tailwindcss"]
+  "plugins": ["tailwindcss", "prettier", "@typescript-eslint"]
 }
 

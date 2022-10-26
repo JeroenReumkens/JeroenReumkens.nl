@@ -1,4 +1,4 @@
-import Link  from 'next/link';
+import Link from 'next/link';
 import classNames from 'classnames';
 import { Container } from '~/components/container';
 import { DoubleArrowIcon } from '~/components/icons';
@@ -6,16 +6,16 @@ import { SectionTitle } from '~/components/section-title';
 
 interface CtaProps {
   children: React.ReactNode;
-  to: string;
+  href: string;
   soon?: boolean;
 }
 
-const Cta = ({ children, to, soon }: CtaProps) => {
+const Cta = ({ children, href, soon }: CtaProps) => {
   const NavLinkOrSpan = soon ? 'span' : Link;
 
   return (
     <NavLinkOrSpan
-      href={to}
+      href={href}
       className={classNames(
         'group relative mb-2 inline-flex w-full flex-col justify-center rounded-lg border bg-white p-3 pr-5 shadow-hard sm:mb-3 sm:p-4 md:mb-[0] md:h-[300px] md:w-[32%]',
         soon &&
@@ -41,9 +41,9 @@ export const ReadOn = () => (
       <SectionTitle>Read on</SectionTitle>
 
       <div className="mt-4 justify-between font-serif text-body leading-tight sm:mt-5 sm:text-xl md:flex">
-        <Cta to="/about-jeroen">More about me</Cta>
-        <Cta to="/mentoring">Mentoring</Cta>
-        <Cta to="/my-vision-on-frontend" soon>
+        <Cta href="/about-jeroen">More about me</Cta>
+        <Cta href="/mentoring">Mentoring</Cta>
+        <Cta href="/my-vision-on-frontend" soon>
           My vision on frontend
         </Cta>
       </div>

@@ -33,7 +33,7 @@ export const SharingMyPassion = () => {
 
       <div className="mt-5 flex justify-center">
         <CtaButton
-          to="/mentoring"
+          href="/mentoring"
           subtitle="see how I can help you or your team"
         >
           More about my mentorship

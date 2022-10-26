@@ -7,7 +7,7 @@ import { OldSkoolWebsite } from '~/sections/home/old-skool-website';
 import { PastDecade } from '~/sections/home/past-decade';
 import { SharingMyPassion } from '~/sections/home/sharing-my-passion';
 import { ReadOn } from '~/sections/home/read-on';
-import Image from 'next/image'
+import Image from 'next/image';
 
 export default function Index() {
   return (

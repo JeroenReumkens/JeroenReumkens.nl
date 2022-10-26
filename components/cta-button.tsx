@@ -5,7 +5,7 @@ import { DoubleArrowIcon } from './icons/double-arrow';
 interface CtaButtonProps {
   children: React.ReactNode;
   subtitle?: string;
-  to: string;
+  href: string;
   className?: string;
   variant?: 'small' | 'large';
   soon?: boolean;
@@ -13,18 +13,26 @@ interface CtaButtonProps {
 
 interface LinkWrapperProps {
   children: React.ReactNode;
-  to: string;
+  href: string;
   className?: string;
 }
 
-const LinkWrapper = ({ children, to, className }: LinkWrapperProps) => {
-  const linkIsInteral = !to.startsWith('http');
+const LinkWrapper = ({ children, href, className }: LinkWrapperProps) => {
+  const isHash = href.startsWith('#');
+  const linkIsInteral = !isHash && !href.startsWith('http');
+
   return linkIsInteral ? (
-    <Link href={to} className={className}>
+    <Link href={href} className={className}>
       {children}
     </Link>
   ) : (
-    <a href={to} target="_blank" className={className} rel="noreferrer">
+    // eslint-disable-next-line react/jsx-no-target-blank
+    <a
+      href={href}
+      target={!isHash ? '_blank' : undefined}
+      rel={!isHash ? 'noreferrer' : undefined}
+      className={className}
+    >
       {children}
     </a>
   );
@@ -32,7 +40,7 @@ const LinkWrapper = ({ children, to, className }: LinkWrapperProps) => {
 
 export const CtaButton = ({
   children,
-  to,
+  href,
   subtitle,
   className,
   variant = 'large',
@@ -40,7 +48,7 @@ export const CtaButton = ({
 }: CtaButtonProps) => {
   return (
     <LinkWrapper
-      to={to}
+      href={href}
       className={classNames(
         'group relative inline-flex items-center border text-left font-serif font-medium leading-tight text-[currentColor] shadow-hard transition-colors hover:bg-white hover:text-black',
         soon &&

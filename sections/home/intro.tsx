@@ -50,7 +50,7 @@ export const Intro = () => {
           <CtaButton
             variant="small"
             className="mr-3 mb-3 md:mb-[0]"
-            to="/mentoring"
+            href="/mentoring"
             subtitle="for teams and individuals"
           >
             I also do mentoring

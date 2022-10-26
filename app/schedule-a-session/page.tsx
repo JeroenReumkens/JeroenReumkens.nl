@@ -16,10 +16,10 @@ export default function Mentoring() {
           </p>
         </Intro>
         <div className="mt-4 sm:mt-auto sm:text-right [&_a]:inline-flex">
-          <CtaButton to="#the-sessions" className="mb-3">
+          <CtaButton href="#the-sessions" className="mb-3">
             See the sessions 👇
           </CtaButton>
-          <CtaButton to="/mentoring" className="sm:ml-3">
+          <CtaButton href="/mentoring" className="sm:ml-3">
             What can I help you with?
           </CtaButton>
         </div>
@@ -38,7 +38,7 @@ export default function Mentoring() {
 
           <div className="flex justify-center">
             <CtaButton
-              to="https://cal.com/frontendfyi/na1eb6eis8-introduction"
+              href="https://cal.com/frontendfyi/na1eb6eis8-introduction"
               subtitle="A payment link will follow after booking"
             >
               Book 25 mins for $49
@@ -60,13 +60,13 @@ export default function Mentoring() {
 
           <div className="flex flex-col items-center space-y-3">
             <CtaButton
-              to="https://cal.com/frontendfyi/lskjm0hrgx-1on1-30mins"
+              href="https://cal.com/frontendfyi/lskjm0hrgx-1on1-30mins"
               subtitle="A payment link will follow after booking"
             >
               Book 30 mins for $125
             </CtaButton>
             <CtaButton
-              to="https://cal.com/frontendfyi/hunm238j9o-1on1-60mins"
+              href="https://cal.com/frontendfyi/hunm238j9o-1on1-60mins"
               subtitle="A payment link will follow after booking"
             >
               Book 60 mins for $199
@@ -99,7 +99,7 @@ export default function Mentoring() {
           </p>
           <div className="flex justify-center">
             <CtaButton
-              to="https://cal.com/frontendfyi/cwm1kphsrr-code-review"
+              href="https://cal.com/frontendfyi/cwm1kphsrr-code-review"
               subtitle="A payment link will follow after booking"
             >
               Book 60 mins for $249

@@ -14,7 +14,7 @@ export const ErrorPage = () => {
         </p>
 
         <CtaButton
-          to="/"
+          href="/"
           className="mt-4"
           subtitle="and try again. I'm really sorry!"
         >

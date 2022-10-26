@@ -38,6 +38,7 @@ export const GoogleEyes = ({ wrapperRef }: GoogleEyesProps) => {
       width: wrapperRef.current.clientWidth,
       height: wrapperRef.current.clientHeight,
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   /**

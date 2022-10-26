@@ -10,8 +10,8 @@ export const GooglyPicture = forwardRef<HTMLImageElement>((_, ref) => {
 
   const updateCursorPos = (ev: MouseEvent<HTMLImageElement>) => {
     const rekt = ev.currentTarget.getBoundingClientRect();
-    let x = ev.clientX - rekt.left;
-    let y = ev.clientY - rekt.top;
+    const x = ev.clientX - rekt.left;
+    const y = ev.clientY - rekt.top;
     if (ref && 'current' in ref && ref.current)
       setGooglyPosition(x, y, ref.current);
   };

@@ -16,7 +16,7 @@ export const NotFound = () => {
         </p>
 
         <CtaButton
-          to="/"
+          href="/"
           className="mt-4"
           subtitle="but I suggest you head back to the homepage"
         >

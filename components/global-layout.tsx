@@ -73,19 +73,19 @@ export const Layout = ({ children }: LayoutProps) => {
             )}
           >
             <Container className="md:space-y-auto mt-6 space-y-4 md:mt-auto md:ml-auto md:mr-[0] md:w-auto md:space-y-3 md:space-x-3 md:p-[0]">
-              <CtaButton className="w-full md:w-auto" to="/" variant="small">
+              <CtaButton className="w-full md:w-auto" href="/" variant="small">
                 Home
               </CtaButton>
               <CtaButton
                 className="w-full md:w-auto"
-                to="/mentoring"
+                href="/mentoring"
                 variant="small"
               >
                 Mentorship
               </CtaButton>
               <CtaButton
                 className="w-full md:w-auto"
-                to="/about-jeroen"
+                href="/about-jeroen"
                 variant="small"
               >
                 About me

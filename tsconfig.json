@@ -1,6 +1,6 @@
 {
   "include": [
-    "remix.env.d.ts",
+    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"

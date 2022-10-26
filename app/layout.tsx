@@ -1,6 +1,6 @@
 // import { NotFound } from '~/sections/404';
 // import { ErrorPage } from '~/sections/error';
-import  '~/tailwind.css';
+import  '~/styles/global.css';
 import { Layout } from './components/global-layout';
 import { Gtag } from './gtag';
 

@@ -3,7 +3,9 @@
   "rules": {
     "quotes": [2, "single", "avoid-escape"],
     "react/display-name": "off",
-    "react/no-unescaped-entities": "off"
+    "react/no-unescaped-entities": "off",
+    // It tries to to stop using overflow-clip, while that's really what I want to use.
+    "tailwindcss/migration-from-tailwind-2": "off"
   },
   "plugins": ["tailwindcss"]
 }

@@ -21,7 +21,7 @@ export default function Index() {
     <>
       <Intro />
       <Early2000s />
-      <div className="safari-text-clip relative text-clip">
+      <div className="safari-overflow-clip relative overflow-clip">
         <Container className="relative z-10">
           <img
             className="mx-auto -mt-6 mb-6 w-[600px] max-w-full md:ml-col"

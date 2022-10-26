@@ -5,6 +5,7 @@ import { SectionTitle } from '~/app/components/section-title';
 import { MyTimeline } from '~/app/sections/shared/my-timeline';
 import { AwardIcon } from '~/app/components/icons';
 import { SectionIntro } from '~/app/components/section-intro';
+import Image from 'next/image';
 
 // export const meta: MetaFunction = () => {
 //   return {
@@ -31,7 +32,9 @@ export default function AboutJeroen() {
           </p>
         </Intro>
         <div className="mb:mt-5 relative mt-2 md:ml-auto md:mt-[0]">
-          <img
+          <Image
+            width="429"
+            height="754"
             className="rounded-massive border shadow-hard"
             src="/img/who-dis.jpg"
             alt="Me wearing glasses, a white blouse and having a very short beard, sitting in a coffee bar."

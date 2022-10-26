@@ -1,13 +1,12 @@
+import Image from 'next/image';
 import type { MouseEvent } from 'react';
 import { useState } from 'react';
-import { useRef } from 'react';
 import { forwardRef } from 'react';
 import { GoogleEyes, setGooglyPosition } from './google-eyes';
 
 export const GooglyPicture = forwardRef<HTMLImageElement>((_, ref) => {
   const [dogZoom, setDogZoom] = useState(1);
   const maxZoomReached = dogZoom > 8;
-  const imageRef = useRef<HTMLImageElement>(null);
 
   const updateCursorPos = (ev: MouseEvent<HTMLImageElement>) => {
     const rekt = ev.currentTarget.getBoundingClientRect();
@@ -23,8 +22,9 @@ export const GooglyPicture = forwardRef<HTMLImageElement>((_, ref) => {
       ref={ref}
       className="relative rounded-massive border shadow-hard"
     >
-      <img
-        ref={imageRef}
+      <Image
+        width="429"
+        height="754"
         onMouseMove={updateCursorPos}
         onClick={() => {
           if (maxZoomReached) return;
@@ -40,7 +40,9 @@ export const GooglyPicture = forwardRef<HTMLImageElement>((_, ref) => {
         alt="Me wearing glasses, a white blouse and having a very short beard, sitting in a coffee bar."
       />
       <GoogleEyes wrapperRef={ref} />
-      <img
+      <Image
+        width="429"
+        height="754"
         loading="lazy"
         className="pointer-events-none absolute left-[0] top-[0] h-full w-full rounded-[inherit] object-cover opacity-0 transition-[opacity_clipPath] duration-500 ease-in-out peer-hover:opacity-100"
         style={

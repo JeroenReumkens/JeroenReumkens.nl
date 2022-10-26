@@ -7,6 +7,8 @@ import { OldSkoolWebsite } from '~/app/sections/home/old-skool-website';
 import { PastDecade } from '~/app/sections/home/past-decade';
 import { SharingMyPassion } from '~/app/sections/home/sharing-my-passion';
 import { ReadOn } from '~/app/sections/home/read-on';
+import Image from 'next/image'
+
 
 // export const meta: MetaFunction = () => {
 //   return {
@@ -23,9 +25,11 @@ export default function Index() {
       <Early2000s />
       <div className="safari-overflow-clip relative overflow-clip">
         <Container className="relative z-10">
-          <img
+          <Image
             className="mx-auto -mt-6 mb-6 w-[600px] max-w-full md:ml-col"
             src="/img/gifs/it-looked-a-bit-like-this.gif"
+            width="491"
+            height="344"
             alt="Animated GIF with flaming text that says 'It looked a bit like this'"
           />
           <span className="sr-only">It looked a bit like this...</span>

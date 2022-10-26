@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import Image from 'next/image';
 
 interface BadgeBaseProps {
   illustrationTitle: string;
@@ -26,21 +27,22 @@ export const Badge = ({
   >
     {'isFullImage' in props && props.isFullImage ? (
       <span className="flex h-full min-w-full items-center justify-center bg-white">
-        <img
-          loading="lazy"
+        <Image
           src={illustrationUrl}
           alt={illustrationAlt}
           width={props.illustrationWidth}
+          height="180"
           className={`w-[${props.illustrationWidth}px]`}
         />
       </span>
     ) : (
       <span className="flex h-full min-w-full items-center justify-center bg-white">
         <figure className="h-[90px] w-[90px] sm:h-[180px] sm:w-[180px]">
-          <img
-            loading="lazy"
+          <Image
             src={illustrationUrl}
             alt={illustrationAlt}
+            width="180"
+            height="180"
             style={{
               WebkitMaskSize: 'cover',
               maskSize: 'cover',

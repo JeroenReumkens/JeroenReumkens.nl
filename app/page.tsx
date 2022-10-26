@@ -9,15 +9,6 @@ import { SharingMyPassion } from '~/app/sections/home/sharing-my-passion';
 import { ReadOn } from '~/app/sections/home/read-on';
 import Image from 'next/image'
 
-
-// export const meta: MetaFunction = () => {
-//   return {
-//     title: 'Jeroen Reumkens — Frontend mentor',
-//     description:
-//       'Jeroen is a passionate frontend engineer who loves to help others become beter frontenders too.',
-//   };
-// };
-
 export default function Index() {
   return (
     <>

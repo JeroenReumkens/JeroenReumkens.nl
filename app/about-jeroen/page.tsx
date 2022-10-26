@@ -7,14 +7,6 @@ import { AwardIcon } from '~/app/components/icons';
 import { SectionIntro } from '~/app/components/section-intro';
 import Image from 'next/image';
 
-// export const meta: MetaFunction = () => {
-//   return {
-//     title: 'About me | Jeroen Reumkens — Frontend mentor',
-//     description:
-//       'Jeroen is a frontend engineer with a passion for the web, trying to make people smile when using this products.',
-//   };
-// };
-
 export default function AboutJeroen() {
   return (
     <>

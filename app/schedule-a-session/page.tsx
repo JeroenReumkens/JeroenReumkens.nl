@@ -4,14 +4,6 @@ import { Container } from '~/app/components/container';
 import { CtaButton } from '~/app/components/cta-button';
 import { Hero, Intro, Title } from '~/app/components/hero';
 
-// export const meta: MetaFunction = () => {
-//   return {
-//     title: 'Schedule a mentorhsip session | Jeroen Reumkens — Frontend mentor',
-//     description:
-//       'I see frontend as a craft and an everlearning journey — a journey on which I love to take you, while teaching you a few things along the way.',
-//   };
-// };
-
 export default function Mentoring() {
   return (
     <>

@@ -6,14 +6,6 @@ import { SmileIcon } from '~/app/components/icons';
 import { SectionTitle } from '~/app/components/section-title';
 import { ForTeamsAndIndividuals } from '~/app/sections/shared/for-teams-and-individuals';
 
-// export const meta: MetaFunction = () => {
-//   return {
-//     title: 'Mentoring | Jeroen Reumkens — Frontend mentor',
-//     description:
-//       'I see frontend as a craft and an everlearning journey — a journey on which I love to take you, while teaching you a few things along the way.',
-//   };
-// };
-
 export default function Mentoring() {
   return (
     <>

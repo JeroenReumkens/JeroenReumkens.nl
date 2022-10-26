@@ -1,9 +1,9 @@
 import classNames from 'classnames';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 interface BadgeBaseProps {
   illustrationTitle: string;
-  illustrationUrl: string;
+  illustrationUrl: StaticImageData;
   illustrationAlt: string;
 }
 
@@ -30,8 +30,6 @@ export const Badge = ({
         <Image
           src={illustrationUrl}
           alt={illustrationAlt}
-          width={props.illustrationWidth}
-          height="180"
           className={`w-[${props.illustrationWidth}px]`}
         />
       </span>
@@ -41,8 +39,6 @@ export const Badge = ({
           <Image
             src={illustrationUrl}
             alt={illustrationAlt}
-            width="180"
-            height="180"
             style={{
               WebkitMaskSize: 'cover',
               maskSize: 'cover',

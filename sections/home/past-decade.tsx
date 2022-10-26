@@ -2,6 +2,8 @@ import { BadgeAndText } from '~/components/badge-and-text';
 import { Container } from '~/components/container';
 import { CtaButton } from '~/components/cta-button';
 import { SectionTitle } from '~/components/section-title';
+import mindBlownGif from '~/public/img/gifs/mind-blown.webp';
+import explorerGif from '~/public/img/gifs/explorer.webp';
 
 export const PastDecade = () => {
   return (
@@ -10,7 +12,7 @@ export const PastDecade = () => {
       <BadgeAndText
         illustrationAlt="Old skool spining logo of the best browser ever made"
         illustrationTitle="Webmaster"
-        illustrationUrl="/img/gifs/explorer.gif"
+        illustrationUrl={explorerGif}
         illustrationWidth={50}
       >
         <p>
@@ -28,8 +30,8 @@ export const PastDecade = () => {
       <BadgeAndText
         illustrationAlt="Mind blown animation"
         illustrationTitle="Focus"
-        illustrationUrl="/img/gifs/mind-blown.gif"
-        illustrationWidth={250}
+        illustrationUrl={mindBlownGif}
+        illustrationWidth={100}
         isReverse
       >
         <p>

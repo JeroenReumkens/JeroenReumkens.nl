@@ -10,6 +10,8 @@ import classNames from 'classnames';
 import escape from 'lodash.escape';
 import { randomNumberBetween } from '~/utils/random-number';
 import Image from 'next/image';
+import loadingGif from '~/public/img/loading.webp';
+import jsAllTheThings from '~/public/img/js-all-the-things.jpg';
 
 const Code = ({
   code,
@@ -216,101 +218,73 @@ export const DivingIntoFrontend = () => {
             <li className="[&_img]:block [&_img]:h-[5rem] [&_img]:w-[5rem] sm:[&_img]:h-[10rem] sm:[&_img]:w-[10rem]">
               Performance
               <Image
-                width="100"
-                height="100"
                 className="absolute top-[-5rem] left-[-5rem]"
-                src="/img/loading.gif"
+                src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
               />
               <Image
-                width="100"
-                height="100"
                 className="absolute top-[0] left-[-30%]"
-                src="/img/loading.gif"
+                src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
               />
               <Image
-                width="100"
-                height="100"
                 className="absolute top-[-105%] left-[68%]"
-                src="/img/loading.gif"
+                src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
               />
               <Image
-                width="100"
-                height="100"
                 className="absolute top-[-100%] left-[12rem]"
-                src="/img/loading.gif"
+                src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
               />
               <Image
-                width="100"
-                height="100"
                 className="absolute top-[130%] left-[-2.4rem]"
-                src="/img/loading.gif"
+                src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
               />
               <Image
-                width="100"
-                height="100"
                 className="absolute top-[-145%] right-[-3rem]"
-                src="/img/loading.gif"
+                src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
               />
               <Image
-                width="100"
-                height="100"
                 className="absolute top-[195%] left-[50%]"
-                src="/img/loading.gif"
+                src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
               />
               <Image
-                width="100"
-                height="100"
                 className="absolute top-[-50%] left-[33%]"
-                src="/img/loading.gif"
+                src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
               />
               <Image
-                width="100"
-                height="100"
                 className="absolute top-[30%] left-[12%]"
-                src="/img/loading.gif"
+                src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
               />
               <Image
-                width="100"
-                height="100"
                 className="absolute top-[70%] right-[12%]"
-                src="/img/loading.gif"
+                src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
               />
               <Image
-                width="100"
-                height="100"
                 className="absolute top-[-5%] left-[50%]"
-                src="/img/loading.gif"
+                src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
               />
               <Image
-                width="100"
-                height="100"
                 className="absolute top-[100%] left-[30%]"
-                src="/img/loading.gif"
+                src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
               />
               <Image
-                width="100"
-                height="100"
                 className="absolute top-[-70%] right-[-4rem]"
-                src="/img/loading.gif"
+                src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
               />
               <Image
-                width="100"
-                height="100"
                 className="absolute top-[198%] left-[96%]"
-                src="/img/loading.gif"
+                src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
               />
             </li>
@@ -343,7 +317,7 @@ export const DivingIntoFrontend = () => {
                   width="25"
                   height="25"
                   className="pointer-events-none absolute top-[50%] left-[50%] z-0 h-[100vw] w-[100vw] -translate-x-1/2 -translate-y-1/2 opacity-20"
-                  src="/img/gifs/explorer.gif"
+                  src="/img/gifs/explorer.webp"
                   alt="Animated gif of an old skool loading spinner"
                 />
               </span>
@@ -366,7 +340,7 @@ export const DivingIntoFrontend = () => {
           isFullImage
           illustrationAlt=""
           illustrationTitle="Well... Not really"
-          illustrationUrl="/img/js-all-the-things.jpg"
+          illustrationUrl={jsAllTheThings}
           illustrationWidth={250}
         >
           <p>

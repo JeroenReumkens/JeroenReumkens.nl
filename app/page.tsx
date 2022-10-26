@@ -1,12 +1,12 @@
-import { Container } from '~/app/components/container';
-import { DivingIntoFrontend } from '~/app/sections/home/diving-into-frontend';
-import { AllThePossibilities } from '~/app/sections/home/all-the-possibilities';
-import { Early2000s } from '~/app/sections/home/early-2000s';
-import { Intro } from '~/app/sections/home/intro';
-import { OldSkoolWebsite } from '~/app/sections/home/old-skool-website';
-import { PastDecade } from '~/app/sections/home/past-decade';
-import { SharingMyPassion } from '~/app/sections/home/sharing-my-passion';
-import { ReadOn } from '~/app/sections/home/read-on';
+import { Container } from '~/components/container';
+import { DivingIntoFrontend } from '~/sections/home/diving-into-frontend';
+import { AllThePossibilities } from '~/sections/home/all-the-possibilities';
+import { Early2000s } from '~/sections/home/early-2000s';
+import { Intro } from '~/sections/home/intro';
+import { OldSkoolWebsite } from '~/sections/home/old-skool-website';
+import { PastDecade } from '~/sections/home/past-decade';
+import { SharingMyPassion } from '~/sections/home/sharing-my-passion';
+import { ReadOn } from '~/sections/home/read-on';
 import Image from 'next/image'
 
 export default function Index() {

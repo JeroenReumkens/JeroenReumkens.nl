@@ -1,9 +1,8 @@
 // import { NotFound } from '~/sections/404';
 // import { ErrorPage } from '~/sections/error';
-import Head from 'next/head';
 import '~/styles/global.css';
-import { Layout } from './components/global-layout';
-import { Gtag } from './gtag';
+import { Layout } from '~/components/global-layout';
+import { Gtag } from '~/components/gtag';
 
 interface DocumentProps {
   children: React.ReactNode;

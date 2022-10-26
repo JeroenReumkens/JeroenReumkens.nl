@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import { GrainSection } from '~/app/components/grain-section';
+import { GrainSection } from '~/components/grain-section';
 import { animate, scroll } from 'motion';
 import { useMotion } from '~/utils/use-motion';
 import classNames from 'classnames';

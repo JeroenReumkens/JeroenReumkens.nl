@@ -1,11 +1,11 @@
 'use client';
 
 import { useRef } from 'react';
-import { Container } from '~/app/components/container';
-import { StarIcon } from '~/app/components/icons';
+import { Container } from '~/components/container';
+import { StarIcon } from '~/components/icons';
 import { useMotion } from '~/utils/use-motion';
 import { animate, scroll } from 'motion';
-import { HighlightText } from '~/app/components/highlight-text';
+import { HighlightText } from '~/components/highlight-text';
 
 export const AllThePossibilities = () => {
   const containerRef = useRef<HTMLDivElement>(null);

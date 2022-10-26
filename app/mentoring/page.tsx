@@ -1,10 +1,10 @@
-import { Container } from '~/app/components/container';
-import { CtaButton } from '~/app/components/cta-button';
-import { Hero, Intro, Title } from '~/app/components/hero';
-import { HighlightText } from '~/app/components/highlight-text';
-import { SmileIcon } from '~/app/components/icons';
-import { SectionTitle } from '~/app/components/section-title';
-import { ForTeamsAndIndividuals } from '~/app/sections/shared/for-teams-and-individuals';
+import { Container } from '~/components/container';
+import { CtaButton } from '~/components/cta-button';
+import { Hero, Intro, Title } from '~/components/hero';
+import { HighlightText } from '~/components/highlight-text';
+import { SmileIcon } from '~/components/icons';
+import { SectionTitle } from '~/components/section-title';
+import { ForTeamsAndIndividuals } from '~/sections/shared/for-teams-and-individuals';
 
 export default function Mentoring() {
   return (

@@ -1,10 +1,10 @@
-import { Container } from '~/app/components/container';
-import { Hero, Intro, Title } from '~/app/components/hero';
-import { HighlightText } from '~/app/components/highlight-text';
-import { SectionTitle } from '~/app/components/section-title';
-import { MyTimeline } from '~/app/sections/shared/my-timeline';
-import { AwardIcon } from '~/app/components/icons';
-import { SectionIntro } from '~/app/components/section-intro';
+import { Container } from '~/components/container';
+import { Hero, Intro, Title } from '~/components/hero';
+import { HighlightText } from '~/components/highlight-text';
+import { SectionTitle } from '~/components/section-title';
+import { MyTimeline } from '~/sections/shared/my-timeline';
+import { AwardIcon } from '~/components/icons';
+import { SectionIntro } from '~/components/section-intro';
 import Image from 'next/image';
 
 export default function AboutJeroen() {

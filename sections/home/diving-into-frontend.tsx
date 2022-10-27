@@ -222,85 +222,71 @@ export const DivingIntoFrontend = () => {
                 className="absolute top-[-5rem] left-[-5rem]"
                 src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
-                placeholder="blur"
               />
               <Image
                 className="absolute top-[0] left-[-30%]"
                 src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
-                placeholder="blur"
               />
               <Image
                 className="absolute top-[-105%] left-[68%]"
                 src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
-                placeholder="blur"
               />
               <Image
                 className="absolute top-[-100%] left-[12rem]"
                 src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
-                placeholder="blur"
               />
               <Image
                 className="absolute top-[130%] left-[-2.4rem]"
                 src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
-                placeholder="blur"
               />
               <Image
                 className="absolute top-[-145%] right-[-3rem]"
                 src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
-                placeholder="blur"
               />
               <Image
                 className="absolute top-[195%] left-[50%]"
                 src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
-                placeholder="blur"
               />
               <Image
                 className="absolute top-[-50%] left-[33%]"
                 src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
-                placeholder="blur"
               />
               <Image
                 className="absolute top-[30%] left-[12%]"
                 src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
-                placeholder="blur"
               />
               <Image
                 className="absolute top-[70%] right-[12%]"
                 src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
-                placeholder="blur"
               />
               <Image
                 className="absolute top-[-5%] left-[50%]"
                 src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
-                placeholder="blur"
               />
               <Image
                 className="absolute top-[100%] left-[30%]"
                 src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
-                placeholder="blur"
               />
               <Image
                 className="absolute top-[-70%] right-[-4rem]"
                 src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
-                placeholder="blur"
               />
               <Image
                 className="absolute top-[198%] left-[96%]"
                 src={loadingGif}
                 alt="Animated gif of an old skool loading spinner"
-                placeholder="blur"
               />
             </li>
             <li>Semantics</li>

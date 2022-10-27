@@ -26,7 +26,6 @@ export const OldSkoolWebsiteFrame = forwardRef<HTMLDivElement>((_, ref) => (
           src={adGif}
           className="mt-4 ml-2 w-[150%] -rotate-12"
           alt="Old skool animated GIF selling fake ad space"
-          placeholder="blur"
         />
         <p className="mt-4 ml-2 font-['comic_sans_MS'] text-[12px] text-[#02FF2B] sm:text-small">
           Everyone needs a cool website!!! I can also build these cool websites
@@ -38,7 +37,6 @@ export const OldSkoolWebsiteFrame = forwardRef<HTMLDivElement>((_, ref) => (
             src={mailGif}
             className="mt-4 ml-2 w-[80%]"
             alt="Spinning email logo"
-            placeholder="blur"
           />
         ))}
       </div>
@@ -49,21 +47,18 @@ export const OldSkoolWebsiteFrame = forwardRef<HTMLDivElement>((_, ref) => (
             width="100"
             className="ml-4 mt-4"
             alt="Animated GIF of a home button"
-            placeholder="blur"
           />
           <Image
             src={linksGif}
             width="100"
             className="mt-4 ml-4"
             alt="Animated GIF of a link button"
-            placeholder="blur"
           />
           <Image
             src={guestbookGif}
             width="100"
             className="mx-4 mt-4"
             alt="Animated GIF of a guestbook button"
-            placeholder="blur"
           />
         </div>
         <div className="relative h-full">
@@ -71,19 +66,16 @@ export const OldSkoolWebsiteFrame = forwardRef<HTMLDivElement>((_, ref) => (
             src={welcomeImage}
             className="absolute top-[10%] left-1/2 w-1/2 -translate-x-1/2"
             alt="Welcome to my website title"
-            placeholder="blur"
           />
           <Image
             src={shuttleGif}
             className="absolute right-[5%] top-[50%] w-[8%]"
             alt="Low pixel GIF of a space shuttle"
-            placeholder="blur"
           />
           <Image
             src={shuttle2Gif}
             className="absolute left-[15%] top-[40%] w-[35%]"
             alt="Low pixel GIF of a space shuttle"
-            placeholder="blur"
           />
           <Image
             src={nextGif}
@@ -94,19 +86,16 @@ export const OldSkoolWebsiteFrame = forwardRef<HTMLDivElement>((_, ref) => (
             src={planetGif}
             className="absolute left-[70%] top-[25%] w-[20%]"
             alt="Animated GIF of a planet with small planets floating around it"
-            placeholder="blur"
           />
           <Image
             src={constructionGif}
             className="absolute left-4 bottom-5 w-[80%]"
             alt="Animated GIF of a retro under construction sign for a website"
-            placeholder="blur"
           />
           <Image
             src={webmasterGif}
             className="absolute left-4 bottom-4 w-[45%]"
             alt="Animated GIF with the text webmaster jeroen"
-            placeholder="blur"
           />
         </div>
       </div>

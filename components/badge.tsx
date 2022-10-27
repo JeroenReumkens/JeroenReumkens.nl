@@ -31,7 +31,6 @@ export const Badge = ({
           src={illustrationUrl}
           alt={illustrationAlt}
           className={`w-[${props.illustrationWidth}px]`}
-          placeholder="blur"
         />
       </span>
     ) : (
@@ -47,7 +46,6 @@ export const Badge = ({
               WebkitMaskImage: 'url("/img/star-twelve.svg")',
             }}
             className="h-full w-full max-w-none object-cover"
-            placeholder="blur"
           />
         </figure>
       </span>

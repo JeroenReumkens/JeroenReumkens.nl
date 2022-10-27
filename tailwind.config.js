@@ -3,7 +3,11 @@ const plugin = require('tailwindcss/plugin');
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: 'jit',
-  content: ['./app/**/*.{ts,tsx}', './sections/**/*.{ts,tsx}', './components/**/*.{ts,tsx}'],
+  content: [
+    './app/**/*.{ts,tsx}',
+    './sections/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+  ],
   theme: {
     colors: {
       white: '#fff',
@@ -28,8 +32,8 @@ module.exports = {
       col: '21.4rem',
     },
     fontFamily: {
-      mono: "'Fira Code', monospace",
-      serif: "'Cormorant', serif",
+      mono: 'var(--font-fira-code)',
+      serif: 'var(--font-cormorant)',
     },
     fontSize: {
       small: '2.2rem',

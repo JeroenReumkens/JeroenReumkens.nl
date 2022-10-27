@@ -1,14 +1,28 @@
 import '~/styles/global.css';
 import { Layout } from '~/components/global-layout';
 import { Gtag } from '~/components/gtag';
+import { Cormorant, Fira_Code } from '@next/font/google';
+import classNames from 'classnames';
 
 interface DocumentProps {
   children: React.ReactNode;
 }
 
+const cormorant = Cormorant({
+  weight: 'variable',
+  variable: '--font-cormorant',
+});
+const firaCode = Fira_Code({
+  weight: 'variable',
+  variable: '--font-fira-code',
+});
+
 const Document = ({ children }: DocumentProps) => {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={classNames(cormorant.variable, firaCode.variable)}
+    >
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />

@@ -1,9 +1,9 @@
 import classNames from 'classnames';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 
 interface BadgeBaseProps {
   illustrationTitle: string;
-  illustrationUrl: StaticImageData;
+  illustrationUrl: string;
   illustrationAlt: string;
 }
 
@@ -31,7 +31,6 @@ export const Badge = ({
           src={illustrationUrl}
           alt={illustrationAlt}
           className={`w-[${props.illustrationWidth}px]`}
-          blurDataURL={undefined}
         />
       </span>
     ) : (
@@ -47,7 +46,6 @@ export const Badge = ({
               WebkitMaskImage: 'url("/img/star-twelve.svg")',
             }}
             className="h-full w-full max-w-none object-cover"
-            blurDataURL={undefined}
           />
         </figure>
       </span>

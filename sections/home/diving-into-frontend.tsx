@@ -11,7 +11,6 @@ import escape from 'lodash.escape';
 import { randomNumberBetween } from '~/utils/random-number';
 import Image from 'next/image';
 import loadingGif from '~/public/img/loading.webp';
-import jsAllTheThings from '~/public/img/js-all-the-things.jpg';
 import explorerGif from '~/public/img/gifs/explorer.webp';
 
 const Code = ({
@@ -339,7 +338,7 @@ export const DivingIntoFrontend = () => {
           isFullImage
           illustrationAlt=""
           illustrationTitle="Well... Not really"
-          illustrationUrl={jsAllTheThings}
+          illustrationUrl="/public/img/js-all-the-things.jpg"
           illustrationWidth={250}
         >
           <p>

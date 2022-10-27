@@ -58,3 +58,5 @@ export const GooglyPicture = forwardRef<HTMLImageElement>((_, ref) => {
     </div>
   );
 });
+
+export default GooglyPicture;

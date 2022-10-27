@@ -1,11 +1,19 @@
 'use client';
 
-import { useRef } from 'react';
+import { Suspense, useRef } from 'react';
 import { animate, scroll } from 'motion';
-import { GooglyPicture } from '~/components/googly-picture';
 import { useMotion } from '~/utils/use-motion';
 import { CtaButton } from '~/components/cta-button';
 import { Hero, Title, Intro as IntroText } from '~/components/hero';
+import dynamic from 'next/dynamic';
+import { WhoDisPicture } from '~/components/who-dis-picture';
+
+const LazyGoogleEyes = dynamic(
+  () => import('../../components/googly-picture'),
+  {
+    suspense: true,
+  }
+);
 
 export const Intro = () => {
   const imageRef = useRef<HTMLImageElement>(null);
@@ -59,7 +67,9 @@ export const Intro = () => {
         </p>
       </IntroText>
       <div className="mb:mt-5 relative mt-2 md:ml-auto md:mt-[0]">
-        <GooglyPicture ref={imageRef} />
+        <Suspense fallback={<WhoDisPicture />}>
+          <LazyGoogleEyes ref={imageRef} />
+        </Suspense>
       </div>
     </Hero>
   );

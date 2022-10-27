@@ -5,8 +5,7 @@ import { SectionTitle } from '~/components/section-title';
 import { MyTimeline } from '~/sections/shared/my-timeline';
 import { AwardIcon } from '~/components/icons';
 import { SectionIntro } from '~/components/section-intro';
-import Image from 'next/image';
-import whoDisImage from '~/public/img/who-dis.jpg';
+import { WhoDisPicture } from '~/components/who-dis-picture';
 
 export default function AboutJeroen() {
   return (
@@ -25,12 +24,7 @@ export default function AboutJeroen() {
           </p>
         </Intro>
         <div className="mb:mt-5 relative mt-2 md:ml-auto md:mt-[0]">
-          <Image
-            className="rounded-massive border shadow-hard"
-            src={whoDisImage}
-            alt="Me wearing glasses, a white blouse and having a very short beard, sitting in a coffee bar."
-            placeholder="blur"
-          />
+          <WhoDisPicture />
         </div>
       </Hero>
 

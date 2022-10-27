@@ -338,7 +338,7 @@ export const DivingIntoFrontend = () => {
           isFullImage
           illustrationAlt=""
           illustrationTitle="Well... Not really"
-          illustrationUrl="/public/img/js-all-the-things.jpg"
+          illustrationUrl="/img/js-all-the-things.jpg"
           illustrationWidth={250}
         >
           <p>

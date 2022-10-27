@@ -33,7 +33,7 @@ export const Title = ({ children }: { children: React.ReactNode }) => (
 );
 
 export const Intro = ({ children }: { children: React.ReactNode }) => (
-  <div className="flex h-full flex-col justify-center space-y-3 sm:mr-4 sm:w-1/2 md:w-[60%]">
+  <div className="flex h-full flex-shrink-0 flex-col justify-center space-y-3 sm:mr-4 sm:w-1/2 md:w-[60%]">
     <div className="mb-2 text-small md:mb-3 md:text-body">{children}</div>
   </div>
 );

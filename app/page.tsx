@@ -19,6 +19,8 @@ export default function Index() {
           <Image
             className="mx-auto -mt-6 mb-6 w-[600px] max-w-full md:ml-col"
             src="/img/gifs/it-looked-a-bit-like-this.webp"
+            width="600"
+            height="300"
             alt="Animated GIF with flaming text that says 'It looked a bit like this'"
           />
           <span className="sr-only">It looked a bit like this...</span>

@@ -47,12 +47,10 @@ export const Intro = () => {
           Reumkens
         </Title>
 
-        <div className="md:ml-col">
-          <p className="mb-2 text-small md:mb-3 md:text-body">
-            is a passionate frontend engineer with over a decade of professional
-            experience hand crafting the best experiences on the web.
-          </p>
-        </div>
+        <p className="mb-2 max-w-[70%] text-small md:mb-3 md:text-body">
+          is a passionate frontend engineer with over a decade of professional
+          experience hand crafting the best experiences on the web.
+        </p>
 
         <p className="mt-5 flex flex-col items-start text-small md:block">
           <CtaButton
@@ -66,7 +64,7 @@ export const Intro = () => {
           or read on... 👇
         </p>
       </IntroText>
-      <div className="mb:mt-5 relative mt-2 md:ml-auto md:mt-[0]">
+      <div className="mb:mt-5 relative mt-2 max-w-[400px] md:ml-auto md:mt-[0]">
         <Suspense fallback={<WhoDisPicture />}>
           <LazyGoogleEyes ref={imageRef} />
         </Suspense>

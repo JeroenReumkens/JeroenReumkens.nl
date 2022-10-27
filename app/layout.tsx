@@ -49,6 +49,9 @@ const Document = ({ children }: DocumentProps) => {
         />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#393939" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="preload" href="/img/noise.png" as="image" />
       </head>
       <body>
         <Gtag />

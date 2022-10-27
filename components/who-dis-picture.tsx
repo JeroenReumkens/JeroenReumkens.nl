@@ -6,6 +6,5 @@ export const WhoDisPicture = () => (
     className="rounded-massive border shadow-hard"
     src={whoDisImage}
     alt="Me wearing glasses, a white blouse and having a very short beard, sitting in a coffee bar."
-    placeholder="blur"
   />
 );

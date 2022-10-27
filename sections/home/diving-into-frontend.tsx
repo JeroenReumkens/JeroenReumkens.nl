@@ -318,7 +318,6 @@ export const DivingIntoFrontend = () => {
                   className="pointer-events-none absolute top-[50%] left-[50%] z-0 h-[100vw] w-[100vw] -translate-x-1/2 -translate-y-1/2 opacity-20"
                   src={explorerGif}
                   alt="Animated gif of an old skool loading spinner"
-                  placeholder="blur"
                 />
               </span>
               Browser APIs

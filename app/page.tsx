@@ -21,7 +21,6 @@ export default function Index() {
             className="mx-auto -mt-6 mb-6 w-[600px] max-w-full md:ml-col"
             src={lookedABitLikeThisGif}
             alt="Animated GIF with flaming text that says 'It looked a bit like this'"
-            placeholder="blur"
           />
           <span className="sr-only">It looked a bit like this...</span>
         </Container>

@@ -38,7 +38,6 @@ export const GooglyPicture = forwardRef<HTMLImageElement>((_, ref) => {
         }}
         src={whoDisImage}
         alt="Me wearing glasses, a white blouse and having a very short beard, sitting in a coffee bar."
-        placeholder="blur"
       />
       <GoogleEyes wrapperRef={ref} />
       <Image
@@ -53,7 +52,6 @@ export const GooglyPicture = forwardRef<HTMLImageElement>((_, ref) => {
         }
         src={googlyDogGif}
         alt="An animated gif of a dog wearing glasses with googly eyes. They have a bone in their mouth which a human tries to pull out of dog's mouth, causing the googly eyes to bounce around."
-        placeholder="blur"
       />
     </div>
   );

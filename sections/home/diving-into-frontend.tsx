@@ -12,6 +12,7 @@ import { randomNumberBetween } from '~/utils/random-number';
 import Image from 'next/image';
 import loadingGif from '~/public/img/loading.webp';
 import jsAllTheThings from '~/public/img/js-all-the-things.jpg';
+import explorerGif from '~/public/img/gifs/explorer.webp';
 
 const Code = ({
   code,
@@ -328,10 +329,8 @@ export const DivingIntoFrontend = () => {
             <li>
               <span className="absolute left-[0] top-[0] block h-full w-full">
                 <Image
-                  width="25"
-                  height="25"
                   className="pointer-events-none absolute top-[50%] left-[50%] z-0 h-[100vw] w-[100vw] -translate-x-1/2 -translate-y-1/2 opacity-20"
-                  src="/img/gifs/explorer.webp"
+                  src={explorerGif}
                   alt="Animated gif of an old skool loading spinner"
                   placeholder="blur"
                 />

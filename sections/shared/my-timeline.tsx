@@ -1,4 +1,6 @@
-import { OldSkoolWebsiteFrame } from '../home/old-skool-website';
+'use client';
+
+import { OldSkoolWebsiteFrame } from '../shared/old-skool-website';
 
 interface YearProps {
   children: React.ReactNode;

@@ -3,12 +3,12 @@ import { DivingIntoFrontend } from '~/sections/home/diving-into-frontend';
 import { AllThePossibilities } from '~/sections/home/all-the-possibilities';
 import { Early2000s } from '~/sections/home/early-2000s';
 import { Intro } from '~/sections/home/intro';
-import { OldSkoolWebsite } from '~/sections/home/old-skool-website';
 import { PastDecade } from '~/sections/home/past-decade';
 import { SharingMyPassion } from '~/sections/home/sharing-my-passion';
 import { ReadOn } from '~/sections/home/read-on';
 import Image from 'next/image';
 import lookedABitLikeThisGif from '~/public/img/gifs/it-looked-a-bit-like-this.webp';
+import { OldSkoolWebsiteWithPreload } from '~/sections/shared/old-skool-website-with-preload';
 
 export default function Index() {
   return (
@@ -25,7 +25,7 @@ export default function Index() {
           />
           <span className="sr-only">It looked a bit like this...</span>
         </Container>
-        <OldSkoolWebsite />
+        <OldSkoolWebsiteWithPreload />
       </div>
       <AllThePossibilities />
       <PastDecade />

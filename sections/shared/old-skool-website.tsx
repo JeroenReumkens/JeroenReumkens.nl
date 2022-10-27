@@ -1,5 +1,3 @@
-'use client';
-
 import { animate, scroll } from 'motion';
 import Image from 'next/image';
 import { forwardRef, useRef } from 'react';
@@ -137,3 +135,5 @@ export const OldSkoolWebsite = () => {
     </div>
   );
 };
+
+export default OldSkoolWebsite;

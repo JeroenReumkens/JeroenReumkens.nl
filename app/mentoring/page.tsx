@@ -1,10 +1,12 @@
-import { Container } from '~/components/container';
-import { CtaButton } from '~/components/cta-button';
-import { Hero, Intro, Title } from '~/components/hero';
-import { HighlightText } from '~/components/highlight-text';
+import { Container } from '~/components/structure';
+import {
+  CtaButton,
+  HighlightText,
+  SectionIntro,
+  SectionTitle,
+} from '~/components/content';
+import { Hero, Intro, Title } from '~/components/content';
 import { SmileIcon } from '~/components/icons';
-import { SectionIntro } from '~/components/section-intro';
-import { SectionTitle } from '~/components/section-title';
 import { ForTeamsAndIndividuals } from '~/sections/shared/for-teams-and-individuals';
 
 export default function Mentoring() {

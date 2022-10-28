@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import { Container } from '~/components/container';
+import { Container } from '~/components/structure';
 import { useMotion } from '~/utils/use-motion';
 import { animate, scroll } from 'motion';
 

@@ -11,7 +11,7 @@ export const HighlightText = ({
   iconLeft: IconLeft,
   iconRight: IconRight,
 }: HighlightTextProps) => (
-  <div className="pt-6 font-serif text-body font-regular leading-tight sm:text-xl md:text-2xl">
+  <div className="pt-4 font-serif text-body font-regular leading-tight sm:text-xl md:pt-6 md:text-2xl">
     <p className="relative z-10 sm:w-[75%]">
       {line1}
       <IconLeft

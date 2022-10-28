@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { Card } from '~/components/card';
-import { Container } from '~/components/container';
-import { CtaButton } from '~/components/cta-button';
-import { Hero, Intro, Title } from '~/components/hero';
+import { Container } from '~/components/structure';
+import { CtaButton } from '~/components/content';
+import { Hero, Intro, Title } from '~/components/content';
 
 export default function Mentoring() {
   return (

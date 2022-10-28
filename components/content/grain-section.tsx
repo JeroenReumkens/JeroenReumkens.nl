@@ -1,6 +1,6 @@
 import type { ForwardedRef } from 'react';
 import { forwardRef } from 'react';
-import { Container } from './container';
+import { Container } from '~/components/structure';
 
 type GrainSectionProps = {
   children?: React.ReactNode;

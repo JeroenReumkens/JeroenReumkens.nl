@@ -1,11 +1,11 @@
 'use client';
 
 import { useRef } from 'react';
-import { Container } from '~/components/container';
+import { Container } from '~/components/structure';
 import { StarIcon } from '~/components/icons';
 import { useMotion } from '~/utils/use-motion';
 import { animate, scroll } from 'motion';
-import { HighlightText } from '~/components/highlight-text';
+import { HighlightText } from '~/components/content';
 
 export const AllThePossibilities = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -40,7 +40,7 @@ export const AllThePossibilities = () => {
   );
 
   return (
-    <Container ref={containerRef} className="py-5 sm:py-6">
+    <Container ref={containerRef} className="py-4 sm:py-5">
       <HighlightText
         line1="Imagine me as a teenager, seeing all the possibilities!"
         line2="It sparked something inside me that is still there today..."

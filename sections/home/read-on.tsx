@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import classNames from 'classnames';
-import { Container } from '~/components/container';
+import { Container } from '~/components/structure';
 import { DoubleArrowIcon } from '~/components/icons';
-import { SectionTitle } from '~/components/section-title';
+import { SectionTitle } from '~/components/content';
 
 interface CtaProps {
   children: React.ReactNode;

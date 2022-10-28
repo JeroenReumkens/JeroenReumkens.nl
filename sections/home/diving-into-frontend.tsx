@@ -2,10 +2,9 @@
 
 import { useRef } from 'react';
 import { useMotion } from '~/utils/use-motion';
-import { GrainSection } from '~/components/grain-section';
+import { GrainSection } from '~/components/content';
 import { animate, scroll, inView } from 'motion';
-import { SectionTitle } from '~/components/section-title';
-import { BadgeAndText } from '~/components/badge-and-text';
+import { SectionTitle, BadgeAndText } from '~/components/content';
 import classNames from 'classnames';
 import escape from 'lodash.escape';
 import { randomNumberBetween } from '~/utils/random-number';

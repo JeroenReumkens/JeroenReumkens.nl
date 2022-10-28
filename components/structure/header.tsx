@@ -7,9 +7,8 @@ import { usePathname } from 'next/navigation';
 import { useRef, useState, useEffect } from 'react';
 import { useWindowWidth, useScrollDepth } from '~/utils/use-window';
 import { Container } from './container';
-import { CtaButton } from './cta-button';
-import { HamburgerIcon } from './icons';
-import { HomeIcon } from './icons/home';
+import { CtaButton } from '~/components/content/cta-button';
+import { HamburgerIcon, HomeIcon } from '~/components/icons';
 
 const staggerAnimation = (elements: ElementOrSelector, isVisible: boolean) =>
   animate(elements, isVisible ? { x: 0, opacity: 1 } : { x: 30, opacity: 0 }, {

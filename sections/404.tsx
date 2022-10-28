@@ -1,9 +1,8 @@
 'use client';
 
 import { useRef } from 'react';
-import { CtaButton } from '~/components/cta-button';
 import { GoogleEyes } from '~/components/google-eyes';
-import { GrainSection } from '~/components/grain-section';
+import { GrainSection, CtaButton } from '~/components/content';
 
 export const NotFound = () => {
   const ref = useRef<HTMLDivElement>(null);

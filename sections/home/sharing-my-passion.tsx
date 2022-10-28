@@ -1,8 +1,6 @@
-import { Container } from '~/components/container';
-import { SectionTitle } from '~/components/section-title';
+import { Container } from '~/components/structure';
+import { SectionTitle, CtaButton, HighlightText } from '~/components/content';
 import { GlobeIcon } from '~/components/icons';
-import { CtaButton } from '~/components/cta-button';
-import { HighlightText } from '~/components/highlight-text';
 import { ForTeamsAndIndividuals } from '../shared/for-teams-and-individuals';
 
 export const SharingMyPassion = () => {

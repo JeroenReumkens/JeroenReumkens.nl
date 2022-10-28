@@ -1,8 +1,9 @@
 import '~/styles/global.css';
-import { Layout } from '~/components/global-layout';
-import { Gtag } from '~/components/gtag';
 import { Cormorant, Fira_Code } from '@next/font/google';
 import classNames from 'classnames';
+import { Header } from '~/components/structure/header';
+import { Footer } from '~/components/structure/footer';
+import { Gtag } from '~/components/structure/gtag';
 
 interface DocumentProps {
   children: React.ReactNode;
@@ -55,8 +56,11 @@ const Document = ({ children }: DocumentProps) => {
       </head>
       <body>
         <Gtag />
-
-        <Layout>{children}</Layout>
+        <main className="font-serif leading-tight [--responsive-massive-radius:60px] sm:[--responsive-massive-radius:120px]">
+          <Header />
+          {children}
+          <Footer />
+        </main>
       </body>
     </html>
   );

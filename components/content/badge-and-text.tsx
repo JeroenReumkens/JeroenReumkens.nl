@@ -1,6 +1,6 @@
 import classNames from 'classnames';
-import type { BadgeProps } from './badge';
-import { Badge } from './badge';
+import type { BadgeProps } from '~/components/badge';
+import { Badge } from '~/components/badge';
 
 interface BadgeAndTextProps {
   children: React.ReactNode;

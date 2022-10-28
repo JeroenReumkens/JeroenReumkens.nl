@@ -3,8 +3,8 @@
 import { Suspense, useRef } from 'react';
 import { animate, scroll } from 'motion';
 import { useMotion } from '~/utils/use-motion';
-import { CtaButton } from '~/components/cta-button';
-import { Hero, Title, Intro as IntroText } from '~/components/hero';
+import { CtaButton } from '~/components/content';
+import { Hero, Title, Intro as IntroText } from '~/components/content';
 import dynamic from 'next/dynamic';
 import { WhoDisPicture } from '~/components/who-dis-picture';
 

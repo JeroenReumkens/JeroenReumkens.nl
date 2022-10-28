@@ -1,4 +1,4 @@
-import { Container } from '~/components/container';
+import { Container } from '~/components/structure';
 import { DivingIntoFrontend } from '~/sections/home/diving-into-frontend';
 import { AllThePossibilities } from '~/sections/home/all-the-possibilities';
 import { Early2000s } from '~/sections/home/early-2000s';

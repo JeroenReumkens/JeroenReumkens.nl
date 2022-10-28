@@ -1,10 +1,12 @@
-import { Container } from '~/components/container';
-import { Hero, Intro, Title } from '~/components/hero';
-import { HighlightText } from '~/components/highlight-text';
-import { SectionTitle } from '~/components/section-title';
+import { Container } from '~/components/structure';
+import { Hero, Intro, Title } from '~/components/content';
+import {
+  HighlightText,
+  SectionTitle,
+  SectionIntro,
+} from '~/components/content';
 import { MyTimeline } from '~/sections/shared/my-timeline';
 import { AwardIcon } from '~/components/icons';
-import { SectionIntro } from '~/components/section-intro';
 import { WhoDisPicture } from '~/components/who-dis-picture';
 
 export default function AboutJeroen() {
@@ -28,7 +30,7 @@ export default function AboutJeroen() {
         </div>
       </Hero>
 
-      <Container className="space-y-5 pt-6 text-body sm:text-xl [&_p]:sm:w-2/3">
+      <Container className="space-y-3 pt-6 text-body sm:text-xl [&_p]:sm:w-2/3 md:space-y-5">
         <p>
           While scrolling through my past experience you might notice that I
           pivoted a few times between freelance and working for an agency...

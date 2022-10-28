@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import Link from 'next/link';
-import { DoubleArrowIcon } from './icons/double-arrow';
+import { DoubleArrowIcon } from '~/components/icons';
 
 interface CtaButtonProps {
   children: React.ReactNode;

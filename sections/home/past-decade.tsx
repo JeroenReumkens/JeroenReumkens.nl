@@ -1,7 +1,5 @@
-import { BadgeAndText } from '~/components/badge-and-text';
-import { Container } from '~/components/container';
-import { CtaButton } from '~/components/cta-button';
-import { SectionTitle } from '~/components/section-title';
+import { BadgeAndText, CtaButton, SectionTitle } from '~/components/content';
+import { Container } from '~/components/structure';
 
 export const PastDecade = () => {
   return (

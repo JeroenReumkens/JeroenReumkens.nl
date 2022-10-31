@@ -109,6 +109,14 @@ export default function Mentoring() {
           <li>
             My website needs to comply with WCAG standards — where do I start?
           </li>
+          <li>
+            So many libraries and frameworks out there nowadays, let me help you
+            decide what to adopt
+          </li>
+          <li>
+            Review your current platform's architecture and create a plan to
+            improve it
+          </li>
           <li>How do I solve ... in React?</li>
           <li>*This* is not working in Safari — help!</li>
         </ul>
@@ -128,6 +136,7 @@ export default function Mentoring() {
             </CtaButton>
           </li>
           <li>How to best prepare for my job interview?</li>
+          <li>How can I give better feedback in pull requests?</li>
         </ul>
 
         <h3 className="mt-5 text-lg font-medium sm:w-2/3 sm:text-xl">
@@ -145,6 +154,10 @@ export default function Mentoring() {
             takes them x amount of time, is that reasonable?
           </li>
           <li>Can you build enterprise software with React? (duh ;))</li>
+          <li>
+            We know we need to give more love to the frontend of our app, but
+            could use some guidance on that.
+          </li>
         </ul>
 
         <SectionTitle>For teams and individuals</SectionTitle>

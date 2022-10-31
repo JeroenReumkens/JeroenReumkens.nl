@@ -42,7 +42,7 @@ export default function Mentoring() {
                 href="https://cal.com/frontendfyi/na1eb6eis8-introduction"
                 subtitle="A payment link will follow after booking"
               >
-                Book 25 mins for $49
+                Book 25 mins for €49
               </CtaButton>
             </div>
           </Card>
@@ -65,13 +65,13 @@ export default function Mentoring() {
                 href="https://cal.com/frontendfyi/lskjm0hrgx-1on1-30mins"
                 subtitle="A payment link will follow after booking"
               >
-                Book 30 mins for $125
+                Book 30 mins for €99
               </CtaButton>
               <CtaButton
                 href="https://cal.com/frontendfyi/hunm238j9o-1on1-60mins"
                 subtitle="A payment link will follow after booking"
               >
-                Book 60 mins for $199
+                Book 60 mins for €165
               </CtaButton>
             </div>
           </Card>
@@ -104,7 +104,7 @@ export default function Mentoring() {
                 href="https://cal.com/frontendfyi/cwm1kphsrr-code-review"
                 subtitle="A payment link will follow after booking"
               >
-                Book 60 mins for $249
+                Book 60 mins for €199
               </CtaButton>
             </div>
           </Card>

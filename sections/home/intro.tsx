@@ -47,12 +47,12 @@ export const Intro = () => {
           Reumkens
         </Title>
 
-        <p className="mb-2 max-w-[70%] text-small md:mb-3 md:text-body">
+        <p className="mb-2 text-small md:mb-3 md:max-w-[70%] md:text-body">
           is a passionate frontend engineer with over a decade of professional
           experience hand crafting the best experiences on the web.
         </p>
 
-        <p className="mt-5 flex flex-col items-start text-small md:block">
+        <p className="mt-4 flex flex-col items-start text-small md:mt-5 md:block">
           <CtaButton
             variant="small"
             className="mr-3 mb-3 md:mb-[0]"

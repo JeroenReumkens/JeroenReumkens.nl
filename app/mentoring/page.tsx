@@ -46,9 +46,9 @@ export default function Mentoring() {
         />
       </Container>
 
-      <Container className="sm:text-md text-body leading-base md:text-body">
+      <Container className="sm:text-md text-small leading-base md:text-body">
         <SectionTitle>What can I teach you?</SectionTitle>
-        <div className="mb-4 space-y-4 pr-4 md:mb-[0] md:ml-col md:w-2/3">
+        <div className="mb-4 space-y-4 md:mb-[0] md:ml-col md:w-2/3">
           <p>
             Nowadays frontend is a very extensive field. Every week there seem
             to be popping up a new standards, browsers are adopting new features

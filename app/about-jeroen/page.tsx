@@ -30,7 +30,7 @@ export default function AboutJeroen() {
         </div>
       </Hero>
 
-      <Container className="space-y-3 pt-6 text-body sm:text-xl [&_p]:sm:w-2/3 md:space-y-5">
+      <Container className="space-y-3 pt-6 text-small sm:text-lg [&_p]:sm:w-2/3 md:space-y-4">
         <p>
           While scrolling through my past experience you might notice that I
           pivoted a few times between freelance and working for an agency...
@@ -48,7 +48,7 @@ export default function AboutJeroen() {
           line2="it's becoming more relevant than ever to have someone to teach you the craft and help you or your team grow to the next level."
         />
 
-        <p>
+        <p className="pr-4 sm:pr-[0]">
           That's why I've decided to do things a bit different: I'm creating a
           platform where I share all the knowledge I have, and give people the
           possibility to pick my brain!

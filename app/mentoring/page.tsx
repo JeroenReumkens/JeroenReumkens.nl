@@ -37,7 +37,7 @@ export default function Mentoring() {
         </div>
       </Hero>
 
-      <Container id="page-content" className="py-5 sm:py-6">
+      <Container id="page-content" className="py-3 sm:py-5">
         <HighlightText
           line1="There is so many competition on the world wide web."
           line2="Leaving an impression on peoples faces when they use your product is key — That is what I want to teach you."

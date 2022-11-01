@@ -40,23 +40,26 @@ export const AllThePossibilities = () => {
   );
 
   return (
-    <Container ref={containerRef} className="py-4 sm:py-5">
-      <HighlightText
-        line1="Imagine me as a teenager, seeing all the possibilities!"
-        line2="It sparked something inside me that is still there today..."
-        iconLeft={(props) => <StarIcon {...props} ref={starLeftRef} />}
-        iconRight={(props) => <StarIcon {...props} ref={starRightRef} />}
-      />
+    <div className="grain">
+      <Container ref={containerRef} className="py-4 sm:py-5">
+        <HighlightText
+          line1="Imagine me as a teenager, seeing all the possibilities!"
+          line2="It sparked something inside me that is still there today..."
+          iconLeft={(props) => <StarIcon {...props} ref={starLeftRef} />}
+          iconRight={(props) => <StarIcon {...props} ref={starRightRef} />}
+        />
 
-      <p className="relative z-10 mt-2 max-w-[80%] text-small sm:ml-col sm:max-w-[60%] sm:text-[4rem]">
-        <span className="font-mono text-[1.4rem] sm:text-small">
-          &lt;==&lt;
-        </span>{' '}
-        Little did I know that the web would only become more amazing over time{' '}
-        <span className="font-mono text-[1.4rem] sm:text-small">
-          &gt;==&gt;
-        </span>
-      </p>
-    </Container>
+        <p className="relative z-10 mt-2 max-w-[80%] text-small sm:ml-col sm:max-w-[60%] sm:text-[4rem]">
+          <span className="font-mono text-[1.4rem] sm:text-small">
+            &lt;==&lt;
+          </span>{' '}
+          Little did I know that the web would only become more amazing over
+          time{' '}
+          <span className="font-mono text-[1.4rem] sm:text-small">
+            &gt;==&gt;
+          </span>
+        </p>
+      </Container>
+    </div>
   );
 };

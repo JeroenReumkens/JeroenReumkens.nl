@@ -30,7 +30,9 @@ export default function Index() {
       <AllThePossibilities />
       <PastDecade />
       <DivingIntoFrontend />
-      <SharingMyPassion />
+      <div className="grain pb-4">
+        <SharingMyPassion />
+      </div>
       <ReadOn />
     </>
   );

@@ -12,10 +12,12 @@ interface DocumentProps {
 const cormorant = Cormorant({
   weight: 'variable',
   variable: '--font-cormorant',
+  display: 'swap',
 });
 const firaCode = Fira_Code({
   weight: 'variable',
   variable: '--font-fira-code',
+  display: 'swap',
 });
 
 const Document = ({ children }: DocumentProps) => {

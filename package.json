@@ -1,35 +1,48 @@
 {
-  "name": "jeroenreumkens",
-  "license": "MIT",
-  "version": "0.1.0",
+  "private": true,
+  "sideEffects": false,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
+    "dev": "next dev",
     "start": "next start",
-    "deploy": "next build && next export"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@urval/lazy-image": "^0.0.1-alpha.6",
-    "@urval/use-in-view": "^0.0.1-alpha.6",
-    "next": "^9.3.5",
-    "polished": "^3.4.2",
-    "react": "16.12.0",
-    "react-dom": "16.12.0",
-    "rebass": "^4.0.7",
-    "styled-components": "^5.0.0"
+    "@netlify/functions": "^1.0.0",
+    "@next/font": "^13.0.0",
+    "classnames": "^2.3.2",
+    "isbot": "^3.6.1",
+    "lodash.escape": "^4.0.1",
+    "motion": "^10.14.2",
+    "next": "^13.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sharp": "^0.31.1",
+    "tailwind": "^4.0.0"
   },
   "devDependencies": {
-    "@types/node": "^13.1.7",
-    "@types/rebass": "^4.0.4",
-    "@types/styled-components": "^4.4.2",
-    "babel-plugin-styled-components": "^1.10.6",
-    "imagemin-mozjpeg": "^8.0.0",
-    "imagemin-optipng": "^7.1.0",
-    "next-compose-plugins": "^2.2.0",
-    "next-optimized-images": "^2.6.0",
-    "tslint-config-airbnb": "^5.11.2",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-react": "^4.1.0",
-    "typescript": "^3.7.4"
+    "@types/lodash.escape": "^4.0.7",
+    "@types/node": "18.11.5",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.41.0",
+    "@typescript-eslint/parser": "^5.41.0",
+    "autoprefixer": "^10.4.12",
+    "concurrently": "^7.4.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.26.0",
+    "eslint-config-next": "^13.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-tailwindcss": "^3.6.2",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.16",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13",
+    "tailwindcss": "^3.2.1",
+    "typescript": "^4.7.4"
+  },
+  "engines": {
+    "node": ">=16"
   }
 }

@@ -1,4 +1,10 @@
-const withPlugins = require('next-compose-plugins');
-const optimizedImages = require('next-optimized-images');
-
-module.exports = withPlugins([optimizedImages]);
+/** @type {import('next').NextConfig} */
+module.exports = {
+  reactStrictMode: true,
+  experimental: {
+    appDir: true,
+    fontLoaders: [
+      { loader: '@next/font/google', options: { subsets: ['latin'] } },
+    ],
+  },
+};

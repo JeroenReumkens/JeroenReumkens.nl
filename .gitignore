@@ -1,25 +1,16 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+node_modules
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
+/.next
 /build
+/public/build
+.env
+./tailwind.css
+yarn-error.log
 
-# misc
 .DS_Store
 .env*
+TODO.MD
+# Local Netlify folder
+.netlify
 
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+.vscode

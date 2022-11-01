@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: 'border-box';
+  }
+
+  * {
+    margin: 0;
+  }
+
+  html, body {
+    background-color: theme('colors.gray');
+    font-size: 10px;
+    min-height: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEWzs7P94mLeAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg=='),
+      url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEWzs7P94mLeAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg=='),
+      url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEWzs7P94mLeAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg=='),
+      url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEWzs7P94mLeAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg=='),
+      url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEWzs7P94mLeAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg=='),
+      url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEWzs7P94mLeAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg=='),
+      url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEWzs7P94mLeAAAACklEQVR42mNgAAAAAgAB5Sfe/AAAAABJRU5ErkJggg==');
+    background-repeat: repeat-y;
+    background-position:
+      50% top, calc(50% - 214px + 1px) top, calc(50% + 214px - 1px) top,  calc(50% - 214px * 2 + 1px) top, calc(50% + 214px * 2 - 1px) top, calc(50% - 214px * 3 + 1px) top, calc(50% + 214px * 3 - 1px) top;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  input, button, textarea, select {
+    font: inherit;
+  }
+
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+}
+
+@layer components {
+  .grain {
+    position: relative;
+  }
+  .grain::after {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("/img/noise.png");
+    background-size: 300px 300px;
+    background-repeat: repeat;
+    mix-blend-mode: overlay;
+  }
+
+  @supports not (overflow: clip) {
+    /*
+      Sorry for the ugly scrollbara Safari users :(
+      Didn't want to make it a better experience for the small
+      group of users. Update to the latest MacOS and it works there too! :)
+    */
+    .safari-overflow-clip {
+      clip-path: inset(0 0 0 0);
+
+    }
+  }
+}

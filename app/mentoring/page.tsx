@@ -28,8 +28,12 @@ export default function Mentoring() {
           </p>
         </Intro>
         <div className="mt-4 sm:mt-auto sm:text-right [&_a]:inline-flex">
-          <CtaButton href="/schedule-a-session" className="mb-3">
-            Schedule a call
+          <CtaButton
+            href="/schedule-a-session"
+            subtitle="Or schedule a call"
+            className="mb-3"
+          >
+            See the sessions I offer
           </CtaButton>
           <CtaButton href="#page-content" className="sm:ml-3">
             Read more 👇

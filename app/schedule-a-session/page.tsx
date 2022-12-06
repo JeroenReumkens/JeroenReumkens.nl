@@ -75,6 +75,63 @@ export default function Mentoring() {
               </CtaButton>
             </div>
           </Card>
+
+          <Card id="packs" title="Mentoring packs">
+            <p>
+              Committing for more than one session helps us set clear goals
+              towards to future and work on that together.
+            </p>
+
+            <h3 className="text-lg font-medium">The packs:</h3>
+
+            <ul className="ml-3 list-disc">
+              <li>Month pack: €999 / month</li>
+              <li>I'm committed pack (3 months): €2799 / 3 months</li>
+              <li>I just wanna code pack (12 months): €9999 / year</li>
+            </ul>
+
+            <h3 className="text-lg font-medium">What's included?</h3>
+            <ul className="ml-3 list-disc">
+              <li>
+                Four 1:1 sessions of one hour every month (plus 10 minute
+                preparation and follow-up time)
+              </li>
+              <li>
+                4 hours of support via private chat (Discord). This can be used
+                for general questions, pointers, sharing articles, having a
+                quick look at a PR you created, etc.
+              </li>
+              <li>
+                A refund of your intro session when choosing any of these packs.
+              </li>
+              <li>
+                Life time access to the frontendfyi Discord community for the 3
+                months and up pack. Community will get released soon.
+              </li>
+            </ul>
+
+            <p>
+              See the{' '}
+              <Link className="underline" href="/mentoring">
+                mentorship page
+              </Link>{' '}
+              to learn more about what I can help you with during these
+              sessions.
+            </p>
+
+            <div className="flex flex-col items-center space-y-3">
+              <CtaButton
+                href="mailto:jeroen@frontend.fyi"
+                subtitle="jeroen@frontend.fyi"
+              >
+                Reach out to me via email
+              </CtaButton>
+              <CtaButton href="https://cal.com/frontendfyi/na1eb6eis8-introduction">
+                Or schedule an intro chat right away
+              </CtaButton>
+            </div>
+          </Card>
+
           <Card id="code-review" title="Code review (60 min)">
             <p>
               Sometimes it's good to have a second pair of eyes. Perhaps you're

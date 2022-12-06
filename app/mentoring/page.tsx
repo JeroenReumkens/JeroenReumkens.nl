@@ -48,7 +48,7 @@ export default function Mentoring() {
 
       <Container className="sm:text-md text-small leading-base md:text-body">
         <SectionTitle>What can I teach you?</SectionTitle>
-        <div className="mb-4 space-y-4 md:mb-[0] md:ml-col md:w-2/3">
+        <div className="mb-4 md:mb-[0] md:ml-col md:w-2/3 [&_p]:mb-4">
           <p>
             Nowadays frontend is a very extensive field. Every week there seem
             to be popping up a new standards, browsers are adopting new features
@@ -98,6 +98,18 @@ export default function Mentoring() {
             also requiring me to grow in my soft skills. I'm sure I'll have some
             great advice in that as well.
           </p>
+
+          <div className="m-2 rounded-lg border bg-white p-4">
+            <h3 className="text-lg font-medium">Discover the way I teach</h3>
+            <p>
+              Still unsure whether we're a match? Have a look at my YouTube
+              channel @frontendfyi to get a better feeling of the way I teach
+              and explain topics.
+            </p>
+            <CtaButton href="https://www.youtube.com/@frontendfyi">
+              Visit my YouTube Channel
+            </CtaButton>
+          </div>
         </div>
 
         <SectionTitle>Example topics</SectionTitle>
@@ -169,9 +181,13 @@ export default function Mentoring() {
 
         <ForTeamsAndIndividuals />
 
-        <div className="mt-5 flex">
+        <div className="mt-5 flex flex-col space-y-4">
           <CtaButton className="mx-auto" href="/schedule-a-session#intro-chat">
             Schedule an intro session now
+          </CtaButton>
+
+          <CtaButton className="mx-auto" href="/schedule-a-session">
+            See all sessions I offer
           </CtaButton>
         </div>
       </Container>

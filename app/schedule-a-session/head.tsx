@@ -1,7 +1,7 @@
 const Head = () => (
   <>
     <title>
-      Schedule a mentorhsip session | Jeroen Reumkens — Frontend mentor
+      Schedule a mentorship session | Jeroen Reumkens — Frontend mentor
     </title>
     <meta
       name="description"

@@ -40,7 +40,7 @@ export default function Mentoring() {
             <div className="flex justify-center">
               <CtaButton
                 href="https://cal.com/frontendfyi/na1eb6eis8-introduction"
-                subtitle="A payment link will follow after booking"
+                subtitle="A payment link will follow after booking. Prices excl. VAT."
               >
                 Book 25 mins for €49
               </CtaButton>
@@ -63,13 +63,13 @@ export default function Mentoring() {
             <div className="flex flex-col items-center space-y-3">
               <CtaButton
                 href="https://cal.com/frontendfyi/lskjm0hrgx-1on1-30mins"
-                subtitle="A payment link will follow after booking"
+                subtitle="A payment link will follow after booking. Prices excl. VAT."
               >
                 Book 30 mins for €99
               </CtaButton>
               <CtaButton
                 href="https://cal.com/frontendfyi/hunm238j9o-1on1-60mins"
-                subtitle="A payment link will follow after booking"
+                subtitle="A payment link will follow after booking. Prices excl. VAT."
               >
                 Book 60 mins for €165
               </CtaButton>
@@ -88,6 +88,9 @@ export default function Mentoring() {
               <li>Month pack: €999 / month</li>
               <li>I'm committed pack (3 months): €2799 / 3 months</li>
               <li>I just wanna code pack (12 months): €9999 / year</li>
+              <li>
+                <small>* All prices are excluding VAT</small>
+              </li>
             </ul>
 
             <h3 className="text-lg font-medium">What's included?</h3>
@@ -159,7 +162,7 @@ export default function Mentoring() {
             <div className="flex justify-center">
               <CtaButton
                 href="https://cal.com/frontendfyi/cwm1kphsrr-code-review"
-                subtitle="A payment link will follow after booking"
+                subtitle="A payment link will follow after booking. Prices excl. VAT."
               >
                 Book 60 mins for €199
               </CtaButton>

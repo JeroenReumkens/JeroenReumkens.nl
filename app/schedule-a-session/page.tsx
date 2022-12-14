@@ -85,9 +85,9 @@ export default function Mentoring() {
             <h3 className="text-lg font-medium">The packs:</h3>
 
             <ul className="ml-3 list-disc">
-              <li>Month pack: €999 / month</li>
-              <li>I'm committed pack (3 months): €2799 / 3 months</li>
-              <li>I just wanna code pack (12 months): €9999 / year</li>
+              <li>Month pack: €949 / month</li>
+              <li>I'm committed pack (3 months): €2699 / 3 months</li>
+              <li>I just wanna code pack (12 months): €9899 / year</li>
               <li>
                 <small>* All prices are excluding VAT</small>
               </li>

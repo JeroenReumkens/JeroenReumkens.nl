@@ -151,8 +151,8 @@ export default function Mentoring() {
             <p>
               Also keep in mind that depending on the size of the codebase, it
               might be very hard to grab my head around it in 60 minutes. In
-              this case it might be wise to create a longer meeting. Reach out
-              to me for more info :)
+              this case it might be wise to stack multiple of these sessions.
+              Reach out to me via the button below for more information.
             </p>
             <p>
               This meeting consists of max 15 minute discussing the project
@@ -165,6 +165,12 @@ export default function Mentoring() {
                 subtitle="A payment link will follow after booking. Prices excl. VAT."
               >
                 Book 60 mins for €199
+              </CtaButton>
+              <CtaButton
+                href="mailto:jeroen@frontend.fyi"
+                subtitle="jeroen@frontend.fyi"
+              >
+                Reach out to me via email
               </CtaButton>
             </div>
           </Card>

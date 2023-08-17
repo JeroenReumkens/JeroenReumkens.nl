@@ -41,7 +41,7 @@ export const MyTimeline = () => {
             I'm currently focussing my attention on building frontend.fyi — a
             new platform where I teach people the craft in frontend.
           </p>
-          <p><a href="https://www.frontend.fyi" target="_blank">Check frontend.fyi here.</a></p>
+          <p><a href="https://www.frontend.fyi" className="underline" target="_blank">Check frontend.fyi here.</a></p>
         </Item>
         <Item title="Helping companies as a freelancer">
           <p>

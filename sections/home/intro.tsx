@@ -56,10 +56,10 @@ export const Intro = () => {
           <CtaButton
             variant="small"
             className="mr-3 mb-3 md:mb-[0]"
-            href="/mentoring"
-            subtitle="for teams and individuals"
+            href="https://www.frontend.fyi"
+            subtitle="via frontend.fyi"
           >
-            I also do mentoring
+            I also teach
           </CtaButton>
           or read on... 👇
         </p>
